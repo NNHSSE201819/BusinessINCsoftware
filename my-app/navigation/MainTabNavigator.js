@@ -18,43 +18,77 @@ HomeStack.navigationOptions = {
       focused={focused}
       name={
         Platform.OS === 'ios'
-          ? `ios-information-circle${focused ? '' : '-outline'}`
-          : 'md-information-circle'
+          ? `ios-home`
+          : 'md-home'
       }
     />
   ),
 };
 
-const LinksStack = createStackNavigator({
-  Links: LinksScreen,
+const ProfileStack = createStackNavigator({
+  Profile: LinksScreen,
 });
 
-LinksStack.navigationOptions = {
-  tabBarLabel: 'Links',
+ProfileStack.navigationOptions = {
+  tabBarLabel: 'Profile',
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}
-      name={Platform.OS === 'ios' ? 'ios-link' : 'md-link'}
+      name={Platform.OS === 'ios' ? 'ios-person' : 'md-person'}
     />
   ),
 };
 
-const SettingsStack = createStackNavigator({
-  Settings: SettingsScreen,
+const StartSwapStack = createStackNavigator({
+  StartSwap: SettingsScreen,
 });
 
-SettingsStack.navigationOptions = {
-  tabBarLabel: 'Settings',
+StartSwapStack.navigationOptions = {
+  tabBarLabel: 'Start Swap',
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}
-      name={Platform.OS === 'ios' ? 'ios-options' : 'md-options'}
+      name={Platform.OS === 'ios' ? 'ios-gift' : 'md-gift'}
+    />
+  ),
+};
+
+const InventoryStack = createStackNavigator({
+  Inventory: HomeScreen,
+});
+
+InventoryStack.navigationOptions = {
+  tabBarLabel: 'Inventory',
+  tabBarIcon: ({ focused }) => (
+    <TabBarIcon
+      focused={focused}
+      name={
+        Platform.OS === 'ios'
+          ? `ios-archive`
+          : 'md-archive'
+      }
+    />
+  ),
+};
+
+const BrowsePrevStack = createStackNavigator({
+  BrowsePrev: SettingsScreen,
+});
+
+BrowsePrevStack.navigationOptions = {
+  tabBarLabel: 'Previous',
+  tabBarIcon: ({ focused }) => (
+    <TabBarIcon
+      focused={focused}
+      name={Platform.OS === 'ios' ? 'ios-return-left' : 'md-return-left'}
     />
   ),
 };
 
 export default createBottomTabNavigator({
   HomeStack,
-  LinksStack,
-  SettingsStack,
+  ProfileStack,
+  StartSwapStack,
+  InventoryStack,
+  BrowsePrevStack,
 });
