@@ -1,4 +1,78 @@
-import React from 'react';
+import React, { Component} from 'react';
+import {
+  Text,
+  View,
+  StyleSheet,
+  ScrollView,
+  Image,
+  AppRegistry,
+  Alert,
+  Button,
+} from 'react-native';
+
+const styles = StyleSheet.create({
+  container: {
+    backgroundColor: 'skyblue',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  mainImage: {
+    width: 350,
+    height: 175,
+    marginBottom: 100,
+  },
+  mainText: {
+    fontSize: 50,
+    margin: 10,
+    fontFamily: 'Avenir',
+    textAlign: 'center',
+    color: 'goldenrod'
+  },
+  subText: {
+    fontSize: 30,
+    margin: 10,
+    fontFamily: 'Avenir',
+    textAlign: 'center'
+  },
+  iconImage: {
+    width: 50,
+    height: 50
+  }
+});
+
+export default class HomeScreen extends Component {
+  render() {
+    return (
+      <ScrollView contentContainerStyle={styles.container}>
+        <View style={{height:300}} />
+        <View>
+          <Image
+            style ={styles.mainImage}
+            source={require('/Users/nn121local/GitHub/BusinessINCsoftware/my-app/assets/images/style.png')}
+          />
+        </View>
+        <View style={{height:100}} />
+        <View style={{alignItems: 'center'}}>
+          <Text style ={styles.mainText}>
+            Our Mission
+          </Text>
+          <Text style={styles.subText}>
+            As a personalized swap service, we provide a cost-effective means to stay stylish
+            without compromising the environment. Help us combat the unsustainability and waste
+            production of the clothing industry.
+          </Text>
+          <Text style={styles.mainText}>
+            Meet Our Stylists
+          </Text>
+        </View>
+      </ScrollView>
+    );
+  }
+}
+
+
+
+{/*import React from 'react';
 import {
   Image,
   Platform,
@@ -19,52 +93,21 @@ export default class HomeScreen extends React.Component {
 
   render() {
     return (
-      <View style={styles.container}>
-        <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
-          <View style={styles.welcomeContainer}>
-            <Image
-              source={
-                __DEV__
-                  ? require('../assets/images/robot-dev.png')
-                  : require('../assets/images/robot-prod.png')
-              }
-              style={styles.welcomeImage}
-            />
-          </View>
-
-          <View style={styles.getStartedContainer}>
-            {this._maybeRenderDevelopmentModeWarning()}
-
-            <Text style={styles.getStartedText}>Get started by opening</Text>
-
-            <View style={[styles.codeHighlightContainer, styles.homeScreenFilename]}>
-              <MonoText style={styles.codeHighlightText}>screens/HomeScreen.js</MonoText>
-            </View>
-
-            <Text style={styles.getStartedText}>
-              Welcome to Style360!
-            </Text>
-          </View>
-
-          <View style={styles.helpContainer}>
-            <TouchableOpacity onPress={this._handleHelpPress} style={styles.helpLink}>
-              <Text style={styles.helpLinkText}>Help, it didn’t automatically reload!</Text>
-            </TouchableOpacity>
-          </View>
-        </ScrollView>
-
-        <View style={styles.tabBarInfoContainer}>
-          <Text style={styles.tabBarInfoText}>This is a tab bar. You can edit it in:</Text>
-
-          <View style={[styles.codeHighlightContainer, styles.navigationFilename]}>
-            <MonoText style={styles.codeHighlightText}>navigation/MainTabNavigator.js</MonoText>
-          </View>
-        </View>
+      <View>
+        <Text>
+          Style 360
+        </Text>
+        <Image
+          source = {{uri: 'https://facebook.github.io/react-native/img/header_logo.png'}}
+          style = {{width: 55, height: 55}}
+        />
       </View>
+
     );
   }
+}
 
-  _maybeRenderDevelopmentModeWarning() {
+  /*_maybeRenderDevelopmentModeWarning() {
     if (__DEV__) {
       const learnMoreButton = (
         <Text onPress={this._handleLearnMorePress} style={styles.helpLinkText}>
@@ -98,7 +141,7 @@ export default class HomeScreen extends React.Component {
   };
 }
 
-const styles = StyleSheet.create({
+/*const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
@@ -185,4 +228,4 @@ const styles = StyleSheet.create({
     fontSize: 14,
     color: '#2e78b7',
   },
-});
+}); */}
