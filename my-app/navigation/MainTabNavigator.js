@@ -8,24 +8,6 @@ import LinksScreen from '../screens/LinksScreen';
 import SettingsScreen from '../screens/SettingsScreen';
 import StartSwapScreen from '../screens/StartSwapScreen';
 
-const HomeStack = createStackNavigator({
-  Home: HomeScreen,
-});
-
-HomeStack.navigationOptions = {
-  tabBarLabel: 'Home',
-  tabBarIcon: ({ focused }) => (
-    <TabBarIcon
-      focused={focused}
-      name={
-        Platform.OS === 'ios'
-          ? `ios-home`
-          : 'md-home'
-      }
-    />
-  ),
-};
-
 const ProfileStack = createStackNavigator({
   Profile: LinksScreen,
 });
@@ -72,24 +54,8 @@ InventoryStack.navigationOptions = {
   ),
 };
 
-const BrowsePrevStack = createStackNavigator({
-  BrowsePrev: SettingsScreen,
-});
-
-BrowsePrevStack.navigationOptions = {
-  tabBarLabel: 'Previous',
-  tabBarIcon: ({ focused }) => (
-    <TabBarIcon
-      focused={focused}
-      name={Platform.OS === 'ios' ? 'ios-return-left' : 'md-return-left'}
-    />
-  ),
-};
-
 export default createBottomTabNavigator({
-  HomeStack,
   ProfileStack,
   StartSwapStack,
   InventoryStack,
-  BrowsePrevStack,
 });
