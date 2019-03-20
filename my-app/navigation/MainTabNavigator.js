@@ -6,6 +6,7 @@ import TabBarIcon from '../components/TabBarIcon';
 import HomeScreen from '../screens/HomeScreen';
 import LinksScreen from '../screens/LinksScreen';
 import SettingsScreen from '../screens/SettingsScreen';
+import InventoryScreen from '../screens/InventoryScreen';
 
 const HomeStack = createStackNavigator({
   Home: HomeScreen,
@@ -54,7 +55,7 @@ StartSwapStack.navigationOptions = {
 };
 
 const InventoryStack = createStackNavigator({
-  Inventory: HomeScreen,
+  Inventory: InventoryScreen,
 });
 
 InventoryStack.navigationOptions = {
