@@ -46,24 +46,34 @@ export default class HomeScreen extends Component {
       <ScrollView contentContainerStyle={styles.container}>
         <View style={{height:300}} />
         <View>
-          <Image
+          {/*<Image
             style ={styles.mainImage}
             source={require('/Users/nn121local/GitHub/BusinessINCsoftware/my-app/assets/images/style.png')}
-          />
+          />*/}
         </View>
         <View style={{height:100}} />
         <View style={{alignItems: 'center'}}>
           <Text style ={styles.mainText}>
-            Our Mission
+            Sign up or login
           </Text>
-          <Text style={styles.subText}>
+          {/*}<Text style={styles.subText}>
             As a personalized swap service, we provide a cost-effective means to stay stylish
             without compromising the environment. Help us combat the unsustainability and waste
             production of the clothing industry.
           </Text>
           <Text style={styles.mainText}>
             Meet Our Stylists
-          </Text>
+          </Text>*/}
+          <Button
+            onPress = {() => navigate('SignUp')}
+            //onPress={onPressLearnMore}
+            title="Sign up!"
+          />
+          <Button
+            onPress = {() => navigate('Login')}
+            //onPress={onPressLearnMore}
+            title="Login"
+          />
         </View>
       </ScrollView>
     );
