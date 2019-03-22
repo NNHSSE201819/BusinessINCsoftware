@@ -6,30 +6,164 @@ import { ScrollView,
   View,
   TouchableHighlight,
   Text,
+  Modal,
   TextInput, } from 'react-native';
 import { MonoText } from '../components/StyledText';
 import { WebBrowser } from 'expo';
 
 export default class StartSwapScreen extends React.Component {
+  static navigationOptions = {
+    header: null,
+  };
 
   state = {
     buttonClicked: 0,
-    progressSteps: ["Order Received", "Outfits Assembled", "Order Shipped", "Order Delivered"]
+    progressSteps: ["Order Received", "Outfits Assembled", "Order Shipped", "Order Delivered"],
+    startSwapModal: true,
+    customizeModal1: false,
+    customizeModal2: false,
+    paymentInfoModal: false,
+    thankYouModal: false,
   }
 
   render() {
     return (
       <View style={styles.container}>
-        <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
-          <Text style={styles.progressBarTitleText}>START SWAP</Text>
-          <Text style={styles.darkTextInputLabel}>number of garments:</Text>
-          <TextInput style = {styles.input}
-               underlineColorAndroid = "transparent"
-               placeholderTextColor = "#A9A9A9"
-               autoCapitalize = "none"/>
-        </ScrollView>
+
+        {/*startSwapModal*/}
+        <Modal
+          transparent={false}
+          visible={this.state.startSwapModal}
+          >
+          <ScrollView contentContainerStyle={styles.contentContainer}>
+            <Text style={styles.progressBarTitleText}>START SWAP</Text>
+            <Text style={styles.numGarmentsInputLabel}>number of garments:</Text>
+            <View style={{alignItems: 'center'}}>
+              <TextInput style = {styles.inputSmall}
+                  underlineColorAndroid = "transparent"
+                  placeholderTextColor = "#A9A9A9"
+                  autoCapitalize = "none"
+                  />
+            </View>
+            <Text style={styles.darkTextInputLabel}>name</Text>
+            <TextInput style = {styles.input}
+                 underlineColorAndroid = "transparent"
+                 placeholderTextColor = "#A9A9A9"
+                 autoCapitalize = "none"/>
+            <Text style={styles.darkTextInputLabel}>address</Text>
+            <TextInput style = {styles.input}
+                underlineColorAndroid = "transparent"
+                placeholderTextColor = "#A9A9A9"
+                autoCapitalize = "none"/>
+            <Text style={styles.darkTextInputLabel}>city</Text>
+            <TextInput style = {styles.input}
+                underlineColorAndroid = "transparent"
+                placeholderTextColor = "#A9A9A9"
+                autoCapitalize = "none"/>
+            <Text style={styles.darkTextInputLabel}>zip code</Text>
+            <TextInput style = {styles.input}
+                underlineColorAndroid = "transparent"
+                placeholderTextColor = "#A9A9A9"
+                autoCapitalize = "none"/>
+            <View style={{alignItems: 'flex-end'}}>
+              <TouchableHighlight
+                  onPress={() => {
+                    this.switchModal("startSwapModal");
+                    this.switchModal("customizeModal1");
+                  }}>
+                  <Text style={styles.nextText}>next >> </Text>
+              </TouchableHighlight>
+            </View>
+          </ScrollView>
+        </Modal>
+
+        {/*customizeModal1*/}
+        <Modal
+          transparent={false}
+          visible={this.state.customizeModal1}
+          >
+          <ScrollView contentContainerStyle={styles.contentContainer}>
+            <View style={{alignItems: 'flex-start'}}>
+              <Text style={styles.darkTextInputLabel}>CHOOSE A STYLIST:</Text>
+              <TouchableHighlight
+                  onPress={() => {
+                  }}>
+                  <Text style={styles.darkTextInputLabel}>Mona Fang</Text>
+              </TouchableHighlight>
+              <TouchableHighlight
+                  onPress={() => {
+                  }}>
+                  <Text style={styles.darkTextInputLabel}>Anahita Tewatia</Text>
+              </TouchableHighlight>
+              <TouchableHighlight
+                  onPress={() => {
+                  }}>
+                  <Text style={styles.darkTextInputLabel}>Leilani Salemme</Text>
+              </TouchableHighlight>
+            </View>
+            <View style={{alignItems: 'flex-end'}}>
+              <TouchableHighlight
+                  onPress={() => {
+                    this.switchModal("customizeModal1");
+                    this.switchModal("customizeModal2");
+                  }}>
+                  <Text style={styles.nextText}>next >> </Text>
+              </TouchableHighlight>
+            </View>
+          </ScrollView>
+        </Modal>
+
+        <TouchableHighlight
+          onPress={() => {
+            this.switchModal("startSwapModal");
+          }}>
+          <Text>Show Modal</Text>
+        </TouchableHighlight>
+        <Text style={styles.progressBarTitleText}>Swap Progress</Text>
+        <View style={styles.progressBarView}>
+          {this.state.buttonClicked == 1? <View style={styles.progressBar1View} />: null}
+          {this.state.buttonClicked == 2? <View style={styles.progressBar2View} />: null}
+          {this.state.buttonClicked == 3? <View style={styles.progressBar3View} />: null}
+          {this.state.buttonClicked == 4? <View style={styles.progressBar4View} />: null}
+        </View>
+        <View style={{flexDirection: 'row'}}>
+          <Text style={styles.progressBarLabelText}>Received</Text>
+          <Text style={styles.progressBarLabelText}>Assembled</Text>
+          <Text style={styles.progressBarLabelText}>Shipped</Text>
+          <Text style={styles.progressBarLabelText}>Delivered</Text>
+        </View>
+        <View style={{alignItems: 'center'}}>
+          <TouchableHighlight onPress={this.startSwapPress}
+          underlayColor="white">
+            <View style={styles.button}>
+              <Text style={styles.buttonText}>Start Swap!</Text>
+            </View>
+          </TouchableHighlight>
+        </View>
+        <View>
+          {/*{this.state.buttonClicked == 1? <Text style={{textAlign: 'right'}}>Order Received!</Text>: null}*/}
+          {this.updateProgressDetails}
+          {this.state.buttonClicked >= 4? <Text style={styles.progressStatusText}>{this.state.progressSteps[3]}</Text>: null}
+          {this.state.buttonClicked >= 3? <Text style={styles.progressStatusText}>{this.state.progressSteps[2]}</Text>: null}
+          {this.state.buttonClicked >= 2? <Text style={styles.progressStatusText}>{this.state.progressSteps[1]}</Text>: null}
+          {this.state.buttonClicked >= 1? <Text style={styles.progressStatusText}>{this.state.progressSteps[0]}</Text>: null}
+        </View>
       </View>
     );
+  }
+
+  switchModal(modalName) {
+    if (modalName == "startSwapModal") {
+      this.setState({startSwapModal: !this.state.startSwapModal});
+    } else if (modalName == "customizeModal1") {
+      this.setState({customizeModal1: !this.state.customizeModal1});
+    } else if (modalName == "customizeModal2") {
+      this.setState({customizeModal2: !this.state.customizeModal2});
+    } else if (modalName == "paymentInfoModal") {
+      this.setState({paymentInfoModal: !this.state.paymentInfoModal});
+    } else if (modalName == "thankYouModal") {
+      this.setState({thankYouModal: !this.state.thankYouModal});
+    }
   }
 
   startSwapPress = () => {
@@ -56,36 +190,109 @@ export default class StartSwapScreen extends React.Component {
 }
 
 const styles = StyleSheet.create({
+  contentContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    backgroundColor: '#ACA5A5',
+  },
   container: {
     flex: 1,
-    paddingTop: 10,
-    backgroundColor: '#fff',
-    //alignItems: 'center'
-  },
-  contentContainer: {
-    paddingTop: 10,
-    marginLeft: 20,
-    marginRight: 20,
+    justifyContent: 'center',
+    backgroundColor: '#ACA5A5',
+    paddingLeft: 20,
+    paddingRight: 20
   },
   progressBarTitleText: {
     paddingTop: 10,
     marginBottom: 10,
-    fontSize: 30,
+    fontSize: 36,
     textAlign: 'center',
-    color: '#2F2B2B'
+    color: '#2F2B2B',
+    fontFamily: 'HelveticaNeue-Light'
+  },
+  progressBarLabelText: {
+    paddingTop: 5,
+    marginLeft: 25,
+    marginBottom: 25,
+  },
+  progressStatusText: {
+    textAlign: 'right',
+    marginBottom: 10,
+  },
+  progressBarView: {
+    marginTop: 20,
+    width: 375,
+    height: 50,
+    borderWidth: 2.5,
+    borderColor: '#000000',
+  },
+  progressBar1View: {
+    width: 92.5,
+    height: 45,
+    backgroundColor: '#2196F3'
+  },
+  progressBar2View: {
+    width: 190,
+    height: 45,
+    backgroundColor: '#2196F3'
+  },
+  progressBar3View: {
+    width: 282.5,
+    height: 45,
+    backgroundColor: '#2196F3'
+  },
+  progressBar4View: {
+    width: 370,
+    height: 45,
+    backgroundColor: '#2196F3'
+  },
+  numGarmentsInputLabel: {
+    color: '#383434',
+    fontSize: 24,
+    paddingTop: 10,
+    textAlign: 'center',
+    alignItems: 'center',
+    fontFamily: 'HelveticaNeue-Light'
   },
   darkTextInputLabel: {
     color: '#383434',
     fontSize: 24,
     paddingTop: 10,
-    textAlign: 'center'
+    fontFamily: 'HelveticaNeue-Light',
+    marginLeft: 40
+  },
+  nextText: {
+    color: '#383434',
+    fontSize: 24,
+    paddingTop: 30,
+    fontFamily: 'Helvetica',
+    marginRight: 40
+  },
+  inputSmall: {
+    height: 43,
+    marginTop: 15,
+    borderColor: '#A79696',
+    borderWidth: 1,
+    textAlign: 'right',
+    alignItems: 'center',
+    backgroundColor: '#fff',
+    width: 100,
+    fontFamily: 'HelveticaNeue-Light',
+    color: '#383434',
+    fontSize: 30
   },
   input: {
-      margin: 15,
-      height: 43,
-      borderColor: '#A79696',
-      borderWidth: 1,
-      textAlign: 'right'
+    height: 43,
+    marginTop: 15,
+    borderColor: '#A79696',
+    borderWidth: 1,
+    alignItems: 'center',
+    backgroundColor: '#EFE9E9',
+    fontFamily: 'HelveticaNeue-Light',
+    color: '#383434',
+    fontSize: 24,
+    marginLeft: 40,
+    marginRight: 40
   },
   button: {
     marginBottom: 30,
