@@ -5,6 +5,7 @@ import { ScrollView,
   Alert,
   View,
   TouchableHighlight,
+  TouchableOpacity,
   Text,
   Modal,
   TextInput, } from 'react-native';
@@ -29,12 +30,6 @@ export default class StartSwapScreen extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-
-        {/*startSwapModal*/}
-        <Modal
-          transparent={false}
-          visible={this.state.startSwapModal}
-          >
           <ScrollView contentContainerStyle={styles.contentContainer}>
             <Text style={styles.progressBarTitleText}>START SWAP</Text>
             <Text style={styles.numGarmentsInputLabel}>number of garments:</Text>
@@ -66,126 +61,14 @@ export default class StartSwapScreen extends React.Component {
                 placeholderTextColor = "#A9A9A9"
                 autoCapitalize = "none"/>
             <View style={{alignItems: 'flex-end'}}>
-              <TouchableHighlight
-                  onPress={() => {
-                    this.switchModal("startSwapModal");
-                    this.switchModal("customizeModal1");
-                  }}>
-                  <Text style={styles.nextText}>next >> </Text>
-              </TouchableHighlight>
+              <TouchableOpacity
+                onPress={() => {this.props.navigation.navigate('CustomizeOne');}}>
+                <Text style={styles.nextText}>next >> </Text>
+              </TouchableOpacity>
             </View>
           </ScrollView>
-        </Modal>
-
-        {/*customizeModal1*/}
-        <Modal
-          transparent={false}
-          visible={this.state.customizeModal1}
-          >
-          <ScrollView contentContainerStyle={styles.contentContainer}>
-            <View style={{alignItems: 'flex-start'}}>
-              <Text style={styles.darkTextInputLabel}>CHOOSE A STYLIST:</Text>
-              <TouchableHighlight
-                  onPress={() => {
-                  }}>
-                  <Text style={styles.darkTextInputLabel}>Mona Fang</Text>
-              </TouchableHighlight>
-              <TouchableHighlight
-                  onPress={() => {
-                  }}>
-                  <Text style={styles.darkTextInputLabel}>Anahita Tewatia</Text>
-              </TouchableHighlight>
-              <TouchableHighlight
-                  onPress={() => {
-                  }}>
-                  <Text style={styles.darkTextInputLabel}>Leilani Salemme</Text>
-              </TouchableHighlight>
-            </View>
-            <View style={{alignItems: 'flex-end'}}>
-              <TouchableHighlight
-                  onPress={() => {
-                    this.switchModal("customizeModal1");
-                    this.switchModal("customizeModal2");
-                  }}>
-                  <Text style={styles.nextText}>next >> </Text>
-              </TouchableHighlight>
-            </View>
-          </ScrollView>
-        </Modal>
-
-        <TouchableHighlight
-          onPress={() => {
-            this.switchModal("startSwapModal");
-          }}>
-          <Text>Show Modal</Text>
-        </TouchableHighlight>
-        <Text style={styles.progressBarTitleText}>Swap Progress</Text>
-        <View style={styles.progressBarView}>
-          {this.state.buttonClicked == 1? <View style={styles.progressBar1View} />: null}
-          {this.state.buttonClicked == 2? <View style={styles.progressBar2View} />: null}
-          {this.state.buttonClicked == 3? <View style={styles.progressBar3View} />: null}
-          {this.state.buttonClicked == 4? <View style={styles.progressBar4View} />: null}
         </View>
-        <View style={{flexDirection: 'row'}}>
-          <Text style={styles.progressBarLabelText}>Received</Text>
-          <Text style={styles.progressBarLabelText}>Assembled</Text>
-          <Text style={styles.progressBarLabelText}>Shipped</Text>
-          <Text style={styles.progressBarLabelText}>Delivered</Text>
-        </View>
-        <View style={{alignItems: 'center'}}>
-          <TouchableHighlight onPress={this.startSwapPress}
-          underlayColor="white">
-            <View style={styles.button}>
-              <Text style={styles.buttonText}>Start Swap!</Text>
-            </View>
-          </TouchableHighlight>
-        </View>
-        <View>
-          {/*{this.state.buttonClicked == 1? <Text style={{textAlign: 'right'}}>Order Received!</Text>: null}*/}
-          {this.updateProgressDetails}
-          {this.state.buttonClicked >= 4? <Text style={styles.progressStatusText}>{this.state.progressSteps[3]}</Text>: null}
-          {this.state.buttonClicked >= 3? <Text style={styles.progressStatusText}>{this.state.progressSteps[2]}</Text>: null}
-          {this.state.buttonClicked >= 2? <Text style={styles.progressStatusText}>{this.state.progressSteps[1]}</Text>: null}
-          {this.state.buttonClicked >= 1? <Text style={styles.progressStatusText}>{this.state.progressSteps[0]}</Text>: null}
-        </View>
-      </View>
     );
-  }
-
-  switchModal(modalName) {
-    if (modalName == "startSwapModal") {
-      this.setState({startSwapModal: !this.state.startSwapModal});
-    } else if (modalName == "customizeModal1") {
-      this.setState({customizeModal1: !this.state.customizeModal1});
-    } else if (modalName == "customizeModal2") {
-      this.setState({customizeModal2: !this.state.customizeModal2});
-    } else if (modalName == "paymentInfoModal") {
-      this.setState({paymentInfoModal: !this.state.paymentInfoModal});
-    } else if (modalName == "thankYouModal") {
-      this.setState({thankYouModal: !this.state.thankYouModal});
-    }
-  }
-
-  startSwapPress = () => {
-    this.setState({ buttonClicked: this.state.buttonClicked + 1});
-    WebBrowser.openBrowserAsync('https://www.thestyle360.com/swap');
-  }
-
-  updateProgressDetails = () => {
-    var text = [];
-    for(var i = this.state.buttonClicked - 1; i >= 0; i--){
-      text.push(
-        <View>
-          <Text style={{textAlign: 'right'}}>{this.state.progressSteps[i]}</Text>
-        </View>
-      )
-      console.log(this.state.progressSteps[i]);
-    }
-    return(
-      <View>
-        {text}
-      </View>
-    )
   }
 }
 
@@ -266,13 +149,12 @@ const styles = StyleSheet.create({
     fontSize: 24,
     paddingTop: 30,
     fontFamily: 'Helvetica',
-    marginRight: 40
   },
   inputSmall: {
     height: 43,
     marginTop: 15,
-    borderColor: '#A79696',
-    borderWidth: 1,
+    borderColor: '#fff',
+    borderWidth: 10,
     textAlign: 'right',
     alignItems: 'center',
     backgroundColor: '#fff',
@@ -284,8 +166,8 @@ const styles = StyleSheet.create({
   input: {
     height: 43,
     marginTop: 15,
-    borderColor: '#A79696',
-    borderWidth: 1,
+    borderColor: '#EFE9E9',
+    borderWidth: 10,
     alignItems: 'center',
     backgroundColor: '#EFE9E9',
     fontFamily: 'HelveticaNeue-Light',

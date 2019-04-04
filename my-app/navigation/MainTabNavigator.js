@@ -7,6 +7,9 @@ import HomeScreen from '../screens/HomeScreen';
 import LinksScreen from '../screens/LinksScreen';
 import SettingsScreen from '../screens/SettingsScreen';
 import StartSwapScreen from '../screens/StartSwapScreen';
+import SwapProgressScreen from '../screens/SwapProgressScreen';
+import CustomizeOne from '../screens/CustomizeOne';
+import CustomizeClothes from '../screens/CustomizeClothes';
 
 const ProfileStack = createStackNavigator({
   Profile: LinksScreen,
@@ -20,10 +23,14 @@ ProfileStack.navigationOptions = {
       name={Platform.OS === 'ios' ? 'ios-person' : 'md-person'}
     />
   ),
+  visible: true,
 };
 
 const StartSwapStack = createStackNavigator({
   StartSwap: StartSwapScreen,
+  SwapProgress: SwapProgressScreen,
+  CustomizeOne: CustomizeOne,
+  CustomizeClothes: CustomizeClothes,
 });
 
 StartSwapStack.navigationOptions = {
@@ -34,6 +41,7 @@ StartSwapStack.navigationOptions = {
       name={Platform.OS === 'ios' ? 'ios-gift' : 'md-gift'}
     />
   ),
+  visible: true,
 };
 
 const InventoryStack = createStackNavigator({
@@ -52,6 +60,7 @@ InventoryStack.navigationOptions = {
       }
     />
   ),
+  visible: true,
 };
 
 export default createBottomTabNavigator({
