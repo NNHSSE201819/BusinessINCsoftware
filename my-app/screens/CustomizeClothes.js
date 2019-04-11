@@ -11,12 +11,60 @@ import { ScrollView,
   TextInput, } from 'react-native';
 import RadioForm, {RadioButton, RadioButtonInput,
   RadioButtonLabel} from 'react-native-simple-radio-button';
+import { CheckBox } from 'react-native-check-box';
 import { MonoText } from '../components/StyledText';
 import { WebBrowser } from 'expo';
 
-var radio_props = [
-  {label: 'param1', value: 0 },
-  {label: 'param2', value: 1 }
+var casual_shirts = [
+  {label: 'casual shirts', value: 0 },
+  {/*}{label: 'jackets', value: 0 },
+  {label: 'sweaters', value: 0 },
+  {label: 'dresses', value: 0 },
+  {label: 'shorts', value: 0 },
+  {label: 'skirts', value: 0 },
+  {label: 'athletic wear', value: 0 },
+  {label: 'T-shirts', value: 0 },
+  {label: 'pants', value: 0 },
+  {label: 'tanks', value: 0 },
+  {label: 'flannel shirts', value: 0 },
+  {label: 'jeans', value: 0 },
+  {label: 'joggers/sweatpants', value: 0 }*/}
+];
+var jackets = [
+  {label: 'jackets', value: 0 }
+];
+var sweaters = [
+  {label: 'sweaters', value: 0 }
+];
+var dresses = [
+  {label: 'dresses', value: 0 }
+];
+var shorts = [
+  {label: 'shorts', value: 0 }
+];
+var skirts = [
+  {label: 'skirts', value: 0 }
+];
+var athletic_wear = [
+  {label: 'athletic wear', value: 0 }
+];
+var t_shirts = [
+  {label: 'T-shirts', value: 0 }
+];
+var pants = [
+  {label: 'pants', value: 0 }
+];
+var tanks = [
+  {label: 'tanks', value: 0 }
+];
+var flannel_shirts = [
+  {label: 'flannel shirts', value: 0 }
+];
+var jeans = [
+  {label: 'jeans', value: 0 }
+];
+var joggers_sweatpants = [
+  {label: 'joggers/sweatpants', value: 0 }
 ];
 
 export default class CustomizeClothes extends React.Component {
@@ -43,10 +91,15 @@ export default class CustomizeClothes extends React.Component {
             what kind of clothes do you prefer{"\n"}to receive? choose at least 3
           </Text>
           <RadioForm
-            radio_props={radio_props}
+            radio_props={casual_shirts}
             initial={0}
+            formHorizontal={false}
+            labelHorizontal={true}
+            buttonColor={'#2196f3'}
+            animation={true}
             onPress={() => {}}
           />
+
           {/*Radio buttons:
             https://www.npmjs.com/package/react-native-simple-radio-button*/}
           <View style={{alignItems: 'flex-end'}}>
