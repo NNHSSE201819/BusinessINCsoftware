@@ -48,7 +48,7 @@ export default class HomeScreen extends Component {
         <View>
           <Image
             style ={styles.mainImage}
-            source={require('/Users/NN121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/style.png')}
+            source={require('../assets/images/style.png')}
           />
         </View>
         <View style={{height:100}} />
