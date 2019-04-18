@@ -10,6 +10,8 @@ import StartSwapScreen from '../screens/StartSwapScreen';
 import SwapProgressScreen from '../screens/SwapProgressScreen';
 import CustomizeOne from '../screens/CustomizeOne';
 import CustomizeClothes from '../screens/CustomizeClothes';
+import CustomizeOccasion from '../screens/CustomizeOccasion';
+import PaymentInfo from '../screens/PaymentInfo';
 
 const ProfileStack = createStackNavigator({
   Profile: LinksScreen,
@@ -31,6 +33,8 @@ const StartSwapStack = createStackNavigator({
   SwapProgress: SwapProgressScreen,
   CustomizeOne: CustomizeOne,
   CustomizeClothes: CustomizeClothes,
+  CustomizeOccasion: CustomizeOccasion,
+  PaymentInfo: PaymentInfo,
 });
 
 StartSwapStack.navigationOptions = {

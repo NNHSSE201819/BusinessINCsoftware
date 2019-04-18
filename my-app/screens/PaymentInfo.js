@@ -9,65 +9,11 @@ import { ScrollView,
   Text,
   Modal,
   TextInput, } from 'react-native';
-import RadioForm, {RadioButton, RadioButtonInput,
-  RadioButtonLabel} from 'react-native-simple-radio-button';
-import { CheckBox } from 'react-native-check-box';
 import { MonoText } from '../components/StyledText';
 import { WebBrowser } from 'expo';
 
-var casual_shirts = [
-  {label: 'casual shirts', value: 0 },
-  {/*{label: 'jackets', value: 0 },
-  {label: 'sweaters', value: 0 },
-  {label: 'dresses', value: 0 },
-  {label: 'shorts', value: 0 },
-  {label: 'skirts', value: 0 },
-  {label: 'athletic wear', value: 0 },
-  {label: 'T-shirts', value: 0 },
-  {label: 'pants', value: 0 },
-  {label: 'tanks', value: 0 },
-  {label: 'flannel shirts', value: 0 },
-  {label: 'jeans', value: 0 },
-  {label: 'joggers/sweatpants', value: 0 }*/}
-];
-var jackets = [
-  {label: 'jackets', value: 0 }
-];
-var sweaters = [
-  {label: 'sweaters', value: 0 }
-];
-var dresses = [
-  {label: 'dresses', value: 0 }
-];
-var shorts = [
-  {label: 'shorts', value: 0 }
-];
-var skirts = [
-  {label: 'skirts', value: 0 }
-];
-var athletic_wear = [
-  {label: 'athletic wear', value: 0 }
-];
-var t_shirts = [
-  {label: 'T-shirts', value: 0 }
-];
-var pants = [
-  {label: 'pants', value: 0 }
-];
-var tanks = [
-  {label: 'tanks', value: 0 }
-];
-var flannel_shirts = [
-  {label: 'flannel shirts', value: 0 }
-];
-var jeans = [
-  {label: 'jeans', value: 0 }
-];
-var joggers_sweatpants = [
-  {label: 'joggers/sweatpants', value: 0 }
-];
 
-export default class CustomizeClothes extends React.Component {
+export default class PaymentInfo extends React.Component {
   static navigationOptions = {
     header: null,
   };
@@ -86,25 +32,35 @@ export default class CustomizeClothes extends React.Component {
     return (
       <View style={styles.container}>
         <ScrollView contentContainerStyle={styles.contentContainer}>
-          <Text style={styles.progressBarTitleText}>customize</Text>
-          <Text style={styles.numGarmentsInputLabel}>
-            what kind of clothes do you prefer{"\n"}to receive? choose at least 3
-          </Text>
-          <RadioForm
-            radio_props={casual_shirts}
-            initial={0}
-            formHorizontal={false}
-            labelHorizontal={true}
-            buttonColor={'#2196f3'}
-            animation={true}
-            onPress={() => {}}
-          />
-
-          {/*Radio buttons:
-            https://www.npmjs.com/package/react-native-simple-radio-button*/}
-          <View style={{alignItems: 'flex-end', justifyContent: 'flex-end'}}>
+          <Text style={styles.progressBarTitleText}>payment info</Text>
+          <Text style={styles.lightTextInputLabel}>Credit Card</Text>
+          <TextInput style = {styles.input}
+               underlineColorAndroid = "transparent"
+               placeholderTextColor = "#A9A9A9"
+               autoCapitalize = "none"/>
+          <Text style={styles.lightTextInputLabel}>CVV</Text>
+          <TextInput style = {styles.input}
+              underlineColorAndroid = "transparent"
+              placeholderTextColor = "#A9A9A9"
+              autoCapitalize = "none"/>
+          <Text style={styles.lightTextInputLabel}>Date</Text>
+          <TextInput style = {styles.input}
+              underlineColorAndroid = "transparent"
+              placeholderTextColor = "#A9A9A9"
+              autoCapitalize = "none"/>
+          <Text style={styles.lightTextInputLabel}>Name on Card</Text>
+          <TextInput style = {styles.input}
+              underlineColorAndroid = "transparent"
+              placeholderTextColor = "#A9A9A9"
+              autoCapitalize = "none"/>
+          <Text style={styles.lightTextInputLabel}>Zip Code</Text>
+          <TextInput style = {styles.input}
+              underlineColorAndroid = "transparent"
+              placeholderTextColor = "#A9A9A9"
+              autoCapitalize = "none"/>
+          <View style={{alignItems: 'flex-end'}}>
             <TouchableOpacity
-              onPress={() => {this.props.navigation.navigate('CustomizeOccasion');}}>
+              onPress={() => {this.props.navigation.navigate('SwapProgress');}}>
               <Text style={styles.nextText}>next >> </Text>
             </TouchableOpacity>
           </View>
@@ -117,19 +73,19 @@ export default class CustomizeClothes extends React.Component {
 const styles = StyleSheet.create({
   contentContainer: {
     flex: 1,
-    marginTop: 100,
+    justifyContent: 'center',
     backgroundColor: '#ACA5A5',
   },
   container: {
     flex: 1,
     justifyContent: 'center',
     backgroundColor: '#ACA5A5',
-    paddingLeft: 20,
-    paddingRight: 20
+    paddingLeft: 10,
+    paddingRight: 10
   },
   progressBarTitleText: {
     paddingTop: 10,
-    marginBottom: 10,
+    marginBottom: 20,
     fontSize: 36,
     textAlign: 'center',
     color: '#2F2B2B',
@@ -148,15 +104,14 @@ const styles = StyleSheet.create({
     color: '#383434',
     fontSize: 24,
     paddingTop: 10,
-    marginBottom: 20,
     textAlign: 'center',
     alignItems: 'center',
     fontFamily: 'HelveticaNeue-Light'
   },
-  darkTextInputLabel: {
-    color: '#383434',
+  lightTextInputLabel: {
+    color: '#F8E4E4',
     fontSize: 24,
-    paddingTop: 10,
+    paddingTop: 20,
     fontFamily: 'HelveticaNeue-Light',
     marginLeft: 40
   },
@@ -181,15 +136,17 @@ const styles = StyleSheet.create({
     fontSize: 30
   },
   input: {
-    height: 250,
+    height: 43,
     marginTop: 15,
-    borderColor: '#EFECEC',
+    borderColor: '#EFE9E9',
     borderWidth: 10,
-    backgroundColor: '#EFECEC',
+    alignItems: 'center',
+    backgroundColor: '#EFE9E9',
     fontFamily: 'HelveticaNeue-Light',
     color: '#383434',
-    fontSize: 18,
-    justifyContent: 'flex-start',
+    fontSize: 24,
+    marginLeft: 40,
+    marginRight: 40
   },
   button: {
     marginBottom: 30,

@@ -67,7 +67,7 @@ var joggers_sweatpants = [
   {label: 'joggers/sweatpants', value: 0 }
 ];
 
-export default class CustomizeClothes extends React.Component {
+export default class CustomizeOccasion extends React.Component {
   static navigationOptions = {
     header: null,
   };
@@ -88,7 +88,7 @@ export default class CustomizeClothes extends React.Component {
         <ScrollView contentContainerStyle={styles.contentContainer}>
           <Text style={styles.progressBarTitleText}>customize</Text>
           <Text style={styles.numGarmentsInputLabel}>
-            what kind of clothes do you prefer{"\n"}to receive? choose at least 3
+            what type(s) of occasion(s) do you need clothes for?
           </Text>
           <RadioForm
             radio_props={casual_shirts}
@@ -102,9 +102,9 @@ export default class CustomizeClothes extends React.Component {
 
           {/*Radio buttons:
             https://www.npmjs.com/package/react-native-simple-radio-button*/}
-          <View style={{alignItems: 'flex-end', justifyContent: 'flex-end'}}>
+          <View style={{alignItems: 'flex-end'}}>
             <TouchableOpacity
-              onPress={() => {this.props.navigation.navigate('CustomizeOccasion');}}>
+              onPress={() => {this.props.navigation.navigate('PaymentInfo');}}>
               <Text style={styles.nextText}>next >> </Text>
             </TouchableOpacity>
           </View>
@@ -148,7 +148,6 @@ const styles = StyleSheet.create({
     color: '#383434',
     fontSize: 24,
     paddingTop: 10,
-    marginBottom: 20,
     textAlign: 'center',
     alignItems: 'center',
     fontFamily: 'HelveticaNeue-Light'

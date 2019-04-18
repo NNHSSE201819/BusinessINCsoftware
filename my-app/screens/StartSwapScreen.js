@@ -153,11 +153,11 @@ const styles = StyleSheet.create({
   inputSmall: {
     height: 43,
     marginTop: 15,
-    borderColor: '#fff',
+    borderColor: '#EFE9E9',
     borderWidth: 10,
     textAlign: 'right',
     alignItems: 'center',
-    backgroundColor: '#fff',
+    backgroundColor: '#EFE9E9',
     width: 100,
     fontFamily: 'HelveticaNeue-Light',
     color: '#383434',
