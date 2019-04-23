@@ -19,11 +19,6 @@ export default class SwapProgressScreen extends React.Component {
   state = {
     buttonClicked: 0,
     progressSteps: ["Order Received", "Outfits Assembled", "Order Shipped", "Order Delivered"],
-    startSwapModal: true,
-    customizeModal1: false,
-    customizeModal2: false,
-    paymentInfoModal: false,
-    thankYouModal: false,
   }
 
   render() {
@@ -34,13 +29,7 @@ export default class SwapProgressScreen extends React.Component {
           {this.state.buttonClicked == 1? <View style={styles.progressBar1View} />: null}
           {this.state.buttonClicked == 2? <View style={styles.progressBar2View} />: null}
           {this.state.buttonClicked == 3? <View style={styles.progressBar3View} />: null}
-          {this.state.buttonClicked == 4? <View style={styles.progressBar4View} />: null}
-        </View>
-        <View style={{flexDirection: 'row'}}>
-          <Text style={styles.progressBarLabelText}>Received</Text>
-          <Text style={styles.progressBarLabelText}>Assembled</Text>
-          <Text style={styles.progressBarLabelText}>Shipped</Text>
-          <Text style={styles.progressBarLabelText}>Delivered</Text>
+          {this.state.buttonClicked >= 4? <View style={styles.progressBar4View} />: null}
         </View>
         <View style={{alignItems: 'center'}}>
           <TouchableHighlight onPress={this.startSwapPress}
@@ -51,7 +40,6 @@ export default class SwapProgressScreen extends React.Component {
           </TouchableHighlight>
         </View>
         <View>
-          {/*{this.state.buttonClicked == 1? <Text style={{textAlign: 'right'}}>Order Received!</Text>: null}*/}
           {this.updateProgressDetails}
           {this.state.buttonClicked >= 4? <Text style={styles.progressStatusText}>{this.state.progressSteps[3]}</Text>: null}
           {this.state.buttonClicked >= 3? <Text style={styles.progressStatusText}>{this.state.progressSteps[2]}</Text>: null}
@@ -60,20 +48,6 @@ export default class SwapProgressScreen extends React.Component {
         </View>
       </View>
     );
-  }
-
-  switchModal(modalName) {
-    if (modalName == "startSwapModal") {
-      this.setState({startSwapModal: !this.state.startSwapModal});
-    } else if (modalName == "customizeModal1") {
-      this.setState({customizeModal1: !this.state.customizeModal1});
-    } else if (modalName == "customizeModal2") {
-      this.setState({customizeModal2: !this.state.customizeModal2});
-    } else if (modalName == "paymentInfoModal") {
-      this.setState({paymentInfoModal: !this.state.paymentInfoModal});
-    } else if (modalName == "thankYouModal") {
-      this.setState({thankYouModal: !this.state.thankYouModal});
-    }
   }
 
   startSwapPress = () => {
@@ -129,31 +103,32 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   progressBarView: {
-    marginTop: 20,
+    marginTop: 10,
+    marginBottom: 20,
     width: 375,
-    height: 50,
+    height: 20,
     borderWidth: 2.5,
     borderColor: '#000000',
   },
   progressBar1View: {
     width: 92.5,
-    height: 45,
-    backgroundColor: '#2196F3'
+    height: 15,
+    backgroundColor: '#08BC40'
   },
   progressBar2View: {
     width: 190,
-    height: 45,
-    backgroundColor: '#2196F3'
+    height: 15,
+    backgroundColor: '#08BC40'
   },
   progressBar3View: {
     width: 282.5,
-    height: 45,
-    backgroundColor: '#2196F3'
+    height: 15,
+    backgroundColor: '#08BC40'
   },
   progressBar4View: {
     width: 370,
-    height: 45,
-    backgroundColor: '#2196F3'
+    height: 15,
+    backgroundColor: '#08BC40'
   },
   numGarmentsInputLabel: {
     color: '#383434',

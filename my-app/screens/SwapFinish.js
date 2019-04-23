@@ -13,7 +13,7 @@ import { MonoText } from '../components/StyledText';
 import { WebBrowser } from 'expo';
 
 
-export default class PaymentInfo extends React.Component {
+export default class SwapFinish extends React.Component {
   static navigationOptions = {
     header: null,
   };
@@ -32,37 +32,17 @@ export default class PaymentInfo extends React.Component {
     return (
       <View style={styles.container}>
         <ScrollView contentContainerStyle={styles.contentContainer}>
-          <Text style={styles.progressBarTitleText}>payment info</Text>
-          <Text style={styles.lightTextInputLabel}>Credit Card</Text>
-          <TextInput style = {styles.input}
-               underlineColorAndroid = "transparent"
-               placeholderTextColor = "#A9A9A9"
-               autoCapitalize = "none"/>
-          <Text style={styles.lightTextInputLabel}>CVV</Text>
-          <TextInput style = {styles.input}
-              underlineColorAndroid = "transparent"
-              placeholderTextColor = "#A9A9A9"
-              autoCapitalize = "none"/>
-          <Text style={styles.lightTextInputLabel}>Date</Text>
-          <TextInput style = {styles.input}
-              underlineColorAndroid = "transparent"
-              placeholderTextColor = "#A9A9A9"
-              autoCapitalize = "none"/>
-          <Text style={styles.lightTextInputLabel}>Name on Card</Text>
-          <TextInput style = {styles.input}
-              underlineColorAndroid = "transparent"
-              placeholderTextColor = "#A9A9A9"
-              autoCapitalize = "none"/>
-          <Text style={styles.lightTextInputLabel}>Zip Code</Text>
-          <TextInput style = {styles.input}
-              underlineColorAndroid = "transparent"
-              placeholderTextColor = "#A9A9A9"
-              autoCapitalize = "none"/>
-          <View style={{alignItems: 'flex-end'}}>
-            <TouchableOpacity
-              onPress={() => {this.props.navigation.navigate('SwapFinish');}}>
-              <Text style={styles.nextText}>next >> </Text>
-            </TouchableOpacity>
+          <Text style={styles.progressBarTitleText}>Awesome swap!{"\n"}Thank you for{"\n"}
+            participating in{"\n"}circular fashion.{"\n"}{"\n"}Expect to get your clothes in{"\n"}
+            5-7 business days!
+          </Text>
+          <View style={{alignItems: 'center'}}>
+            <TouchableHighlight onPress={() => {this.props.navigation.navigate('SwapProgress');}}
+            underlayColor="white">
+              <View style={styles.button}>
+                <Text style={styles.buttonText}>view swap progress</Text>
+              </View>
+            </TouchableHighlight>
           </View>
         </ScrollView>
       </View>
@@ -88,7 +68,7 @@ const styles = StyleSheet.create({
     marginBottom: 20,
     fontSize: 36,
     textAlign: 'center',
-    color: '#2F2B2B',
+    color: '#F8F8F8',
     fontFamily: 'HelveticaNeue-Light'
   },
   progressBarLabelText: {
@@ -140,7 +120,6 @@ const styles = StyleSheet.create({
     marginTop: 15,
     borderColor: '#EFE9E9',
     borderWidth: 10,
-    borderRadius: 5,
     alignItems: 'center',
     backgroundColor: '#EFE9E9',
     fontFamily: 'HelveticaNeue-Light',
@@ -153,11 +132,12 @@ const styles = StyleSheet.create({
     marginBottom: 30,
     width: 260,
     alignItems: 'center',
-    backgroundColor: '#2196F3'
+    backgroundColor: '#F7EFEF'
   },
   buttonText: {
     padding: 20,
-    color: 'white',
+    color: '#191616',
     fontSize: 20,
+    fontFamily: 'HelveticaNeue-Light',
   }
 });

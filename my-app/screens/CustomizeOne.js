@@ -18,13 +18,9 @@ export default class CustomizeOne extends React.Component {
   };
 
   state = {
-    buttonClicked: 0,
-    progressSteps: ["Order Received", "Outfits Assembled", "Order Shipped", "Order Delivered"],
-    startSwapModal: true,
-    customizeModal1: false,
-    customizeModal2: false,
-    paymentInfoModal: false,
-    thankYouModal: false,
+    choseMona: false,
+    choseAnahita: false,
+    choseLeilani: false,
   }
 
   render() {
@@ -34,19 +30,16 @@ export default class CustomizeOne extends React.Component {
           <View style={{alignItems: 'flex-start'}}>
             <Text style={styles.darkTextInputLabel}>CHOOSE A STYLIST:</Text>
             <TouchableOpacity
-                onPress={() => {
-                }}>
-                <Text style={styles.darkTextInputLabel}>Mona Fang</Text>
+              onPress={this.chooseMona}>
+              {this.state.choseMona == true? <Text style={styles.selectedText}>Mona Fang</Text>: <Text style={styles.darkTextInputLabel}>Mona Fang</Text>}
             </TouchableOpacity>
             <TouchableOpacity
-                onPress={() => {
-                }}>
-                <Text style={styles.darkTextInputLabel}>Anahita Tewatia</Text>
+              onPress={this.chooseAnahita}>
+              {this.state.choseAnahita == true? <Text style={styles.selectedText}>Anahita Tewatia</Text>: <Text style={styles.darkTextInputLabel}>Anahita Tewatia</Text>}
             </TouchableOpacity>
             <TouchableOpacity
-                onPress={() => {
-                }}>
-                <Text style={styles.darkTextInputLabel}>Leilani Salemme{"\n"}</Text>
+              onPress={this.chooseLeilani}>
+              {this.state.choseLeilani == true? <Text style={styles.selectedText}>Leilani Salemme{"\n"}</Text>: <Text style={styles.darkTextInputLabel}>Leilani Salemme{"\n"}</Text>}
             </TouchableOpacity>
           </View>
           <Text style={styles.progressBarTitleText}>customize</Text>
@@ -65,6 +58,23 @@ export default class CustomizeOne extends React.Component {
       </View>
     );
   }
+
+  chooseMona = () => {
+    this.setState({ choseMona: this.state.choseMona = true,
+                    choseAnahita: this.state.choseAnahita = false,
+                    choseLeilani: this.state.choseLeilani = false });
+  }
+  chooseAnahita = () => {
+    this.setState({ choseMona: this.state.choseMona = false,
+                    choseAnahita: this.state.choseAnahita = true,
+                    choseLeilani: this.state.choseLeilani = false });
+  }
+  chooseLeilani = () => {
+    this.setState({ choseMona: this.state.choseMona = false,
+                    choseAnahita: this.state.choseAnahita = false,
+                    choseLeilani: this.state.choseLeilani = true });
+  }
+
 }
 
 const styles = StyleSheet.create({
@@ -107,6 +117,13 @@ const styles = StyleSheet.create({
   },
   darkTextInputLabel: {
     color: '#383434',
+    fontSize: 24,
+    paddingTop: 10,
+    fontFamily: 'HelveticaNeue-Light',
+    marginLeft: 40
+  },
+  selectedText: {
+    color: 'white',
     fontSize: 24,
     paddingTop: 10,
     fontFamily: 'HelveticaNeue-Light',
