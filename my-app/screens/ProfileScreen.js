@@ -60,7 +60,11 @@ const styles = StyleSheet.create({
     fontSize: 25,
     marginLeft: 20,
     fontFamily: 'HelveticaNeue-Light'
-
+  },
+  subtext: {
+    fontSize: 20,
+    marginLeft: 25,
+    fontFamily: 'HelveticaNeue-Light'
   },
   textLittle: {
     fontSize: 18,
@@ -76,6 +80,9 @@ const styles = StyleSheet.create({
     color: 'white',
     fontSize: 25,
     fontFamily: 'HelveticaNeue-Light',
+  },
+  textbox: {
+    backgroundColor: 'white'
   }
 });
 
@@ -92,9 +99,11 @@ export default class ProfileScreen extends Component {
       modalAnahita: false,
       modalLeilani: false,
       insertName: 'Insert Name',
+      email: 'gracieliu@gmail.com',
       modalEmail: false,
       modalBirthday: false,
-      email: 'gracieliu@gmail.com',
+      faveBrand: '',
+      modalBrand: false,
     }
   }
 
@@ -111,6 +120,9 @@ export default class ProfileScreen extends Component {
   }
   openEmail(visible) {
     this.setState({modalEmail: visible});
+  }
+  changeBrand(visible) {
+    this.setState({modalBrand: visible});
   }
 
 
@@ -216,9 +228,10 @@ export default class ProfileScreen extends Component {
           visible={this.state.modalEmail}
           onRequestClose={() => {
             Alert.alert('Modal has been closed.');}}>
-          <View style={{flex:1, alignItems:'center', justifyContent:'center',backgroundColor: '#4CD4B2'}}>
+          <View style={{flex:1, alignItems:'center', justifyContent:'center',backgroundColor: '#ACA5A5'}}>
+            <Text>Email</Text>
             <TextInput
-              style ={styles.hideModalText}
+              style ={styles.textbox}
               onChangeText={(insertEmail) => this.setState({email: insertEmail})}
               value={this.state.email}
             />
@@ -228,6 +241,28 @@ export default class ProfileScreen extends Component {
               style={{marginTop: 25, backgroundColor:'#008766'}}
             >
               <Text style={styles.hideModalText}>Close</Text>
+            </TouchableHighlight>
+          </View>
+        </Modal>
+
+        <Modal
+          animationType="slide"
+          transparent={false}
+          visible={this.state.modalBrand}
+          onRequestClose={() => {
+            Alert.alert('Modal has been closed.');}}>
+          <View style={{flex:1, alignItems:'center', justifyContent:'center',backgroundColor: '#ACA5A5'}}>
+            <TextInput
+              style ={styles.textbox}
+              onChangeText={(insertBrand) => this.setState({faveBrand: insertBrand})}
+              value={this.state.faveBrand}
+            />
+            <TouchableHighlight
+              onPress={() => {
+                this.changeBrand(!this.state.modalBrand)}}
+              style={{marginTop: 25, backgroundColor:'#008766'}}
+            >
+              <Text style={styles.hideModalText}>vv</Text>
             </TouchableHighlight>
           </View>
         </Modal>
@@ -256,22 +291,18 @@ export default class ProfileScreen extends Component {
           <Text style ={styles.textMain}>Personal Info</Text>
         </View>
 
-        <View style ={styles.subdivider}/>
-
-        <View style={{flexDirection:'row', alignItems: 'center', height: 40, backgroundColor:'#ccc3c3'}}>
-          <Text style ={styles.textMain}>Email</Text>
+        <View style={{flexDirection:'row', alignItems: 'center', height: 40, backgroundColor:'#b6afaf'}}>
+          <Text style ={styles.subtext}>Email</Text>
           <TouchableHighlight
             onPress={() => this.openEmail(true)}
-            style ={{flexDirection: 'row', justifyContent: 'center', flex: 1}}
+            style ={{flexDirection: 'row', justifyContent: 'flex-end', flex: 1}}
           >
-            <View style={{justifyContent: 'flex-end',flexDirection:'row'}}>
-              <Text style ={{fontSize:20,fontFamily:'HelveticaNeue-Light'}}>{this.state.email}</Text>
-              <Text style ={{fontSize:20,fontFamily:'HelveticaNeue-Light'}}>  ></Text>
+            <View style={{justifyContent: 'flex-end',flexDirection:'row', alignItems: 'flex-end'}}>
+              <Text style ={styles.subtext}>{this.state.email}</Text>
+              <Text style ={{fontSize: 20, fontFamily: 'HelveticaNeue-Light'}}>  > </Text>
             </View>
           </TouchableHighlight>
         </View>
-
-        <View style={styles.divider}/>
 
         <View style={styles.heading}>
           <TouchableOpacity
@@ -282,7 +313,18 @@ export default class ProfileScreen extends Component {
           </TouchableOpacity>
         </View>
 
-        <View style ={styles.divider}/>
+        <View style={{flexDirection:'row', alignItems: 'center', height: 40, backgroundColor:'#b6afaf'}}>
+          <Text style ={styles.subtext}>Favorite Brand</Text>
+          <TouchableHighlight
+            onPress={() => this.changeBrand(true)}
+            style ={{flexDirection: 'row', justifyContent: 'flex-end', flex: 1}}
+          >
+            <View style={{justifyContent: 'flex-end',flexDirection:'row', alignItems: 'flex-end'}}>
+              <Text style ={styles.subtext}>{this.state.faveBrand}</Text>
+              <Text style ={{fontSize: 20, fontFamily: 'HelveticaNeue-Light'}}>  > </Text>
+            </View>
+          </TouchableHighlight>
+        </View>
 
         <View style={styles.heading}>
           <TouchableOpacity
