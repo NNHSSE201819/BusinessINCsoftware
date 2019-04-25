@@ -73,13 +73,19 @@ export default class CustomizeClothes extends React.Component {
   };
 
   state = {
-    buttonClicked: 0,
-    progressSteps: ["Order Received", "Outfits Assembled", "Order Shipped", "Order Delivered"],
-    startSwapModal: true,
-    customizeModal1: false,
-    customizeModal2: false,
-    paymentInfoModal: false,
-    thankYouModal: false,
+    casualShirts: false,
+    jackets: false,
+    sweaters: false,
+    dresses: false,
+    shorts: false,
+    skirts: false,
+    athleticWear: false,
+    tshirts: false,
+    pants: false,
+    tanks: false,
+    flannels: false,
+    jeans: false,
+    joggers_sweatpants: false,
   }
 
   render() {
@@ -90,7 +96,7 @@ export default class CustomizeClothes extends React.Component {
           <Text style={styles.numGarmentsInputLabel}>
             what kind of clothes do you prefer{"\n"}to receive? choose at least 3
           </Text>
-          <RadioForm
+          {/*}<RadioForm
             radio_props={casual_shirts}
             initial={0}
             formHorizontal={false}
@@ -98,7 +104,8 @@ export default class CustomizeClothes extends React.Component {
             buttonColor={'#2196f3'}
             animation={true}
             onPress={() => {}}
-          />
+          />*/}
+          <FullCheckBox checkboxChecked={this.state.casualShirts}/>
 
           {/*Radio buttons:
             https://www.npmjs.com/package/react-native-simple-radio-button*/}
