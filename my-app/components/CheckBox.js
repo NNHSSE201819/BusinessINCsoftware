@@ -15,6 +15,24 @@ const styles = StyleSheet.create({
   },
 })
 
+class MyForm extends Component {
+  state = {
+    checkboxChecked: false,
+  }
+  render() {
+    return (
+      <View>
+      <Checkbox isChecked={this.state.checkboxChecked}
+        onToggle={this.handleCheck}/>
+      </View>)
+  }
+  handleCheck = () => {
+    this.setState({checkboxChecked: !this.state.checkboxChecked})
+  }
+  {/*when including a class including a Checkbox component, make sure
+    to import at the top*/}
+}
+
 export default class Checkbox extends Component {
 
   static propTypes = {
