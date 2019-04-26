@@ -13,6 +13,7 @@ import {
   TouchableHighlight,
   Modal,
   TextInput,
+  Item,
   TouchableOpacity,
 } from 'react-native';
 import {StackNavigator} from 'react-navigation';
@@ -20,7 +21,6 @@ import {StackNavigator} from 'react-navigation';
 const styles = StyleSheet.create({
   container: {
     backgroundColor: '#ACA5A5',
-    flex: 1
   },
   iconImage: {
     width: 100,
@@ -32,10 +32,6 @@ const styles = StyleSheet.create({
   },
   divider: {
     height: 5,
-    backgroundColor: '#6F4141',
-  },
-  subdivider: {
-    height: 3,
     backgroundColor: '#6F4141',
   },
   profileHeader: {
@@ -82,7 +78,13 @@ const styles = StyleSheet.create({
     fontFamily: 'HelveticaNeue-Light',
   },
   textbox: {
-    backgroundColor: 'white'
+    backgroundColor: '#EFE9E9',
+    height: 50,
+    width: 300,
+    fontFamily: 'HelveticaNeue-Light',
+    fontSize: 20,
+    alignItems: 'center',
+    justifyContent: 'center'
   }
 });
 
@@ -99,11 +101,16 @@ export default class ProfileScreen extends Component {
       modalAnahita: false,
       modalLeilani: false,
       insertName: 'Insert Name',
+      password: ' ',
+      modalPassword: false,
       email: 'gracieliu@gmail.com',
       modalEmail: false,
       modalBirthday: false,
-      faveBrand: '',
+      faveBrand: 'Choose an option',
       modalBrand: false,
+      distress: 'Choose an option',
+      modalDistress: false,
+
     }
   }
 
@@ -118,11 +125,24 @@ export default class ProfileScreen extends Component {
   meetLeilani(visible) {
     this.setState({modalLeilani: visible});
   }
+  changePass(visible) {
+    this.setState({modalPassword: visible});
+  }
+  hidePassword(newPass) {
+    var newPassword = '';
+    for (var i=0; i < newPass.length; i++) {
+      newPassword+='*'
+    };
+    this.setState({password: newPassword});
+  }
   openEmail(visible) {
     this.setState({modalEmail: visible});
   }
   changeBrand(visible) {
     this.setState({modalBrand: visible});
+  }
+  distressPreference(visible) {
+    this.setState({modalDistress: visible});
   }
 
 
@@ -189,7 +209,7 @@ export default class ProfileScreen extends Component {
                 this.meetAnahita(!this.state.modalAnahita)}}
               style={{marginTop: 25, backgroundColor: '#0099cc'}}
             >
-              <Text style={styles.hideModalText}>Close</Text>
+              <Text style={styles.hideModalText}>Submit</Text>
             </TouchableHighlight>
           </View>
         </Modal>
@@ -223,22 +243,51 @@ export default class ProfileScreen extends Component {
         </Modal>
 
         <Modal
+          animationType="fade"
+          transparent={true}
+          visible={this.state.modalPassword}
+          onRequestClose={() => {
+            Alert.alert('Modal has been closed.');}}
+          style={{justifyContent: 'center', alignItems: 'center'}}
+        >
+          <View style={{position: 'absolute', justifyContent: 'center', alignItems: 'center', top: 0, bottom: 0, left: 0, right: 0}} />
+          <View style={{alignItems:'center', justifyContent:'center',backgroundColor: 'white', bottom: 10, left: 10, right: 10, marginBottom: 350, paddingBottom: 75, paddingTop: 75,position: 'absolute'}}>
+            <Text style={{fontFamily:'HelveticaNeue-Light',fontSize: 25}}>New Password</Text>
+            <TextInput
+              style ={styles.textbox}
+              onChangeText={(insertPass) => this.hidePassword(insertPass)}
+              value={this.state.password}
+              secureTextEntry= {true}
+              autoCapitalize= "none"
+            />
+            <TouchableHighlight
+              onPress={() => {
+                this.changePass(!this.state.modalPassword)}}
+              style={{marginTop: 25, backgroundColor:'#9d9595'}}
+            >
+              <Text style={styles.hideModalText}>Close</Text>
+            </TouchableHighlight>
+          </View>
+        </Modal>
+
+        <Modal
           animationType="slide"
           transparent={false}
           visible={this.state.modalEmail}
           onRequestClose={() => {
             Alert.alert('Modal has been closed.');}}>
           <View style={{flex:1, alignItems:'center', justifyContent:'center',backgroundColor: '#ACA5A5'}}>
-            <Text>Email</Text>
+            <Text style={{fontSize: 25, fontFamily: 'HelveticaNeue-Light'}}>Email</Text>
             <TextInput
               style ={styles.textbox}
               onChangeText={(insertEmail) => this.setState({email: insertEmail})}
               value={this.state.email}
+              autoCapitalize= "none"
             />
             <TouchableHighlight
               onPress={() => {
                 this.openEmail(!this.state.modalEmail)}}
-              style={{marginTop: 25, backgroundColor:'#008766'}}
+              style={{marginTop: 25, backgroundColor:'#9d9595'}}
             >
               <Text style={styles.hideModalText}>Close</Text>
             </TouchableHighlight>
@@ -252,15 +301,43 @@ export default class ProfileScreen extends Component {
           onRequestClose={() => {
             Alert.alert('Modal has been closed.');}}>
           <View style={{flex:1, alignItems:'center', justifyContent:'center',backgroundColor: '#ACA5A5'}}>
+            <Text style={{fontSize: 25, fontFamily: 'HelveticaNeue-Light'}}>Favorite Brand</Text>
             <TextInput
               style ={styles.textbox}
               onChangeText={(insertBrand) => this.setState({faveBrand: insertBrand})}
               value={this.state.faveBrand}
+              autoCapitalize= "none"
             />
             <TouchableHighlight
               onPress={() => {
                 this.changeBrand(!this.state.modalBrand)}}
-              style={{marginTop: 25, backgroundColor:'#008766'}}
+              style={{marginTop: 25, backgroundColor:'#9d9595'}}
+            >
+              <Text style={styles.hideModalText}>vv</Text>
+            </TouchableHighlight>
+          </View>
+        </Modal>
+
+        <Modal
+          animationType="slide"
+          transparent={false}
+          visible={this.state.modalDistress}
+          onRequestClose={() => {
+            Alert.alert('Modal has been closed.');}}>
+          <View style={{flex:1, alignItems:'center', justifyContent:'center',backgroundColor: '#ACA5A5'}}>
+            <Text style={{fontSize: 25, fontFamily: 'HelveticaNeue-Light'}}>Do you like distress items?</Text>
+            <Picker
+              selectedValue={this.state.distress}
+              style={{height: 50, width: 100}}
+              onValueChange={(itemValue, itemIndex) =>
+                this.setState({distress: itemValue})}
+            >
+              <Picker.Item label='Yes' value='Yes'/>
+              <Picker.Item label='No' value='No'/>
+            </Picker>
+            <TouchableHighlight
+              onPress={() => {this.distressPreference(!this.state.modalDistress)}}
+              style={{marginTop: 200, backgroundColor:'#9d9595'}}
             >
               <Text style={styles.hideModalText}>vv</Text>
             </TouchableHighlight>
@@ -304,6 +381,19 @@ export default class ProfileScreen extends Component {
           </TouchableHighlight>
         </View>
 
+        <View style={{flexDirection:'row', alignItems: 'center', height: 40, backgroundColor:'#b6afaf'}}>
+          <Text style ={styles.subtext}>Password</Text>
+          <TouchableHighlight
+            onPress={() => this.changePass(true)}
+            style ={{flexDirection: 'row', justifyContent: 'flex-end', flex: 1}}
+          >
+            <View style={{justifyContent: 'flex-end',flexDirection:'row', alignItems: 'flex-end'}}>
+              <Text style ={styles.subtext}>{this.state.password}</Text>
+              <Text style ={{fontSize: 20, fontFamily: 'HelveticaNeue-Light'}}>  > </Text>
+            </View>
+          </TouchableHighlight>
+        </View>
+
         <View style={styles.heading}>
           <TouchableOpacity
             onPress={() => {Alert.alert('Style Profile shows up here.')}}
@@ -326,6 +416,19 @@ export default class ProfileScreen extends Component {
           </TouchableHighlight>
         </View>
 
+        <View style={{flexDirection:'row', alignItems: 'center', height: 40, backgroundColor:'#b6afaf'}}>
+          <Text style ={styles.subtext}>Distress Items</Text>
+          <TouchableHighlight
+            onPress={() => this.distressPreference(true)}
+            style ={{flexDirection: 'row', justifyContent: 'flex-end', flex: 1}}
+          >
+            <View style={{justifyContent: 'flex-end',flexDirection:'row', alignItems: 'flex-end'}}>
+              <Text style ={styles.subtext}>{this.state.distress}</Text>
+              <Text style ={{fontSize: 20, fontFamily: 'HelveticaNeue-Light'}}>  > </Text>
+            </View>
+          </TouchableHighlight>
+        </View>
+
         <View style={styles.heading}>
           <TouchableOpacity
             onPress={() => {Alert.alert('Transaction History shows up here.')}}
@@ -335,7 +438,11 @@ export default class ProfileScreen extends Component {
           </TouchableOpacity>
         </View>
 
-        {/* New subset of information */}
+{/*
+
+New subset of information
+
+*/}
 
         <View style ={styles.divider}/>
 
