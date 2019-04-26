@@ -1,5 +1,6 @@
-import React, { Component, PropTypes } from 'react'
+import React, { Component} from 'react'
 import { View, StyleSheet, TouchableOpacity } from 'react-native'
+import PropTypes from 'prop-types';
 
 const styles = StyleSheet.create({
   box: {
@@ -29,8 +30,7 @@ class MyForm extends Component {
   handleCheck = () => {
     this.setState({checkboxChecked: !this.state.checkboxChecked})
   }
-  {/*when including a class including a Checkbox component, make sure
-    to import at the top*/}
+
 }
 
 export default class Checkbox extends Component {

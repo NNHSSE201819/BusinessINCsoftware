@@ -14,6 +14,7 @@ import RadioForm, {RadioButton, RadioButtonInput,
 import { CheckBox } from 'react-native-check-box';
 import { MonoText } from '../components/StyledText';
 import { WebBrowser } from 'expo';
+import { FullCheckBox } from '../components/FullCheckBox';
 
 var casual_shirts = [
   {label: 'casual shirts', value: 0 },
@@ -96,7 +97,7 @@ export default class CustomizeClothes extends React.Component {
           <Text style={styles.numGarmentsInputLabel}>
             what kind of clothes do you prefer{"\n"}to receive? choose at least 3
           </Text>
-          {/*}<RadioForm
+          <RadioForm
             radio_props={casual_shirts}
             initial={0}
             formHorizontal={false}
@@ -104,8 +105,8 @@ export default class CustomizeClothes extends React.Component {
             buttonColor={'#2196f3'}
             animation={true}
             onPress={() => {}}
-          />*/}
-          <FullCheckBox checkboxChecked={this.state.casualShirts}/>
+          />
+          {/*}<FullCheckBox checkboxChecked={this.state.casualShirts}/>*/}
 
           {/*Radio buttons:
             https://www.npmjs.com/package/react-native-simple-radio-button*/}
