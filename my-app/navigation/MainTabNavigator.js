@@ -6,24 +6,13 @@ import TabBarIcon from '../components/TabBarIcon';
 import HomeScreen from '../screens/HomeScreen';
 import LinksScreen from '../screens/LinksScreen';
 import SettingsScreen from '../screens/SettingsScreen';
-
-const HomeStack = createStackNavigator({
-  Home: HomeScreen,
-});
-
-HomeStack.navigationOptions = {
-  tabBarLabel: 'Home',
-  tabBarIcon: ({ focused }) => (
-    <TabBarIcon
-      focused={focused}
-      name={
-        Platform.OS === 'ios'
-          ? `ios-home`
-          : 'md-home'
-      }
-    />
-  ),
-};
+import StartSwapScreen from '../screens/StartSwapScreen';
+import SwapProgressScreen from '../screens/SwapProgressScreen';
+import CustomizeOne from '../screens/CustomizeOne';
+import CustomizeClothes from '../screens/CustomizeClothes';
+import CustomizeOccasion from '../screens/CustomizeOccasion';
+import PaymentInfo from '../screens/PaymentInfo';
+import SwapFinish from '../screens/SwapFinish';
 
 const ProfileStack = createStackNavigator({
   Profile: LinksScreen,
@@ -37,10 +26,17 @@ ProfileStack.navigationOptions = {
       name={Platform.OS === 'ios' ? 'ios-person' : 'md-person'}
     />
   ),
+  visible: true,
 };
 
 const StartSwapStack = createStackNavigator({
-  StartSwap: SettingsScreen,
+  StartSwap: StartSwapScreen,
+  SwapProgress: SwapProgressScreen,
+  CustomizeOne: CustomizeOne,
+  CustomizeClothes: CustomizeClothes,
+  CustomizeOccasion: CustomizeOccasion,
+  PaymentInfo: PaymentInfo,
+  SwapFinish: SwapFinish,
 });
 
 StartSwapStack.navigationOptions = {
@@ -51,6 +47,7 @@ StartSwapStack.navigationOptions = {
       name={Platform.OS === 'ios' ? 'ios-gift' : 'md-gift'}
     />
   ),
+  visible: true,
 };
 
 const InventoryStack = createStackNavigator({
@@ -69,26 +66,11 @@ InventoryStack.navigationOptions = {
       }
     />
   ),
-};
-
-const BrowsePrevStack = createStackNavigator({
-  BrowsePrev: SettingsScreen,
-});
-
-BrowsePrevStack.navigationOptions = {
-  tabBarLabel: 'Previous',
-  tabBarIcon: ({ focused }) => (
-    <TabBarIcon
-      focused={focused}
-      name={Platform.OS === 'ios' ? 'ios-return-left' : 'md-return-left'}
-    />
-  ),
+  visible: true,
 };
 
 export default createBottomTabNavigator({
-  HomeStack,
   ProfileStack,
   StartSwapStack,
   InventoryStack,
-  BrowsePrevStack,
 });
