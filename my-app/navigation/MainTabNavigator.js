@@ -6,25 +6,14 @@ import TabBarIcon from '../components/TabBarIcon';
 import HomeScreen from '../screens/HomeScreen';
 import LinksScreen from '../screens/LinksScreen';
 import SettingsScreen from '../screens/SettingsScreen';
+import StartSwapScreen from '../screens/StartSwapScreen';
+import SwapProgressScreen from '../screens/SwapProgressScreen';
+import CustomizeOne from '../screens/CustomizeOne';
+import CustomizeClothes from '../screens/CustomizeClothes';
+import CustomizeOccasion from '../screens/CustomizeOccasion';
+import PaymentInfo from '../screens/PaymentInfo';
+import SwapFinish from '../screens/SwapFinish';
 import ProfileScreen from '../screens/ProfileScreen';
-
-const HomeStack = createStackNavigator({
-  Home: HomeScreen,
-});
-
-HomeStack.navigationOptions = {
-  tabBarLabel: 'Home',
-  tabBarIcon: ({ focused }) => (
-    <TabBarIcon
-      focused={focused}
-      name={
-        Platform.OS === 'ios'
-          ? `ios-home`
-          : 'md-home'
-      }
-    />
-  ),
-};
 
 const ProfileStack = createStackNavigator({
   Profile: ProfileScreen,
@@ -38,10 +27,17 @@ ProfileStack.navigationOptions = {
       name={Platform.OS === 'ios' ? 'ios-person' : 'md-person'}
     />
   ),
+  visible: true,
 };
 
 const StartSwapStack = createStackNavigator({
-  StartSwap: SettingsScreen,
+  StartSwap: StartSwapScreen,
+  SwapProgress: SwapProgressScreen,
+  CustomizeOne: CustomizeOne,
+  CustomizeClothes: CustomizeClothes,
+  CustomizeOccasion: CustomizeOccasion,
+  PaymentInfo: PaymentInfo,
+  SwapFinish: SwapFinish,
 });
 
 StartSwapStack.navigationOptions = {
@@ -52,6 +48,7 @@ StartSwapStack.navigationOptions = {
       name={Platform.OS === 'ios' ? 'ios-gift' : 'md-gift'}
     />
   ),
+  visible: true,
 };
 
 const InventoryStack = createStackNavigator({
@@ -70,26 +67,31 @@ InventoryStack.navigationOptions = {
       }
     />
   ),
+  visible: true,
 };
 
-const BrowsePrevStack = createStackNavigator({
-  BrowsePrev: SettingsScreen,
+const PointsStack = createStackNavigator({
+  GetPoints: HomeScreen,
 });
 
-BrowsePrevStack.navigationOptions = {
-  tabBarLabel: 'Previous',
+PointsStack.navigationOptions = {
+  tabBarLabel: 'Get Points',
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}
-      name={Platform.OS === 'ios' ? 'ios-return-left' : 'md-return-left'}
+      name={
+        Platform.OS === 'ios'
+          ? `ios-camera`
+          : 'md-camera'
+      }
     />
   ),
+  visible: true,
 };
 
 export default createBottomTabNavigator({
-  HomeStack,
   ProfileStack,
   StartSwapStack,
   InventoryStack,
-  BrowsePrevStack,
+  PointsStack,
 });
