@@ -48,11 +48,19 @@ export default class CustomizeOne extends React.Component {
               underlineColorAndroid = "transparent"
               placeholderTextColor = "#A9A9A9"
               autoCapitalize = "none"/>
-          <View style={{alignItems: 'flex-end'}}>
-            <TouchableOpacity
-              onPress={() => {this.props.navigation.navigate('CustomizeClothes');}}>
-              <Text style={styles.nextText}>next >> </Text>
-            </TouchableOpacity>
+          <View style={{flexDirection: 'row', flex: 2}}>
+            <View style={{alignItems: 'flex-start', flex: 2}}>
+              <TouchableOpacity
+                onPress={() => {this.props.navigation.navigate('StartSwap');}}>
+                <Text style={styles.nextText}>back</Text>
+              </TouchableOpacity>
+            </View>
+            <View style={{alignItems: 'flex-end'}}>
+              <TouchableOpacity
+                onPress={() => {this.props.navigation.navigate('MyCart');}}>
+                <Text style={styles.nextText}>next</Text>
+              </TouchableOpacity>
+            </View>
           </View>
         </ScrollView>
       </View>
@@ -82,6 +90,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     backgroundColor: '#ACA5A5',
+    paddingTop: 75,
   },
   container: {
     flex: 1,

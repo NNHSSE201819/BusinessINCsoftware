@@ -33,7 +33,7 @@ export default class SwapProgressScreen extends React.Component {
         </View>
         <View style={{alignItems: 'center'}}>
           <TouchableHighlight onPress={this.startSwapPress}
-          underlayColor="white">
+          underlayColor="none">
             <View style={styles.button}>
               <Text style={styles.buttonText}>Start Swap!</Text>
             </View>
@@ -74,8 +74,8 @@ export default class SwapProgressScreen extends React.Component {
 
 const styles = StyleSheet.create({
   contentContainer: {
-    flex: 1,
-    justifyContent: 'center',
+    marginTop: 100,
+    justifyContent: 'flex-start',
     backgroundColor: '#ACA5A5',
   },
   container: {

@@ -32,7 +32,7 @@ export default class StartSwapScreen extends React.Component {
       <View style={styles.container}>
           <ScrollView contentContainerStyle={styles.contentContainer}>
             <Text style={styles.progressBarTitleText}>START SWAP</Text>
-            <Text style={styles.numGarmentsInputLabel}>number of garments:</Text>
+            <Text style={styles.numGarmentsInputLabel}>number of points to redeem:</Text>
             <View style={{alignItems: 'center'}}>
               <TextInput style = {styles.inputSmall}
                   underlineColorAndroid = "transparent"
@@ -63,7 +63,7 @@ export default class StartSwapScreen extends React.Component {
             <View style={{alignItems: 'flex-end'}}>
               <TouchableOpacity
                 onPress={() => {this.props.navigation.navigate('CustomizeOne');}}>
-                <Text style={styles.nextText}>next >> </Text>
+                <Text style={styles.nextText}>next</Text>
               </TouchableOpacity>
             </View>
           </ScrollView>

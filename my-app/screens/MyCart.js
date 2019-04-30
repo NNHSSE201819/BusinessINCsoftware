@@ -16,59 +16,8 @@ import { MonoText } from '../components/StyledText';
 import { WebBrowser } from 'expo';
 import { FullCheckBox } from '../components/FullCheckBox';
 
-var casual_shirts = [
-  {label: 'casual shirts', value: 0 },
-  {/*{label: 'jackets', value: 0 },
-  {label: 'sweaters', value: 0 },
-  {label: 'dresses', value: 0 },
-  {label: 'shorts', value: 0 },
-  {label: 'skirts', value: 0 },
-  {label: 'athletic wear', value: 0 },
-  {label: 'T-shirts', value: 0 },
-  {label: 'pants', value: 0 },
-  {label: 'tanks', value: 0 },
-  {label: 'flannel shirts', value: 0 },
-  {label: 'jeans', value: 0 },
-  {label: 'joggers/sweatpants', value: 0 }*/}
-];
-var jackets = [
-  {label: 'jackets', value: 0 }
-];
-var sweaters = [
-  {label: 'sweaters', value: 0 }
-];
-var dresses = [
-  {label: 'dresses', value: 0 }
-];
-var shorts = [
-  {label: 'shorts', value: 0 }
-];
-var skirts = [
-  {label: 'skirts', value: 0 }
-];
-var athletic_wear = [
-  {label: 'athletic wear', value: 0 }
-];
-var t_shirts = [
-  {label: 'T-shirts', value: 0 }
-];
-var pants = [
-  {label: 'pants', value: 0 }
-];
-var tanks = [
-  {label: 'tanks', value: 0 }
-];
-var flannel_shirts = [
-  {label: 'flannel shirts', value: 0 }
-];
-var jeans = [
-  {label: 'jeans', value: 0 }
-];
-var joggers_sweatpants = [
-  {label: 'joggers/sweatpants', value: 0 }
-];
 
-export default class CustomizeClothes extends React.Component {
+export default class MyCart extends React.Component {
   static navigationOptions = {
     header: null,
   };
@@ -93,28 +42,21 @@ export default class CustomizeClothes extends React.Component {
     return (
       <View style={styles.container}>
         <ScrollView contentContainerStyle={styles.contentContainer}>
-          <Text style={styles.progressBarTitleText}>customize</Text>
-          <Text style={styles.numGarmentsInputLabel}>
-            what kind of clothes do you prefer{"\n"}to receive? choose at least 3
-          </Text>
-          <RadioForm
-            radio_props={casual_shirts}
-            initial={0}
-            formHorizontal={false}
-            labelHorizontal={true}
-            buttonColor={'#2196f3'}
-            animation={true}
-            onPress={() => {}}
-          />
-          {/*}<FullCheckBox checkboxChecked={this.state.casualShirts}/>*/}
+          <Text style={styles.progressBarTitleText}>my cart</Text>
 
-          {/*Radio buttons:
-            https://www.npmjs.com/package/react-native-simple-radio-button*/}
-          <View style={{alignItems: 'flex-end', justifyContent: 'flex-end'}}>
-            <TouchableOpacity
-              onPress={() => {this.props.navigation.navigate('CustomizeOccasion');}}>
-              <Text style={styles.nextText}>next >> </Text>
-            </TouchableOpacity>
+          <View style={{flexDirection: 'row', flex: 2}}>
+            <View style={{alignItems: 'flex-start', flex: 2}}>
+              <TouchableOpacity
+                onPress={() => {this.props.navigation.navigate('CustomizeOne');}}>
+                <Text style={styles.nextText}>back</Text>
+              </TouchableOpacity>
+            </View>
+            <View style={{alignItems: 'flex-end'}}>
+              <TouchableOpacity
+                onPress={() => {this.props.navigation.navigate('SwapProgress');}}>
+                <Text style={styles.nextText}>next</Text>
+              </TouchableOpacity>
+            </View>
           </View>
         </ScrollView>
       </View>
@@ -173,7 +115,6 @@ const styles = StyleSheet.create({
     fontSize: 24,
     paddingTop: 30,
     fontFamily: 'Helvetica',
-    marginRight: 40
   },
   inputSmall: {
     height: 43,

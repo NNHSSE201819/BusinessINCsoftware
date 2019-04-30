@@ -9,7 +9,7 @@ import SettingsScreen from '../screens/SettingsScreen';
 import StartSwapScreen from '../screens/StartSwapScreen';
 import SwapProgressScreen from '../screens/SwapProgressScreen';
 import CustomizeOne from '../screens/CustomizeOne';
-import CustomizeClothes from '../screens/CustomizeClothes';
+import MyCart from '../screens/MyCart';
 import CustomizeOccasion from '../screens/CustomizeOccasion';
 import PaymentInfo from '../screens/PaymentInfo';
 import SwapFinish from '../screens/SwapFinish';
@@ -33,7 +33,7 @@ const StartSwapStack = createStackNavigator({
   StartSwap: StartSwapScreen,
   SwapProgress: SwapProgressScreen,
   CustomizeOne: CustomizeOne,
-  CustomizeClothes: CustomizeClothes,
+  MyCart: MyCart,
   CustomizeOccasion: CustomizeOccasion,
   PaymentInfo: PaymentInfo,
   SwapFinish: SwapFinish,
