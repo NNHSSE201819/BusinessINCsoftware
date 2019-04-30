@@ -21,6 +21,7 @@ import {StackNavigator} from 'react-navigation';
 const styles = StyleSheet.create({
   container: {
     backgroundColor: '#ACA5A5',
+    marginBottom: 100
   },
   iconImage: {
     width: 100,
@@ -100,16 +101,12 @@ export default class ProfileScreen extends Component {
       modalMona: false,
       modalAnahita: false,
       modalLeilani: false,
-      insertName: 'Insert Name',
+      insertName: 'Jane Doe',
       password: ' ',
       modalPassword: false,
-      email: 'gracieliu@gmail.com',
+      email: 'example@gmail.com',
       modalEmail: false,
       modalBirthday: false,
-      faveBrand: 'Choose an option',
-      modalBrand: false,
-      distress: 'Choose an option',
-      modalDistress: false,
 
     }
   }
@@ -137,12 +134,6 @@ export default class ProfileScreen extends Component {
   }
   openEmail(visible) {
     this.setState({modalEmail: visible});
-  }
-  changeBrand(visible) {
-    this.setState({modalBrand: visible});
-  }
-  distressPreference(visible) {
-    this.setState({modalDistress: visible});
   }
 
 
@@ -294,56 +285,6 @@ export default class ProfileScreen extends Component {
           </View>
         </Modal>
 
-        <Modal
-          animationType="slide"
-          transparent={false}
-          visible={this.state.modalBrand}
-          onRequestClose={() => {
-            Alert.alert('Modal has been closed.');}}>
-          <View style={{flex:1, alignItems:'center', justifyContent:'center',backgroundColor: '#ACA5A5'}}>
-            <Text style={{fontSize: 25, fontFamily: 'HelveticaNeue-Light'}}>Favorite Brand</Text>
-            <TextInput
-              style ={styles.textbox}
-              onChangeText={(insertBrand) => this.setState({faveBrand: insertBrand})}
-              value={this.state.faveBrand}
-              autoCapitalize= "none"
-            />
-            <TouchableHighlight
-              onPress={() => {
-                this.changeBrand(!this.state.modalBrand)}}
-              style={{marginTop: 25, backgroundColor:'#9d9595'}}
-            >
-              <Text style={styles.hideModalText}>vv</Text>
-            </TouchableHighlight>
-          </View>
-        </Modal>
-
-        <Modal
-          animationType="slide"
-          transparent={false}
-          visible={this.state.modalDistress}
-          onRequestClose={() => {
-            Alert.alert('Modal has been closed.');}}>
-          <View style={{flex:1, alignItems:'center', justifyContent:'center',backgroundColor: '#ACA5A5'}}>
-            <Text style={{fontSize: 25, fontFamily: 'HelveticaNeue-Light'}}>Do you like distress items?</Text>
-            <Picker
-              selectedValue={this.state.distress}
-              style={{height: 50, width: 100}}
-              onValueChange={(itemValue, itemIndex) =>
-                this.setState({distress: itemValue})}
-            >
-              <Picker.Item label='Yes' value='Yes'/>
-              <Picker.Item label='No' value='No'/>
-            </Picker>
-            <TouchableHighlight
-              onPress={() => {this.distressPreference(!this.state.modalDistress)}}
-              style={{marginTop: 200, backgroundColor:'#9d9595'}}
-            >
-              <Text style={styles.hideModalText}>vv</Text>
-            </TouchableHighlight>
-          </View>
-        </Modal>
-
 {/*
 
 
@@ -356,7 +297,7 @@ export default class ProfileScreen extends Component {
         <View style ={styles.profileHeader}>
           <Image
             style ={styles.iconImage}
-            source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/style.png')}/>
+            source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/profile_image.jpg')}/>
           <Text style ={styles.textMain}>
             {this.state.insertName}
           </Text>
@@ -403,32 +344,6 @@ export default class ProfileScreen extends Component {
           </TouchableOpacity>
         </View>
 
-        <View style={{flexDirection:'row', alignItems: 'center', height: 40, backgroundColor:'#b6afaf'}}>
-          <Text style ={styles.subtext}>Favorite Brand</Text>
-          <TouchableHighlight
-            onPress={() => this.changeBrand(true)}
-            style ={{flexDirection: 'row', justifyContent: 'flex-end', flex: 1}}
-          >
-            <View style={{justifyContent: 'flex-end',flexDirection:'row', alignItems: 'flex-end'}}>
-              <Text style ={styles.subtext}>{this.state.faveBrand}</Text>
-              <Text style ={{fontSize: 20, fontFamily: 'HelveticaNeue-Light'}}>  > </Text>
-            </View>
-          </TouchableHighlight>
-        </View>
-
-        <View style={{flexDirection:'row', alignItems: 'center', height: 40, backgroundColor:'#b6afaf'}}>
-          <Text style ={styles.subtext}>Distress Items</Text>
-          <TouchableHighlight
-            onPress={() => this.distressPreference(true)}
-            style ={{flexDirection: 'row', justifyContent: 'flex-end', flex: 1}}
-          >
-            <View style={{justifyContent: 'flex-end',flexDirection:'row', alignItems: 'flex-end'}}>
-              <Text style ={styles.subtext}>{this.state.distress}</Text>
-              <Text style ={{fontSize: 20, fontFamily: 'HelveticaNeue-Light'}}>  > </Text>
-            </View>
-          </TouchableHighlight>
-        </View>
-
         <View style={styles.heading}>
           <TouchableOpacity
             onPress={() => {Alert.alert('Transaction History shows up here.')}}
@@ -456,7 +371,7 @@ New subset of information
         </View>
 
         <View>
-          <Text style ={styles.textMain}>Meet Your Stylists</Text>
+          <Text style ={styles.textMain}>Choose Your Stylists</Text>
         </View>
 
         <View style={{flexDirection:'row', justifyContent: 'center', marginTop: 10}}>
@@ -490,6 +405,8 @@ New subset of information
               <Text style={styles.textLittle}>Leilani</Text>
           </TouchableOpacity>
         </View>
+
+        <View style={{height: 100, backgroundColor: '#ACA5A5'}}/>
 
       </ScrollView>
     );
