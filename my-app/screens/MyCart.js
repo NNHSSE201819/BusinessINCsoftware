@@ -8,6 +8,7 @@ import { ScrollView,
   TouchableOpacity,
   Text,
   Modal,
+  Image,
   TextInput, } from 'react-native';
 import RadioForm, {RadioButton, RadioButtonInput,
   RadioButtonLabel} from 'react-native-simple-radio-button';
@@ -43,7 +44,25 @@ export default class MyCart extends React.Component {
       <View style={styles.container}>
         <ScrollView contentContainerStyle={styles.contentContainer}>
           <Text style={styles.progressBarTitleText}>my cart</Text>
-
+          <View style={{height:10}} />
+          <View style={styles.topDivider} />
+          <View style={{height:30}} />
+          <View style={{flexDirection: 'row', flex: 2}}>
+            <Image
+              style ={styles.image}
+              source={require('../assets/images/myCart1.jpg')}
+            />
+            <View style={{width:30}} />
+            <Text style={styles.nextText}>points: 300</Text>
+          </View>
+          <View style={{flexDirection: 'row', flex: 2}}>
+            <Image
+              style ={styles.image}
+              source={require('../assets/images/myCart2.jpg')}
+            />
+            <View style={{width:30}} />
+            <Text style={styles.nextText}>points: 550</Text>
+          </View>
           <View style={{flexDirection: 'row', flex: 2}}>
             <View style={{alignItems: 'flex-start', flex: 2}}>
               <TouchableOpacity
@@ -74,8 +93,8 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     backgroundColor: '#ACA5A5',
-    paddingLeft: 20,
-    paddingRight: 20
+    paddingLeft: 40,
+    paddingRight: 40
   },
   progressBarTitleText: {
     paddingTop: 10,
@@ -151,5 +170,14 @@ const styles = StyleSheet.create({
     padding: 20,
     color: 'white',
     fontSize: 20,
+  },
+  image: {
+    width: 150,
+    height: 150,
+    marginBottom: 30,
+  },
+  topDivider: {
+    height: 10,
+    backgroundColor: '#6F4141'
   }
 });
