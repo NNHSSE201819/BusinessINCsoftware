@@ -14,6 +14,7 @@ import CustomizeOccasion from '../screens/CustomizeOccasion';
 import PaymentInfo from '../screens/PaymentInfo';
 import SwapFinish from '../screens/SwapFinish';
 import ProfileScreen from '../screens/ProfileScreen';
+import GetPointsScreen from '../screens/GetPointsScreen';
 
 const ProfileStack = createStackNavigator({
   Profile: ProfileScreen,
@@ -71,7 +72,7 @@ InventoryStack.navigationOptions = {
 };
 
 const PointsStack = createStackNavigator({
-  GetPoints: HomeScreen,
+  GetPoints: GetPointsScreen,
 });
 
 PointsStack.navigationOptions = {
