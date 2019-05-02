@@ -29,59 +29,52 @@ export default class StartSwapScreen extends React.Component {
 
   render() {
     return (
-      <View style={styles.container}>
-          <ScrollView contentContainerStyle={styles.contentContainer}>
-            <Text style={styles.progressBarTitleText}>START SWAP</Text>
-            <Text style={styles.numGarmentsInputLabel}>number of points to redeem:</Text>
-            <View style={{alignItems: 'center'}}>
-              <TextInput style = {styles.inputSmall}
-                  underlineColorAndroid = "transparent"
-                  placeholderTextColor = "#A9A9A9"
-                  autoCapitalize = "none"
-                  />
-            </View>
-            <Text style={styles.darkTextInputLabel}>name</Text>
-            <TextInput style = {styles.input}
-                 underlineColorAndroid = "transparent"
-                 placeholderTextColor = "#A9A9A9"
-                 autoCapitalize = "none"/>
-            <Text style={styles.darkTextInputLabel}>address</Text>
-            <TextInput style = {styles.input}
+        <ScrollView contentContainerStyle={styles.contentContainer}>
+          <Text style={styles.progressBarTitleText}>START SWAP</Text>
+          <Text style={styles.numGarmentsInputLabel}>number of points to redeem:</Text>
+          <View style={{alignItems: 'center'}}>
+            <TextInput style = {styles.inputSmall}
                 underlineColorAndroid = "transparent"
                 placeholderTextColor = "#A9A9A9"
-                autoCapitalize = "none"/>
-            <Text style={styles.darkTextInputLabel}>city</Text>
-            <TextInput style = {styles.input}
-                underlineColorAndroid = "transparent"
-                placeholderTextColor = "#A9A9A9"
-                autoCapitalize = "none"/>
-            <Text style={styles.darkTextInputLabel}>zip code</Text>
-            <TextInput style = {styles.input}
-                underlineColorAndroid = "transparent"
-                placeholderTextColor = "#A9A9A9"
-                autoCapitalize = "none"/>
-            <View style={{alignItems: 'flex-end'}}>
-              <TouchableOpacity
-                onPress={() => {this.props.navigation.navigate('CustomizeOne');}}>
-                <Text style={styles.nextText}>next</Text>
-              </TouchableOpacity>
-            </View>
-          </ScrollView>
-        </View>
+                autoCapitalize = "none"
+                />
+          </View>
+          <Text style={styles.darkTextInputLabel}>name</Text>
+          <TextInput style = {styles.input}
+               underlineColorAndroid = "transparent"
+               placeholderTextColor = "#A9A9A9"
+               autoCapitalize = "none"/>
+          <Text style={styles.darkTextInputLabel}>address</Text>
+          <TextInput style = {styles.input}
+              underlineColorAndroid = "transparent"
+              placeholderTextColor = "#A9A9A9"
+              autoCapitalize = "none"/>
+          <Text style={styles.darkTextInputLabel}>city</Text>
+          <TextInput style = {styles.input}
+              underlineColorAndroid = "transparent"
+              placeholderTextColor = "#A9A9A9"
+              autoCapitalize = "none"/>
+          <Text style={styles.darkTextInputLabel}>zip code</Text>
+          <TextInput style = {styles.input}
+              underlineColorAndroid = "transparent"
+              placeholderTextColor = "#A9A9A9"
+              autoCapitalize = "none"/>
+          <View style={{alignItems: 'flex-end'}}>
+            <TouchableOpacity
+              onPress={() => {this.props.navigation.navigate('CustomizeOne');}}>
+              <Text style={styles.nextText}>next</Text>
+            </TouchableOpacity>
+          </View>
+        </ScrollView>
     );
   }
 }
 
 const styles = StyleSheet.create({
   contentContainer: {
-    flex: 1,
     justifyContent: 'center',
     backgroundColor: '#ACA5A5',
-  },
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    backgroundColor: '#ACA5A5',
+    paddingTop: 75,
     paddingLeft: 20,
     paddingRight: 20
   },

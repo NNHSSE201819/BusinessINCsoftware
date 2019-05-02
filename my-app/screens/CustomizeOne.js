@@ -25,45 +25,43 @@ export default class CustomizeOne extends React.Component {
 
   render() {
     return (
-      <View style={styles.container}>
-        <ScrollView contentContainerStyle={styles.contentContainer}>
-          <View style={{alignItems: 'flex-start'}}>
-            <Text style={styles.darkTextInputLabel}>CHOOSE A STYLIST:</Text>
+      <ScrollView contentContainerStyle={styles.contentContainer}>
+        <View style={{alignItems: 'flex-start'}}>
+          <Text style={styles.darkTextInputLabel}>CHOOSE A STYLIST:</Text>
+          <TouchableOpacity
+            onPress={this.chooseMona}>
+            {this.state.choseMona == true? <Text style={styles.selectedText}>Mona Fang</Text>: <Text style={styles.darkTextInputLabel}>Mona Fang</Text>}
+          </TouchableOpacity>
+          <TouchableOpacity
+            onPress={this.chooseAnahita}>
+            {this.state.choseAnahita == true? <Text style={styles.selectedText}>Anahita Tewatia</Text>: <Text style={styles.darkTextInputLabel}>Anahita Tewatia</Text>}
+          </TouchableOpacity>
+          <TouchableOpacity
+            onPress={this.chooseLeilani}>
+            {this.state.choseLeilani == true? <Text style={styles.selectedText}>Leilani Salemme{"\n"}</Text>: <Text style={styles.darkTextInputLabel}>Leilani Salemme{"\n"}</Text>}
+          </TouchableOpacity>
+        </View>
+        <Text style={styles.progressBarTitleText}>customize</Text>
+        <Text style={styles.numGarmentsInputLabel}>tell us any special requests that you have</Text>
+        <TextInput style = {styles.input} multiline = {true}
+            underlineColorAndroid = "transparent"
+            placeholderTextColor = "#A9A9A9"
+            autoCapitalize = "none"/>
+        <View style={{flexDirection: 'row', flex: 2}}>
+          <View style={{alignItems: 'flex-start', flex: 2}}>
             <TouchableOpacity
-              onPress={this.chooseMona}>
-              {this.state.choseMona == true? <Text style={styles.selectedText}>Mona Fang</Text>: <Text style={styles.darkTextInputLabel}>Mona Fang</Text>}
-            </TouchableOpacity>
-            <TouchableOpacity
-              onPress={this.chooseAnahita}>
-              {this.state.choseAnahita == true? <Text style={styles.selectedText}>Anahita Tewatia</Text>: <Text style={styles.darkTextInputLabel}>Anahita Tewatia</Text>}
-            </TouchableOpacity>
-            <TouchableOpacity
-              onPress={this.chooseLeilani}>
-              {this.state.choseLeilani == true? <Text style={styles.selectedText}>Leilani Salemme{"\n"}</Text>: <Text style={styles.darkTextInputLabel}>Leilani Salemme{"\n"}</Text>}
+              onPress={() => {this.props.navigation.navigate('StartSwap');}}>
+              <Text style={styles.nextText}>back</Text>
             </TouchableOpacity>
           </View>
-          <Text style={styles.progressBarTitleText}>customize</Text>
-          <Text style={styles.numGarmentsInputLabel}>tell us any special requests that you{"\n"}have</Text>
-          <TextInput style = {styles.input} multiline = {true}
-              underlineColorAndroid = "transparent"
-              placeholderTextColor = "#A9A9A9"
-              autoCapitalize = "none"/>
-          <View style={{flexDirection: 'row', flex: 2}}>
-            <View style={{alignItems: 'flex-start', flex: 2}}>
-              <TouchableOpacity
-                onPress={() => {this.props.navigation.navigate('StartSwap');}}>
-                <Text style={styles.nextText}>back</Text>
-              </TouchableOpacity>
-            </View>
-            <View style={{alignItems: 'flex-end'}}>
-              <TouchableOpacity
-                onPress={() => {this.props.navigation.navigate('MyCart');}}>
-                <Text style={styles.nextText}>next</Text>
-              </TouchableOpacity>
-            </View>
+          <View style={{alignItems: 'flex-end'}}>
+            <TouchableOpacity
+              onPress={() => {this.props.navigation.navigate('MyCart');}}>
+              <Text style={styles.nextText}>next</Text>
+            </TouchableOpacity>
           </View>
-        </ScrollView>
-      </View>
+        </View>
+      </ScrollView>
     );
   }
 
@@ -87,15 +85,9 @@ export default class CustomizeOne extends React.Component {
 
 const styles = StyleSheet.create({
   contentContainer: {
-    flex: 1,
     justifyContent: 'center',
     backgroundColor: '#ACA5A5',
     paddingTop: 75,
-  },
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    backgroundColor: '#ACA5A5',
     paddingLeft: 20,
     paddingRight: 20
   },

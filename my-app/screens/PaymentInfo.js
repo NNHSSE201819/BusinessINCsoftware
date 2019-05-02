@@ -30,58 +30,59 @@ export default class PaymentInfo extends React.Component {
 
   render() {
     return (
-      <View style={styles.container}>
-        <ScrollView contentContainerStyle={styles.contentContainer}>
-          <Text style={styles.progressBarTitleText}>payment info</Text>
-          <Text style={styles.lightTextInputLabel}>Credit Card</Text>
-          <TextInput style = {styles.input}
-               underlineColorAndroid = "transparent"
-               placeholderTextColor = "#A9A9A9"
-               autoCapitalize = "none"/>
-          <Text style={styles.lightTextInputLabel}>CVV</Text>
-          <TextInput style = {styles.input}
-              underlineColorAndroid = "transparent"
-              placeholderTextColor = "#A9A9A9"
-              autoCapitalize = "none"/>
-          <Text style={styles.lightTextInputLabel}>Date</Text>
-          <TextInput style = {styles.input}
-              underlineColorAndroid = "transparent"
-              placeholderTextColor = "#A9A9A9"
-              autoCapitalize = "none"/>
-          <Text style={styles.lightTextInputLabel}>Name on Card</Text>
-          <TextInput style = {styles.input}
-              underlineColorAndroid = "transparent"
-              placeholderTextColor = "#A9A9A9"
-              autoCapitalize = "none"/>
-          <Text style={styles.lightTextInputLabel}>Zip Code</Text>
-          <TextInput style = {styles.input}
-              underlineColorAndroid = "transparent"
-              placeholderTextColor = "#A9A9A9"
-              autoCapitalize = "none"/>
+      <ScrollView contentContainerStyle={styles.contentContainer}>
+        <Text style={styles.progressBarTitleText}>payment info</Text>
+        <Text style={styles.lightTextInputLabel}>Credit Card</Text>
+        <TextInput style = {styles.input}
+             underlineColorAndroid = "transparent"
+             placeholderTextColor = "#A9A9A9"
+             autoCapitalize = "none"/>
+        <Text style={styles.lightTextInputLabel}>CVV</Text>
+        <TextInput style = {styles.input}
+            underlineColorAndroid = "transparent"
+            placeholderTextColor = "#A9A9A9"
+            autoCapitalize = "none"/>
+        <Text style={styles.lightTextInputLabel}>Date</Text>
+        <TextInput style = {styles.input}
+            underlineColorAndroid = "transparent"
+            placeholderTextColor = "#A9A9A9"
+            autoCapitalize = "none"/>
+        <Text style={styles.lightTextInputLabel}>Name on Card</Text>
+        <TextInput style = {styles.input}
+            underlineColorAndroid = "transparent"
+            placeholderTextColor = "#A9A9A9"
+            autoCapitalize = "none"/>
+        <Text style={styles.lightTextInputLabel}>Zip Code</Text>
+        <TextInput style = {styles.input}
+            underlineColorAndroid = "transparent"
+            placeholderTextColor = "#A9A9A9"
+            autoCapitalize = "none"/>
+        <View style={{flexDirection: 'row', flex: 2}}>
+          <View style={{alignItems: 'flex-start', flex: 2}}>
+            <TouchableOpacity
+              onPress={() => {this.props.navigation.navigate('MyCart');}}>
+              <Text style={styles.nextText}>back</Text>
+            </TouchableOpacity>
+          </View>
           <View style={{alignItems: 'flex-end'}}>
             <TouchableOpacity
               onPress={() => {this.props.navigation.navigate('SwapFinish');}}>
-              <Text style={styles.nextText}>next >> </Text>
+              <Text style={styles.nextText}>submit!</Text>
             </TouchableOpacity>
           </View>
-        </ScrollView>
-      </View>
+        </View>
+      </ScrollView>
     );
   }
 }
 
 const styles = StyleSheet.create({
   contentContainer: {
-    flex: 1,
     justifyContent: 'center',
     backgroundColor: '#ACA5A5',
-  },
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    backgroundColor: '#ACA5A5',
-    paddingLeft: 10,
-    paddingRight: 10
+    paddingTop: 75,
+    paddingLeft: 20,
+    paddingRight: 20
   },
   progressBarTitleText: {
     paddingTop: 10,
@@ -120,7 +121,6 @@ const styles = StyleSheet.create({
     fontSize: 24,
     paddingTop: 30,
     fontFamily: 'Helvetica',
-    marginRight: 40
   },
   inputSmall: {
     height: 43,

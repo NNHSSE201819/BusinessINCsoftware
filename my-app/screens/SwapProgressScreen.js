@@ -7,9 +7,13 @@ import { ScrollView,
   TouchableHighlight,
   Text,
   Modal,
-  TextInput, } from 'react-native';
+  TextInput,
+  Dimensions } from 'react-native';
 import { MonoText } from '../components/StyledText';
 import { WebBrowser } from 'expo';
+import TabBarIcon from '../components/TabBarIcon';
+import { Platform } from 'react-native';
+import { Icon } from 'expo';
 
 export default class SwapProgressScreen extends React.Component {
   static navigationOptions = {
@@ -23,21 +27,21 @@ export default class SwapProgressScreen extends React.Component {
 
   render() {
     return (
-      <View style={styles.container}>
+      <View style={styles.contentContainer}>
+        <View style={{alignItems: 'flex-start'}}>
+          <Button
+            onPress={this.startSwapPress}
+            title="Refresh"
+            color="#383434"
+          />
+        </View>
+        <View style={{height:30}} />
         <Text style={styles.progressBarTitleText}>Swap Progress</Text>
         <View style={styles.progressBarView}>
           {this.state.buttonClicked == 1? <View style={styles.progressBar1View} />: null}
           {this.state.buttonClicked == 2? <View style={styles.progressBar2View} />: null}
           {this.state.buttonClicked == 3? <View style={styles.progressBar3View} />: null}
           {this.state.buttonClicked >= 4? <View style={styles.progressBar4View} />: null}
-        </View>
-        <View style={{alignItems: 'center'}}>
-          <TouchableHighlight onPress={this.startSwapPress}
-          underlayColor="white">
-            <View style={styles.button}>
-              <Text style={styles.buttonText}>Start Swap!</Text>
-            </View>
-          </TouchableHighlight>
         </View>
         <View>
           {this.updateProgressDetails}
@@ -65,23 +69,16 @@ export default class SwapProgressScreen extends React.Component {
       console.log(this.state.progressSteps[i]);
     }
     return(
-      <View>
         {text}
-      </View>
     )
   }
 }
 
 const styles = StyleSheet.create({
   contentContainer: {
-    marginTop: 100,
-    justifyContent: 'flex-start',
-    backgroundColor: '#ACA5A5',
-  },
-  container: {
     flex: 1,
-    justifyContent: 'center',
     backgroundColor: '#ACA5A5',
+    paddingTop: 75,
     paddingLeft: 20,
     paddingRight: 20
   },
@@ -101,81 +98,40 @@ const styles = StyleSheet.create({
   progressStatusText: {
     textAlign: 'right',
     marginBottom: 10,
+    fontFamily: 'HelveticaNeue-Light',
+    fontSize: 20
   },
   progressBarView: {
     marginTop: 10,
     marginBottom: 20,
-    width: 375,
     height: 20,
     borderWidth: 2.5,
     borderColor: '#000000',
   },
   progressBar1View: {
-    width: 92.5,
+    marginRight: Dimensions.get('screen').width*.75,
     height: 15,
     backgroundColor: '#08BC40'
   },
   progressBar2View: {
-    width: 190,
+    marginRight: Dimensions.get('screen').width*.5,
     height: 15,
     backgroundColor: '#08BC40'
   },
   progressBar3View: {
-    width: 282.5,
+    marginRight: Dimensions.get('screen').width*.25,
     height: 15,
     backgroundColor: '#08BC40'
   },
   progressBar4View: {
-    width: 370,
     height: 15,
     backgroundColor: '#08BC40'
-  },
-  numGarmentsInputLabel: {
-    color: '#383434',
-    fontSize: 24,
-    paddingTop: 10,
-    textAlign: 'center',
-    alignItems: 'center',
-    fontFamily: 'HelveticaNeue-Light'
-  },
-  darkTextInputLabel: {
-    color: '#383434',
-    fontSize: 24,
-    paddingTop: 10,
-    fontFamily: 'HelveticaNeue-Light',
-    marginLeft: 40
   },
   nextText: {
     color: '#383434',
     fontSize: 24,
     paddingTop: 30,
     fontFamily: 'Helvetica',
-    marginRight: 40
-  },
-  inputSmall: {
-    height: 43,
-    marginTop: 15,
-    borderColor: '#A79696',
-    borderWidth: 1,
-    textAlign: 'right',
-    alignItems: 'center',
-    backgroundColor: '#fff',
-    width: 100,
-    fontFamily: 'HelveticaNeue-Light',
-    color: '#383434',
-    fontSize: 30
-  },
-  input: {
-    height: 43,
-    marginTop: 15,
-    borderColor: '#A79696',
-    borderWidth: 1,
-    alignItems: 'center',
-    backgroundColor: '#EFE9E9',
-    fontFamily: 'HelveticaNeue-Light',
-    color: '#383434',
-    fontSize: 24,
-    marginLeft: 40,
     marginRight: 40
   },
   button: {

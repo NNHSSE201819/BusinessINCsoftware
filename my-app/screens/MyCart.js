@@ -41,60 +41,63 @@ export default class MyCart extends React.Component {
 
   render() {
     return (
-      <View style={styles.container}>
-        <ScrollView contentContainerStyle={styles.contentContainer}>
-          <Text style={styles.progressBarTitleText}>my cart</Text>
-          <View style={{height:10}} />
-          <View style={styles.topDivider} />
-          <View style={{height:30}} />
-          <View style={{flexDirection: 'row', flex: 2}}>
-            <Image
-              style ={styles.image}
-              source={require('../assets/images/myCart1.jpg')}
-            />
-            <View style={{width:30}} />
-            <Text style={styles.nextText}>points: 300</Text>
+      <ScrollView contentContainerStyle={styles.contentContainer}>
+        <Text style={styles.progressBarTitleText}>my cart</Text>
+        <View style={{height:10}} />
+        <View style={styles.topDivider} />
+        <View style={{height:10}} />
+        <View style={{flexDirection: 'row', flex: 2}}>
+          <Image
+            style ={styles.image}
+            source={require('../assets/images/myCart1.jpg')}
+          />
+          <View style={{width:30}} />
+          <Text style={styles.nextText}>points: 550</Text>
+        </View>
+        <View style={styles.bottomDivider} />
+        <View style={{flexDirection: 'row', flex: 2}}>
+          <Image
+            style ={styles.image}
+            source={require('../assets/images/myCart2.jpg')}
+          />
+          <View style={{width:30}} />
+          <Text style={styles.nextText}>points: 300</Text>
+        </View>
+        <View style={styles.bottomDivider} />
+        <View style={{flexDirection: 'row', flex: 2}}>
+          <Image
+            style ={styles.image}
+            source={require('../assets/images/myCart3.jpg')}
+          />
+          <View style={{width:30}} />
+          <Text style={styles.nextText}>points: 1000</Text>
+        </View>
+        <View style={{flexDirection: 'row', flex: 2}}>
+          <View style={{alignItems: 'flex-start', flex: 2}}>
+            <TouchableOpacity
+              onPress={() => {this.props.navigation.navigate('CustomizeOne');}}>
+              <Text style={styles.nextText}>back</Text>
+            </TouchableOpacity>
           </View>
-          <View style={{flexDirection: 'row', flex: 2}}>
-            <Image
-              style ={styles.image}
-              source={require('../assets/images/myCart2.jpg')}
-            />
-            <View style={{width:30}} />
-            <Text style={styles.nextText}>points: 550</Text>
+          <View style={{alignItems: 'flex-end'}}>
+            <TouchableOpacity
+              onPress={() => {this.props.navigation.navigate('PaymentInfo');}}>
+              <Text style={styles.nextText}>next</Text>
+            </TouchableOpacity>
           </View>
-          <View style={{flexDirection: 'row', flex: 2}}>
-            <View style={{alignItems: 'flex-start', flex: 2}}>
-              <TouchableOpacity
-                onPress={() => {this.props.navigation.navigate('CustomizeOne');}}>
-                <Text style={styles.nextText}>back</Text>
-              </TouchableOpacity>
-            </View>
-            <View style={{alignItems: 'flex-end'}}>
-              <TouchableOpacity
-                onPress={() => {this.props.navigation.navigate('SwapProgress');}}>
-                <Text style={styles.nextText}>next</Text>
-              </TouchableOpacity>
-            </View>
-          </View>
-        </ScrollView>
-      </View>
+        </View>
+      </ScrollView>
     );
   }
 }
 
 const styles = StyleSheet.create({
   contentContainer: {
-    flex: 1,
-    marginTop: 100,
-    backgroundColor: '#ACA5A5',
-  },
-  container: {
-    flex: 1,
     justifyContent: 'center',
     backgroundColor: '#ACA5A5',
-    paddingLeft: 40,
-    paddingRight: 40
+    paddingTop: 75,
+    paddingLeft: 20,
+    paddingRight: 20
   },
   progressBarTitleText: {
     paddingTop: 10,
@@ -174,10 +177,17 @@ const styles = StyleSheet.create({
   image: {
     width: 150,
     height: 150,
-    marginBottom: 30,
+    marginBottom: 15,
+    marginTop: 15
   },
   topDivider: {
     height: 10,
     backgroundColor: '#6F4141'
+  },
+  bottomDivider: {
+    height: 3,
+    backgroundColor: '#654321',
+    marginLeft: 35,
+    marginRight: 35,
   }
 });
