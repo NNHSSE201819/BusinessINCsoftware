@@ -54,6 +54,7 @@ export default class MyCart extends React.Component {
           <View style={{width:30}} />
           <Text style={styles.nextText}>points: 550</Text>
         </View>
+        <View style={{height:35}} />
         <View style={styles.bottomDivider} />
         <View style={{flexDirection: 'row', flex: 2}}>
           <Image
@@ -63,6 +64,7 @@ export default class MyCart extends React.Component {
           <View style={{width:30}} />
           <Text style={styles.nextText}>points: 300</Text>
         </View>
+        <View style={{height:35}} />
         <View style={styles.bottomDivider} />
         <View style={{flexDirection: 'row', flex: 2}}>
           <Image

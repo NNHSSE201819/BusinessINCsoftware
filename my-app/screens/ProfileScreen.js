@@ -101,7 +101,7 @@ export default class ProfileScreen extends Component {
       modalMona: false,
       modalAnahita: false,
       modalLeilani: false,
-      insertName: 'Jane Doe',
+      insertName: 'Emma Smith',
       password: ' ',
       modalPassword: false,
       email: 'example@gmail.com',
@@ -153,7 +153,7 @@ export default class ProfileScreen extends Component {
             <View style={{height: 100, backgroundColor: '#e2cce7'}}/>
             <Image
               style ={styles.iconImage}
-              source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/your_profile_picture.jpg')}
+              source={require('../assets/images/your_profile_picture.jpg')}
             />
             <Text style={{fontSize: 25, fontFamily: 'HelveticaNeue-Light'}}>Mona Fang</Text>
             <Text style={{textAlign: 'center',fontSize: 20, marginLeft: 15, marginRight: 15, fontFamily: 'HelveticaNeue-Light'}}>
@@ -189,7 +189,7 @@ export default class ProfileScreen extends Component {
             <View style={{height: 100, backgroundColor: '#a8daf9'}}/>
             <Image
               style ={styles.iconImage}
-              source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/anahita.jpg')}
+              source={require('../assets/images/anahita.jpg')}
             />
             <Text style={{fontSize: 25, fontFamily: 'HelveticaNeue-Light'}}>Anahita</Text>
             <Text style={{textAlign: 'center',fontSize: 20, marginLeft: 15, marginRight: 15, fontFamily: 'HelveticaNeue-Light'}}>
@@ -217,7 +217,7 @@ export default class ProfileScreen extends Component {
             <View style={{height:100, backgroundColor:'#4cd4b2'}}/>
             <Image
               style ={styles.iconImage}
-              source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/leilani.jpg')}
+              source={require('../assets/images/leilani.jpg')}
             />
             <Text style={{fontSize: 25, fontFamily: 'HelveticaNeue-Light'}}>Leilani</Text>
             <Text style={{textAlign: 'center',fontSize: 20, marginLeft: 15, marginRight: 15, fontFamily: 'HelveticaNeue-Light'}}>
@@ -297,7 +297,7 @@ export default class ProfileScreen extends Component {
         <View style ={styles.profileHeader}>
           <Image
             style ={styles.iconImage}
-            source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/profile_image.jpg')}/>
+            source={require('../assets/images/profile_image.jpg')}/>
           <Text style ={styles.textMain}>
             {this.state.insertName}
           </Text>
@@ -380,7 +380,7 @@ New subset of information
             style={{alignItems: 'center'}}>
               <Image
                 style ={styles.iconImage}
-                source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/your_profile_picture.jpg')}
+                source={require('../assets/images/your_profile_picture.jpg')}
               />
               <Text style={styles.textLittle}>Mona Fang</Text>
           </TouchableOpacity>
@@ -390,7 +390,7 @@ New subset of information
             style={{alignItems: 'center'}}>
               <Image
                 style ={styles.iconImage}
-                source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/anahita.jpg')}
+                source={require('../assets/images/anahita.jpg')}
               />
               <Text style={styles.textLittle}>Anahita</Text>
           </TouchableOpacity>
@@ -400,7 +400,7 @@ New subset of information
             style={{alignItems: 'center'}}>
               <Image
                 style ={styles.iconImage}
-                source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/leilani.jpg')}
+                source={require('../assets/images/leilani.jpg')}
               />
               <Text style={styles.textLittle}>Leilani</Text>
           </TouchableOpacity>
