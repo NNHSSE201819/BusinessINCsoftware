@@ -13,9 +13,11 @@ import CustomizeClothes from '../screens/CustomizeClothes';
 import CustomizeOccasion from '../screens/CustomizeOccasion';
 import PaymentInfo from '../screens/PaymentInfo';
 import SwapFinish from '../screens/SwapFinish';
+import ProfileScreen from '../screens/ProfileScreen';
+import GetPointsScreen from '../screens/GetPointsScreen';
 
 const ProfileStack = createStackNavigator({
-  Profile: LinksScreen,
+  Profile: ProfileScreen,
 });
 
 ProfileStack.navigationOptions = {
@@ -69,8 +71,28 @@ InventoryStack.navigationOptions = {
   visible: true,
 };
 
+const PointsStack = createStackNavigator({
+  GetPoints: GetPointsScreen,
+});
+
+PointsStack.navigationOptions = {
+  tabBarLabel: 'Get Points',
+  tabBarIcon: ({ focused }) => (
+    <TabBarIcon
+      focused={focused}
+      name={
+        Platform.OS === 'ios'
+          ? `ios-camera`
+          : 'md-camera'
+      }
+    />
+  ),
+  visible: true,
+};
+
 export default createBottomTabNavigator({
   ProfileStack,
   StartSwapStack,
   InventoryStack,
+  PointsStack,
 });
