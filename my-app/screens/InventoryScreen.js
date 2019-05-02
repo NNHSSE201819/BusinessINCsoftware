@@ -317,7 +317,8 @@ export default class InventoryScreen extends React.Component {
 
                   </View>
                   <View style={styles.text}>
-                    <Text style={styles.t}>Hello</Text>
+                    <Text style={styles.t}>300 Pts</Text>
+
                   </View>
                   <TouchableOpacity onPress={() => {this.setModals1(false)}}>
                     <Text style={styles.back}>Back</Text>
@@ -336,6 +337,10 @@ export default class InventoryScreen extends React.Component {
                   <View style={styles.modalview2}>
 
                     <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/s1.jpg')}/>
+
+                  </View>
+                  <View style={styles.text}>
+                    <Text style={styles.t}>350 Pts</Text>
 
                   </View>
                   <TouchableOpacity onPress={() => {this.setModals2(false)}}>
@@ -357,6 +362,10 @@ export default class InventoryScreen extends React.Component {
                     <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/s2.jpg')}/>
 
                   </View>
+                  <View style={styles.text}>
+                    <Text style={styles.t}>315 Pts</Text>
+
+                  </View>
                   <TouchableOpacity onPress={() => {this.setModals3(false)}}>
                     <Text style={styles.back}>Back</Text>
                   </TouchableOpacity>
@@ -374,6 +383,10 @@ export default class InventoryScreen extends React.Component {
                   <View style={styles.modalview2}>
 
                     <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/s3.jpg')}/>
+
+                  </View>
+                  <View style={styles.text}>
+                    <Text style={styles.t}>330 Pts</Text>
 
                   </View>
                   <TouchableOpacity onPress={() => {this.setModals4(false)}}>
@@ -397,6 +410,10 @@ export default class InventoryScreen extends React.Component {
                   <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/s4.jpg')}/>
 
                 </View>
+                <View style={styles.text}>
+                  <Text style={styles.t}>305 Pts</Text>
+
+                </View>
                 <TouchableOpacity onPress={() => {this.setModals13(false)}}>
                   <Text style={styles.back}>Back</Text>
                 </TouchableOpacity>
@@ -414,6 +431,10 @@ export default class InventoryScreen extends React.Component {
                 <View style={styles.modalview2}>
 
                   <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/s5.jpg')}/>
+
+                </View>
+                <View style={styles.text}>
+                  <Text style={styles.t}>280 Pts</Text>
 
                 </View>
                 <TouchableOpacity onPress={() => {this.setModals14(false)}}>
@@ -435,6 +456,10 @@ export default class InventoryScreen extends React.Component {
                   <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/s6.jpg')}/>
 
                 </View>
+                <View style={styles.text}>
+                  <Text style={styles.t}>275 Pts</Text>
+
+                </View>
                 <TouchableOpacity onPress={() => {this.setModals15(false)}}>
                   <Text style={styles.back}>Back</Text>
                 </TouchableOpacity>
@@ -452,6 +477,10 @@ export default class InventoryScreen extends React.Component {
                 <View style={styles.modalview2}>
 
                   <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/s7.jpg')}/>
+
+                </View>
+                <View style={styles.text}>
+                  <Text style={styles.t}>285 Pts</Text>
 
                 </View>
                 <TouchableOpacity onPress={() => {this.setModals16(false)}}>
@@ -476,6 +505,10 @@ export default class InventoryScreen extends React.Component {
                   <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/s9.jpg')}/>
 
                 </View>
+                <View style={styles.text}>
+                  <Text style={styles.t}>300 Pts</Text>
+
+                </View>
                 <TouchableOpacity onPress={() => {this.setModals33(false)}}>
                   <Text style={styles.back}>Back</Text>
                 </TouchableOpacity>
@@ -493,6 +526,10 @@ export default class InventoryScreen extends React.Component {
                 <View style={styles.modalview2}>
 
                   <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/s10.jpg')}/>
+
+                </View>
+                <View style={styles.text}>
+                  <Text style={styles.t}>370 Pts</Text>
 
                 </View>
                 <TouchableOpacity onPress={() => {this.setModals34(false)}}>
@@ -514,6 +551,10 @@ export default class InventoryScreen extends React.Component {
                   <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/s11.jpg')}/>
 
                 </View>
+                <View style={styles.text}>
+                  <Text style={styles.t}>310 Pts</Text>
+
+                </View>
                 <TouchableOpacity onPress={() => {this.setModals35(false)}}>
                   <Text style={styles.back}>Back</Text>
                 </TouchableOpacity>
@@ -531,6 +572,10 @@ export default class InventoryScreen extends React.Component {
                 <View style={styles.modalview2}>
 
                   <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/s12.jpg')}/>
+
+                </View>
+                <View style={styles.text}>
+                  <Text style={styles.t}>335 Pts</Text>
 
                 </View>
                 <TouchableOpacity onPress={() => {this.setModals36(false)}}>
@@ -555,6 +600,10 @@ export default class InventoryScreen extends React.Component {
                   <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/s13.jpg')}/>
 
                 </View>
+                <View style={styles.text}>
+                  <Text style={styles.t}>345 Pts</Text>
+
+                </View>
                 <TouchableOpacity onPress={() => {this.setModals37(false)}}>
                   <Text style={styles.back}>Back</Text>
                 </TouchableOpacity>
@@ -572,6 +621,11 @@ export default class InventoryScreen extends React.Component {
                 <View style={styles.modalview2}>
 
                   <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/s14.jpg')}/>
+
+                </View>
+
+                <View style={styles.text}>
+                  <Text style={styles.t}>290 Pts</Text>
 
                 </View>
                 <TouchableOpacity onPress={() => {this.setModals38(false)}}>
@@ -592,6 +646,9 @@ export default class InventoryScreen extends React.Component {
 
                   <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/s15.jpg')}/>
 
+                </View><View style={styles.text}>
+                  <Text style={styles.t}>380 Pts</Text>
+
                 </View>
                 <TouchableOpacity onPress={() => {this.setModals39(false)}}>
                   <Text style={styles.back}>Back</Text>
@@ -610,6 +667,10 @@ export default class InventoryScreen extends React.Component {
                 <View style={styles.modalview2}>
 
                   <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/s16.jpg')}/>
+
+                </View>
+                <View style={styles.text}>
+                  <Text style={styles.t}>300 Pts</Text>
 
                 </View>
                 <TouchableOpacity onPress={() => {this.setModals40(false)}}>
@@ -641,6 +702,10 @@ export default class InventoryScreen extends React.Component {
                     <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/DP0706201717213547M.jpg')}/>
 
                   </View>
+                  <View style={styles.text}>
+                    <Text style={styles.t}>300 Pts</Text>
+
+                  </View>
                   <TouchableOpacity onPress={() => {this.setModals5(false)}}>
                     <Text style={styles.back}>Back</Text>
                   </TouchableOpacity>
@@ -660,6 +725,9 @@ export default class InventoryScreen extends React.Component {
                   <View style={styles.modalview2}>
 
                     <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/DP1130201708530536M.jpg')}/>
+
+                  </View><View style={styles.text}>
+                    <Text style={styles.t}>315 Pts</Text>
 
                   </View>
                   <TouchableOpacity onPress={() => {this.setModals6(false)}}>
@@ -683,6 +751,9 @@ export default class InventoryScreen extends React.Component {
 
                     <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/DP1205201706382400M.jpg')}/>
 
+                  </View><View style={styles.text}>
+                    <Text style={styles.t}>325 Pts</Text>
+
                   </View>
                   <TouchableOpacity onPress={() => {this.setModals7(false)}}>
                     <Text style={styles.back}>Back</Text>
@@ -693,7 +764,7 @@ export default class InventoryScreen extends React.Component {
 
 
               <TouchableOpacity onPress={() => {this.setModals8(true)}}>
-                <Image style={styles.pic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/DP1215201617174022M.jpg')}/>
+                <Image style={styles.pic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/pantsbundle.jpg')}/>
               </TouchableOpacity>
               <Modal
                 animationType = "slide"
@@ -703,7 +774,11 @@ export default class InventoryScreen extends React.Component {
                 <View style={styles.modalview}>
                   <View style={styles.modalview2}>
 
-                    <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/DP1215201617174022M.jpg')}/>
+                    <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/pantsbundle.jpg')}/>
+
+                  </View>
+                  <View style={styles.text}>
+                    <Text style={styles.t}>250 Pts</Text>
 
                   </View>
                   <TouchableOpacity onPress={() => {this.setModals8(false)}}>
@@ -727,6 +802,9 @@ export default class InventoryScreen extends React.Component {
 
                     <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/p1.jpg')}/>
 
+                  </View><View style={styles.text}>
+                    <Text style={styles.t}>360 Pts</Text>
+
                   </View>
                   <TouchableOpacity onPress={() => {this.setModals17(false)}}>
                     <Text style={styles.back}>Back</Text>
@@ -746,6 +824,9 @@ export default class InventoryScreen extends React.Component {
                   <View style={styles.modalview2}>
 
                     <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/p2.jpg')}/>
+
+                  </View><View style={styles.text}>
+                    <Text style={styles.t}>340 Pts</Text>
 
                   </View>
                   <TouchableOpacity onPress={() => {this.setModals18(false)}}>
@@ -767,6 +848,9 @@ export default class InventoryScreen extends React.Component {
 
                     <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/p3.jpg')}/>
 
+                  </View><View style={styles.text}>
+                    <Text style={styles.t}>350 Pts</Text>
+
                   </View>
                   <TouchableOpacity onPress={() => {this.setModals19(false)}}>
                     <Text style={styles.back}>Back</Text>
@@ -786,6 +870,10 @@ export default class InventoryScreen extends React.Component {
                   <View style={styles.modalview2}>
 
                     <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/p4.jpg')}/>
+
+                  </View>
+                  <View style={styles.text}>
+                    <Text style={styles.t}>290 Pts</Text>
 
                   </View>
                   <TouchableOpacity onPress={() => {this.setModals20(false)}}>
@@ -809,6 +897,10 @@ export default class InventoryScreen extends React.Component {
                     <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/p5.jpg')}/>
 
                   </View>
+                  <View style={styles.text}>
+                    <Text style={styles.t}>305 Pts</Text>
+
+                  </View>
                   <TouchableOpacity onPress={() => {this.setModals41(false)}}>
                     <Text style={styles.back}>Back</Text>
                   </TouchableOpacity>
@@ -826,6 +918,10 @@ export default class InventoryScreen extends React.Component {
                   <View style={styles.modalview2}>
 
                     <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/p6.jpg')}/>
+
+                  </View>
+                  <View style={styles.text}>
+                    <Text style={styles.t}>325 Pts</Text>
 
                   </View>
                   <TouchableOpacity onPress={() => {this.setModals42(false)}}>
@@ -847,6 +943,10 @@ export default class InventoryScreen extends React.Component {
                     <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/p7.jpg')}/>
 
                   </View>
+                  <View style={styles.text}>
+                    <Text style={styles.t}>370 Pts</Text>
+
+                  </View>
                   <TouchableOpacity onPress={() => {this.setModals43(false)}}>
                     <Text style={styles.back}>Back</Text>
                   </TouchableOpacity>
@@ -864,6 +964,10 @@ export default class InventoryScreen extends React.Component {
                   <View style={styles.modalview2}>
 
                     <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/p8.jpg')}/>
+
+                  </View>
+                  <View style={styles.text}>
+                    <Text style={styles.t}>315 Pts</Text>
 
                   </View>
                   <TouchableOpacity onPress={() => {this.setModals44(false)}}>
@@ -887,6 +991,10 @@ export default class InventoryScreen extends React.Component {
                     <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/p9.jpg')}/>
 
                   </View>
+                  <View style={styles.text}>
+                    <Text style={styles.t}>345 Pts</Text>
+
+                  </View>
                   <TouchableOpacity onPress={() => {this.setModals45(false)}}>
                     <Text style={styles.back}>Back</Text>
                   </TouchableOpacity>
@@ -904,6 +1012,10 @@ export default class InventoryScreen extends React.Component {
                   <View style={styles.modalview2}>
 
                     <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/p10.jpg')}/>
+
+                  </View>
+                  <View style={styles.text}>
+                    <Text style={styles.t}>300 Pts</Text>
 
                   </View>
                   <TouchableOpacity onPress={() => {this.setModals46(false)}}>
@@ -925,6 +1037,10 @@ export default class InventoryScreen extends React.Component {
                     <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/p11.jpg')}/>
 
                   </View>
+                  <View style={styles.text}>
+                    <Text style={styles.t}>285 Pts</Text>
+
+                  </View>
                   <TouchableOpacity onPress={() => {this.setModals47(false)}}>
                     <Text style={styles.back}>Back</Text>
                   </TouchableOpacity>
@@ -942,6 +1058,10 @@ export default class InventoryScreen extends React.Component {
                   <View style={styles.modalview2}>
 
                     <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/p12.jpg')}/>
+
+                  </View>
+                  <View style={styles.text}>
+                    <Text style={styles.t}>310 Pts</Text>
 
                   </View>
                   <TouchableOpacity onPress={() => {this.setModals48(false)}}>
@@ -980,6 +1100,10 @@ export default class InventoryScreen extends React.Component {
                     <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/d1.jpg')}/>
 
                   </View>
+                  <View style={styles.text}>
+                    <Text style={styles.t}>350 Pts</Text>
+
+                  </View>
                   <TouchableOpacity onPress={() => {this.setModals9(false)}}>
                     <Text style={styles.back}>Back</Text>
                   </TouchableOpacity>
@@ -1001,6 +1125,10 @@ export default class InventoryScreen extends React.Component {
                   <View style={styles.modalview2}>
 
                     <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/d2.jpg')}/>
+
+                  </View>
+                  <View style={styles.text}>
+                    <Text style={styles.t}>380 Pts</Text>
 
                   </View>
                   <TouchableOpacity onPress={() => {this.setModals10(false)}}>
@@ -1027,6 +1155,10 @@ export default class InventoryScreen extends React.Component {
                     <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/d3.jpg')}/>
 
                   </View>
+                  <View style={styles.text}>
+                    <Text style={styles.t}>400 Pts</Text>
+
+                  </View>
                   <TouchableOpacity onPress={() => {this.setModals11(false)}}>
                     <Text style={styles.back}>Back</Text>
                   </TouchableOpacity>
@@ -1046,6 +1178,10 @@ export default class InventoryScreen extends React.Component {
                   <View style={styles.modalview2}>
 
                     <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/d4.jpg')}/>
+
+                  </View>
+                  <View style={styles.text}>
+                    <Text style={styles.t}>390 Pts</Text>
 
                   </View>
                   <TouchableOpacity onPress={() => {this.setModals12(false)}}>
@@ -1072,6 +1208,10 @@ export default class InventoryScreen extends React.Component {
                     <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/d5.jpg')}/>
 
                   </View>
+                  <View style={styles.text}>
+                    <Text style={styles.t}>360 Pts</Text>
+
+                  </View>
                   <TouchableOpacity onPress={() => {this.setModals21(false)}}>
                     <Text style={styles.back}>Back</Text>
                   </TouchableOpacity>
@@ -1090,6 +1230,10 @@ export default class InventoryScreen extends React.Component {
                   <View style={styles.modalview2}>
 
                     <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/d6.jpg')}/>
+
+                  </View>
+                  <View style={styles.text}>
+                    <Text style={styles.t}>340 Pts</Text>
 
                   </View>
                   <TouchableOpacity onPress={() => {this.setModals22(false)}}>
@@ -1112,6 +1256,10 @@ export default class InventoryScreen extends React.Component {
                     <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/d7.jpg')}/>
 
                   </View>
+                  <View style={styles.text}>
+                    <Text style={styles.t}>365 Pts</Text>
+
+                  </View>
                   <TouchableOpacity onPress={() => {this.setModals23(false)}}>
                     <Text style={styles.back}>Back</Text>
                   </TouchableOpacity>
@@ -1130,6 +1278,10 @@ export default class InventoryScreen extends React.Component {
                   <View style={styles.modalview2}>
 
                     <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/d8.jpg')}/>
+
+                  </View>
+                  <View style={styles.text}>
+                    <Text style={styles.t}>385 Pts</Text>
 
                   </View>
                   <TouchableOpacity onPress={() => {this.setModals24(false)}}>
@@ -1153,6 +1305,10 @@ export default class InventoryScreen extends React.Component {
                     <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/d9.jpg')}/>
 
                   </View>
+                  <View style={styles.text}>
+                    <Text style={styles.t}>395 Pts</Text>
+
+                  </View>
                   <TouchableOpacity onPress={() => {this.setModals49(false)}}>
                     <Text style={styles.back}>Back</Text>
                   </TouchableOpacity>
@@ -1170,6 +1326,10 @@ export default class InventoryScreen extends React.Component {
                   <View style={styles.modalview2}>
 
                     <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/d10.jpg')}/>
+
+                  </View>
+                  <View style={styles.text}>
+                    <Text style={styles.t}>345 Pts</Text>
 
                   </View>
                   <TouchableOpacity onPress={() => {this.setModals50(false)}}>
@@ -1191,6 +1351,10 @@ export default class InventoryScreen extends React.Component {
                     <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/d11.jpg')}/>
 
                   </View>
+                  <View style={styles.text}>
+                    <Text style={styles.t}>375 Pts</Text>
+
+                  </View>
                   <TouchableOpacity onPress={() => {this.setModals51(false)}}>
                     <Text style={styles.back}>Back</Text>
                   </TouchableOpacity>
@@ -1208,6 +1372,9 @@ export default class InventoryScreen extends React.Component {
                   <View style={styles.modalview2}>
 
                     <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/d12.jpg')}/>
+
+                  </View><View style={styles.text}>
+                    <Text style={styles.t}>360 Pts</Text>
 
                   </View>
                   <TouchableOpacity onPress={() => {this.setModals52(false)}}>
@@ -1231,6 +1398,10 @@ export default class InventoryScreen extends React.Component {
                     <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/d13.jpg')}/>
 
                   </View>
+                  <View style={styles.text}>
+                    <Text style={styles.t}>380 Pts</Text>
+
+                  </View>
                   <TouchableOpacity onPress={() => {this.setModals53(false)}}>
                     <Text style={styles.back}>Back</Text>
                   </TouchableOpacity>
@@ -1248,6 +1419,10 @@ export default class InventoryScreen extends React.Component {
                   <View style={styles.modalview2}>
 
                     <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/d14.jpg')}/>
+
+                  </View>
+                  <View style={styles.text}>
+                    <Text style={styles.t}>330 Pts</Text>
 
                   </View>
                   <TouchableOpacity onPress={() => {this.setModals54(false)}}>
@@ -1269,6 +1444,10 @@ export default class InventoryScreen extends React.Component {
                     <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/d15.png')}/>
 
                   </View>
+                  <View style={styles.text}>
+                    <Text style={styles.t}>390 Pts</Text>
+
+                  </View>
                   <TouchableOpacity onPress={() => {this.setModals55(false)}}>
                     <Text style={styles.back}>Back</Text>
                   </TouchableOpacity>
@@ -1286,6 +1465,10 @@ export default class InventoryScreen extends React.Component {
                   <View style={styles.modalview2}>
 
                     <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/d16.jpg')}/>
+
+                  </View>
+                  <View style={styles.text}>
+                    <Text style={styles.t}>350 Pts</Text>
 
                   </View>
                   <TouchableOpacity onPress={() => {this.setModals56(false)}}>
@@ -1316,6 +1499,10 @@ export default class InventoryScreen extends React.Component {
                     <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/sh1.jpg')}/>
 
                   </View>
+                  <View style={styles.text}>
+                    <Text style={styles.t}>350 Pts</Text>
+
+                  </View>
                   <TouchableOpacity onPress={() => {this.setModals25(false)}}>
                     <Text style={styles.back}>Back</Text>
                   </TouchableOpacity>
@@ -1334,6 +1521,10 @@ export default class InventoryScreen extends React.Component {
                   <View style={styles.modalview2}>
 
                     <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/sh2.jpg')}/>
+
+                  </View>
+                  <View style={styles.text}>
+                    <Text style={styles.t}>350 Pts</Text>
 
                   </View>
                   <TouchableOpacity onPress={() => {this.setModals26(false)}}>
@@ -1356,6 +1547,10 @@ export default class InventoryScreen extends React.Component {
                     <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/sh3.jpg')}/>
 
                   </View>
+                  <View style={styles.text}>
+                    <Text style={styles.t}>350 Pts</Text>
+
+                  </View>
                   <TouchableOpacity onPress={() => {this.setModals27(false)}}>
                     <Text style={styles.back}>Back</Text>
                   </TouchableOpacity>
@@ -1374,6 +1569,10 @@ export default class InventoryScreen extends React.Component {
                   <View style={styles.modalview2}>
 
                     <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/sh4.jpg')}/>
+
+                  </View>
+                  <View style={styles.text}>
+                    <Text style={styles.t}>350 Pts</Text>
 
                   </View>
                   <TouchableOpacity onPress={() => {this.setModals28(false)}}>
@@ -1398,6 +1597,10 @@ export default class InventoryScreen extends React.Component {
                     <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/sh5.jpg')}/>
 
                   </View>
+                  <View style={styles.text}>
+                    <Text style={styles.t}>350 Pts</Text>
+
+                  </View>
                   <TouchableOpacity onPress={() => {this.setModals29(false)}}>
                     <Text style={styles.back}>Back</Text>
                   </TouchableOpacity>
@@ -1415,6 +1618,10 @@ export default class InventoryScreen extends React.Component {
                   <View style={styles.modalview2}>
 
                     <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/sh6.jpg')}/>
+
+                  </View>
+                  <View style={styles.text}>
+                    <Text style={styles.t}>350 Pts</Text>
 
                   </View>
                   <TouchableOpacity onPress={() => {this.setModals30(false)}}>
@@ -1436,6 +1643,10 @@ export default class InventoryScreen extends React.Component {
                     <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/sh7.jpg')}/>
 
                   </View>
+                  <View style={styles.text}>
+                    <Text style={styles.t}>350 Pts</Text>
+
+                  </View>
                   <TouchableOpacity onPress={() => {this.setModals31(false)}}>
                     <Text style={styles.back}>Back</Text>
                   </TouchableOpacity>
@@ -1453,6 +1664,10 @@ export default class InventoryScreen extends React.Component {
                   <View style={styles.modalview2}>
 
                     <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/sh8.jpg')}/>
+
+                  </View>
+                  <View style={styles.text}>
+                    <Text style={styles.t}>350 Pts</Text>
 
                   </View>
                   <TouchableOpacity onPress={() => {this.setModals32(false)}}>
@@ -1495,6 +1710,10 @@ export default class InventoryScreen extends React.Component {
                     <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/sh10.jpg')}/>
 
                   </View>
+                  <View style={styles.text}>
+                    <Text style={styles.t}>350 Pts</Text>
+
+                  </View>
                   <TouchableOpacity onPress={() => {this.setModals58(false)}}>
                     <Text style={styles.back}>Back</Text>
                   </TouchableOpacity>
@@ -1514,6 +1733,10 @@ export default class InventoryScreen extends React.Component {
                     <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/sh11.jpg')}/>
 
                   </View>
+                  <View style={styles.text}>
+                    <Text style={styles.t}>350 Pts</Text>
+
+                  </View>
                   <TouchableOpacity onPress={() => {this.setModals59(false)}}>
                     <Text style={styles.back}>Back</Text>
                   </TouchableOpacity>
@@ -1531,6 +1754,10 @@ export default class InventoryScreen extends React.Component {
                   <View style={styles.modalview2}>
 
                     <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/sh12.jpg')}/>
+
+                  </View>
+                  <View style={styles.text}>
+                    <Text style={styles.t}>350 Pts</Text>
 
                   </View>
                   <TouchableOpacity onPress={() => {this.setModals60(false)}}>
@@ -1554,6 +1781,10 @@ export default class InventoryScreen extends React.Component {
                     <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/sh13.jpg')}/>
 
                   </View>
+                  <View style={styles.text}>
+                    <Text style={styles.t}>350 Pts</Text>
+
+                  </View>
                   <TouchableOpacity onPress={() => {this.setModals61(false)}}>
                     <Text style={styles.back}>Back</Text>
                   </TouchableOpacity>
@@ -1571,6 +1802,10 @@ export default class InventoryScreen extends React.Component {
                   <View style={styles.modalview2}>
 
                     <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/sh14.jpg')}/>
+
+                  </View>
+                  <View style={styles.text}>
+                    <Text style={styles.t}>350 Pts</Text>
 
                   </View>
                   <TouchableOpacity onPress={() => {this.setModals62(false)}}>
@@ -1592,6 +1827,10 @@ export default class InventoryScreen extends React.Component {
                     <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/sh15.jpg')}/>
 
                   </View>
+                  <View style={styles.text}>
+                    <Text style={styles.t}>350 Pts</Text>
+
+                  </View>
                   <TouchableOpacity onPress={() => {this.setModals63(false)}}>
                     <Text style={styles.back}>Back</Text>
                   </TouchableOpacity>
@@ -1609,6 +1848,10 @@ export default class InventoryScreen extends React.Component {
                   <View style={styles.modalview2}>
 
                     <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/sh16.jpg')}/>
+
+                  </View>
+                  <View style={styles.text}>
+                    <Text style={styles.t}>350 Pts</Text>
 
                   </View>
                   <TouchableOpacity onPress={() => {this.setModals64(false)}}>
@@ -1648,6 +1891,9 @@ const styles = StyleSheet.create({
 
   },
   t:{fontFamily: 'HelveticaNeue-Light',
+  fontSize:30,
+  textAlign: 'center',
+  marginTop:30,
 },
   modalview:{alignItems: 'center',
 backgroundColor: '#ACA5A5',
@@ -1667,7 +1913,7 @@ flex:1,}
     backgroundColor: '#ACA5A5',
   },
   back:{
-    bottom: -400,
+    bottom: -350,
     alignItems: 'center',
     fontSize: 40,
     fontFamily: 'HelveticaNeue-Light',
