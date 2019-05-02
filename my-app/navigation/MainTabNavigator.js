@@ -6,6 +6,7 @@ import TabBarIcon from '../components/TabBarIcon';
 import HomeScreen from '../screens/HomeScreen';
 import LinksScreen from '../screens/LinksScreen';
 import SettingsScreen from '../screens/SettingsScreen';
+import InventoryScreen from '../screens/InventoryScreen';
 import StartSwapScreen from '../screens/StartSwapScreen';
 import SwapProgressScreen from '../screens/SwapProgressScreen';
 import CustomizeOne from '../screens/CustomizeOne';
@@ -15,6 +16,24 @@ import PaymentInfo from '../screens/PaymentInfo';
 import SwapFinish from '../screens/SwapFinish';
 import ProfileScreen from '../screens/ProfileScreen';
 import GetPointsScreen from '../screens/GetPointsScreen';
+
+const HomeStack = createStackNavigator({
+  Home: HomeScreen,
+});
+
+HomeStack.navigationOptions = {
+  tabBarLabel: 'Home',
+  tabBarIcon: ({ focused }) => (
+    <TabBarIcon
+      focused={focused}
+      name={
+        Platform.OS === 'ios'
+          ? `ios-home`
+          : 'md-home'
+      }
+    />
+  ),
+};
 
 const ProfileStack = createStackNavigator({
   Profile: ProfileScreen,
@@ -53,7 +72,7 @@ StartSwapStack.navigationOptions = {
 };
 
 const InventoryStack = createStackNavigator({
-  Inventory: HomeScreen,
+  Inventory: InventoryScreen,
 });
 
 InventoryStack.navigationOptions = {
