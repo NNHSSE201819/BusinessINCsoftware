@@ -93,6 +93,7 @@ export default class MyCart extends React.Component {
 
 const styles = StyleSheet.create({
   contentContainer: {
+    flex: 1,
     justifyContent: 'center',
     backgroundColor: '#ACA5A5',
     paddingTop: 75,

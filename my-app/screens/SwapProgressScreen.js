@@ -35,7 +35,7 @@ export default class SwapProgressScreen extends React.Component {
             color="#383434"
           />
         </View>
-        <View style={{height:30}} />
+        <View style={{height:45}} />
         <Text style={styles.progressBarTitleText}>Swap Progress</Text>
         <View style={styles.progressBarView}>
           {this.state.buttonClicked == 1? <View style={styles.progressBar1View} />: null}
