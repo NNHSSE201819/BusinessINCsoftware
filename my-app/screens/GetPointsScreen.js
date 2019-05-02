@@ -68,7 +68,7 @@ export default class GetPointsScreen extends Component {
           <View style={{flex:1, alignItems:'center', justifyContent:'center'}}>
             <TouchableHighlight
               onPress={() => {
-                this.closeModal(false)}}
+                this.closeModal(!this.state.modal)}}
               style={{flex:1, alignItems:'center', justifyContent:'center'}}
             >
             <Image
