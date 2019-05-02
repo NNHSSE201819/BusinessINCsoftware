@@ -94,7 +94,8 @@ const styles = StyleSheet.create({
     fontSize: 24,
     paddingTop: 30,
     fontFamily: 'Helvetica',
-    marginRight: 40
+    marginRight: 40,
+    marginBottom: 15,
   },
   inputSmall: {
     height: 43,

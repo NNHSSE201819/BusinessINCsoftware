@@ -44,7 +44,6 @@ export default class SwapProgressScreen extends React.Component {
           {this.state.buttonClicked >= 4? <View style={styles.progressBar4View} />: null}
         </View>
         <View>
-          {this.updateProgressDetails}
           {this.state.buttonClicked >= 4? <Text style={styles.progressStatusText}>{this.state.progressSteps[3]}</Text>: null}
           {this.state.buttonClicked >= 3? <Text style={styles.progressStatusText}>{this.state.progressSteps[2]}</Text>: null}
           {this.state.buttonClicked >= 2? <Text style={styles.progressStatusText}>{this.state.progressSteps[1]}</Text>: null}
@@ -58,7 +57,7 @@ export default class SwapProgressScreen extends React.Component {
     this.setState({ buttonClicked: this.state.buttonClicked + 1});
   }
 
-  updateProgressDetails = () => {
+  /*updateProgressDetails = () => {
     var text = [];
     for(var i = this.state.buttonClicked - 1; i >= 0; i--){
       text.push(
@@ -66,12 +65,13 @@ export default class SwapProgressScreen extends React.Component {
           <Text style={{textAlign: 'right'}}>{this.state.progressSteps[i]}</Text>
         </View>
       )
-      console.log(this.state.progressSteps[i]);
     }
     return(
+      <View>
         {text}
+      </View>
     )
-  }
+  }*/
 }
 
 const styles = StyleSheet.create({
@@ -132,7 +132,8 @@ const styles = StyleSheet.create({
     fontSize: 24,
     paddingTop: 30,
     fontFamily: 'Helvetica',
-    marginRight: 40
+    marginRight: 40,
+    marginBottom: 15,
   },
   button: {
     marginBottom: 30,
