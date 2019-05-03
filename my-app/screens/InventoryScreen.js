@@ -303,7 +303,7 @@ export default class InventoryScreen extends React.Component {
 
             <View style={styles.pic2} >
               <TouchableOpacity onPress={() => {this.setModals1(true)}}>
-                <Image style={styles.pic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/s.jpg')}/>
+                <Image style={styles.pic} source={require('../assets/images/s.jpg')}/>
               </TouchableOpacity>
               <Modal
                 animationType = "slide"
@@ -313,7 +313,7 @@ export default class InventoryScreen extends React.Component {
                 <View style={styles.modalview}>
                   <View style={styles.modalview2}>
 
-                    <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/s.jpg')}/>
+                    <Image style={styles.modalpic} source={require('../assets/images/s.jpg')}/>
 
                   </View>
                   <View style={styles.text}>
@@ -326,7 +326,7 @@ export default class InventoryScreen extends React.Component {
                 </View>
               </Modal>
               <TouchableOpacity onPress={() => {this.setModals2(true)}}>
-                <Image style={styles.pic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/s1.jpg')}/>
+                <Image style={styles.pic} source={require('../assets/images/s1.jpg')}/>
               </TouchableOpacity>
               <Modal
                 animationType = "slide"
@@ -336,7 +336,7 @@ export default class InventoryScreen extends React.Component {
                 <View style={styles.modalview}>
                   <View style={styles.modalview2}>
 
-                    <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/s1.jpg')}/>
+                    <Image style={styles.modalpic} source={require('../assets/images/s1.jpg')}/>
 
                   </View>
                   <View style={styles.text}>
@@ -349,7 +349,7 @@ export default class InventoryScreen extends React.Component {
                 </View>
               </Modal>
               <TouchableOpacity onPress={() => {this.setModals3(true)}}>
-                <Image style={styles.pic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/s2.jpg')}/>
+                <Image style={styles.pic} source={require('../assets/images/s2.jpg')}/>
               </TouchableOpacity>
               <Modal
                 animationType = "slide"
@@ -359,7 +359,7 @@ export default class InventoryScreen extends React.Component {
                 <View style={styles.modalview}>
                   <View style={styles.modalview2}>
 
-                    <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/s2.jpg')}/>
+                    <Image style={styles.modalpic} source={require('../assets/images/s2.jpg')}/>
 
                   </View>
                   <View style={styles.text}>
@@ -372,7 +372,7 @@ export default class InventoryScreen extends React.Component {
                 </View>
               </Modal>
               <TouchableOpacity onPress={() => {this.setModals4(true)}}>
-                <Image style={styles.pic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/s3.jpg')}/>
+                <Image style={styles.pic} source={require('../assets/images/s3.jpg')}/>
               </TouchableOpacity>
               <Modal
                 animationType = "slide"
@@ -382,7 +382,7 @@ export default class InventoryScreen extends React.Component {
                 <View style={styles.modalview}>
                   <View style={styles.modalview2}>
 
-                    <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/s3.jpg')}/>
+                    <Image style={styles.modalpic} source={require('../assets/images/s3.jpg')}/>
 
                   </View>
                   <View style={styles.text}>
@@ -397,7 +397,7 @@ export default class InventoryScreen extends React.Component {
             </View>
             <View style={styles.pic2}>
             <TouchableOpacity onPress={() => {this.setModals13(true)}}>
-              <Image style={styles.pic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/s4.jpg')}/>
+              <Image style={styles.pic} source={require('../assets/images/s4.jpg')}/>
             </TouchableOpacity>
             <Modal
               animationType = "slide"
@@ -407,7 +407,7 @@ export default class InventoryScreen extends React.Component {
               <View style={styles.modalview}>
                 <View style={styles.modalview2}>
 
-                  <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/s4.jpg')}/>
+                  <Image style={styles.modalpic} source={require('../assets/images/s4.jpg')}/>
 
                 </View>
                 <View style={styles.text}>
@@ -420,7 +420,7 @@ export default class InventoryScreen extends React.Component {
               </View>
             </Modal>
             <TouchableOpacity onPress={() => {this.setModals14(true)}}>
-              <Image style={styles.pic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/s5.jpg')}/>
+              <Image style={styles.pic} source={require('../assets/images/s5.jpg')}/>
             </TouchableOpacity>
             <Modal
               animationType = "slide"
@@ -430,7 +430,7 @@ export default class InventoryScreen extends React.Component {
               <View style={styles.modalview}>
                 <View style={styles.modalview2}>
 
-                  <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/s5.jpg')}/>
+                  <Image style={styles.modalpic} source={require('../assets/images/s5.jpg')}/>
 
                 </View>
                 <View style={styles.text}>
@@ -443,7 +443,7 @@ export default class InventoryScreen extends React.Component {
               </View>
             </Modal>
             <TouchableOpacity onPress={() => {this.setModals15(true)}}>
-              <Image style={styles.pic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/s6.jpg')}/>
+              <Image style={styles.pic} source={require('../assets/images/s6.jpg')}/>
             </TouchableOpacity>
             <Modal
               animationType = "slide"
@@ -453,7 +453,7 @@ export default class InventoryScreen extends React.Component {
               <View style={styles.modalview}>
                 <View style={styles.modalview2}>
 
-                  <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/s6.jpg')}/>
+                  <Image style={styles.modalpic} source={require('../assets/images/s6.jpg')}/>
 
                 </View>
                 <View style={styles.text}>
@@ -466,7 +466,7 @@ export default class InventoryScreen extends React.Component {
               </View>
             </Modal>
             <TouchableOpacity onPress={() => {this.setModals16(true)}}>
-              <Image style={styles.pic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/s7.jpg')}/>
+              <Image style={styles.pic} source={require('../assets/images/s7.jpg')}/>
             </TouchableOpacity>
             <Modal
               animationType = "slide"
@@ -476,7 +476,7 @@ export default class InventoryScreen extends React.Component {
               <View style={styles.modalview}>
                 <View style={styles.modalview2}>
 
-                  <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/s7.jpg')}/>
+                  <Image style={styles.modalpic} source={require('../assets/images/s7.jpg')}/>
 
                 </View>
                 <View style={styles.text}>
@@ -492,7 +492,7 @@ export default class InventoryScreen extends React.Component {
 
           <View style={styles.pic2} >
             <TouchableOpacity onPress={() => {this.setModals33(true)}}>
-              <Image style={styles.pic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/s9.jpg')}/>
+              <Image style={styles.pic} source={require('../assets/images/s9.jpg')}/>
             </TouchableOpacity>
             <Modal
               animationType = "slide"
@@ -502,7 +502,7 @@ export default class InventoryScreen extends React.Component {
               <View style={styles.modalview}>
                 <View style={styles.modalview2}>
 
-                  <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/s9.jpg')}/>
+                  <Image style={styles.modalpic} source={require('../assets/images/s9.jpg')}/>
 
                 </View>
                 <View style={styles.text}>
@@ -515,7 +515,7 @@ export default class InventoryScreen extends React.Component {
               </View>
             </Modal>
             <TouchableOpacity onPress={() => {this.setModals34(true)}}>
-              <Image style={styles.pic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/s10.jpg')}/>
+              <Image style={styles.pic} source={require('../assets/images/s10.jpg')}/>
             </TouchableOpacity>
             <Modal
               animationType = "slide"
@@ -525,7 +525,7 @@ export default class InventoryScreen extends React.Component {
               <View style={styles.modalview}>
                 <View style={styles.modalview2}>
 
-                  <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/s10.jpg')}/>
+                  <Image style={styles.modalpic} source={require('../assets/images/s10.jpg')}/>
 
                 </View>
                 <View style={styles.text}>
@@ -538,7 +538,7 @@ export default class InventoryScreen extends React.Component {
               </View>
             </Modal>
             <TouchableOpacity onPress={() => {this.setModals35(true)}}>
-              <Image style={styles.pic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/s11.jpg')}/>
+              <Image style={styles.pic} source={require('../assets/images/s11.jpg')}/>
             </TouchableOpacity>
             <Modal
               animationType = "slide"
@@ -548,7 +548,7 @@ export default class InventoryScreen extends React.Component {
               <View style={styles.modalview}>
                 <View style={styles.modalview2}>
 
-                  <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/s11.jpg')}/>
+                  <Image style={styles.modalpic} source={require('../assets/images/s11.jpg')}/>
 
                 </View>
                 <View style={styles.text}>
@@ -561,7 +561,7 @@ export default class InventoryScreen extends React.Component {
               </View>
             </Modal>
             <TouchableOpacity onPress={() => {this.setModals36(true)}}>
-              <Image style={styles.pic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/s12.jpg')}/>
+              <Image style={styles.pic} source={require('../assets/images/s12.jpg')}/>
             </TouchableOpacity>
             <Modal
               animationType = "slide"
@@ -571,7 +571,7 @@ export default class InventoryScreen extends React.Component {
               <View style={styles.modalview}>
                 <View style={styles.modalview2}>
 
-                  <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/s12.jpg')}/>
+                  <Image style={styles.modalpic} source={require('../assets/images/s12.jpg')}/>
 
                 </View>
                 <View style={styles.text}>
@@ -587,7 +587,7 @@ export default class InventoryScreen extends React.Component {
 
           <View style={styles.pic2} >
             <TouchableOpacity onPress={() => {this.setModals37(true)}}>
-              <Image style={styles.pic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/s13.jpg')}/>
+              <Image style={styles.pic} source={require('../assets/images/s13.jpg')}/>
             </TouchableOpacity>
             <Modal
               animationType = "slide"
@@ -597,7 +597,7 @@ export default class InventoryScreen extends React.Component {
               <View style={styles.modalview}>
                 <View style={styles.modalview2}>
 
-                  <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/s13.jpg')}/>
+                  <Image style={styles.modalpic} source={require('../assets/images/s13.jpg')}/>
 
                 </View>
                 <View style={styles.text}>
@@ -610,7 +610,7 @@ export default class InventoryScreen extends React.Component {
               </View>
             </Modal>
             <TouchableOpacity onPress={() => {this.setModals38(true)}}>
-              <Image style={styles.pic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/s14.jpg')}/>
+              <Image style={styles.pic} source={require('../assets/images/s14.jpg')}/>
             </TouchableOpacity>
             <Modal
               animationType = "slide"
@@ -620,7 +620,7 @@ export default class InventoryScreen extends React.Component {
               <View style={styles.modalview}>
                 <View style={styles.modalview2}>
 
-                  <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/s14.jpg')}/>
+                  <Image style={styles.modalpic} source={require('../assets/images/s14.jpg')}/>
 
                 </View>
 
@@ -634,7 +634,7 @@ export default class InventoryScreen extends React.Component {
               </View>
             </Modal>
             <TouchableOpacity onPress={() => {this.setModals39(true)}}>
-              <Image style={styles.pic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/s15.jpg')}/>
+              <Image style={styles.pic} source={require('../assets/images/s15.jpg')}/>
             </TouchableOpacity>
             <Modal
               animationType = "slide"
@@ -644,7 +644,7 @@ export default class InventoryScreen extends React.Component {
               <View style={styles.modalview}>
                 <View style={styles.modalview2}>
 
-                  <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/s15.jpg')}/>
+                  <Image style={styles.modalpic} source={require('../assets/images/s15.jpg')}/>
 
                 </View><View style={styles.text}>
                   <Text style={styles.t}>380 Pts</Text>
@@ -656,7 +656,7 @@ export default class InventoryScreen extends React.Component {
               </View>
             </Modal>
             <TouchableOpacity onPress={() => {this.setModals40(true)}}>
-              <Image style={styles.pic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/s16.jpg')}/>
+              <Image style={styles.pic} source={require('../assets/images/s16.jpg')}/>
             </TouchableOpacity>
             <Modal
               animationType = "slide"
@@ -666,7 +666,7 @@ export default class InventoryScreen extends React.Component {
               <View style={styles.modalview}>
                 <View style={styles.modalview2}>
 
-                  <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/s16.jpg')}/>
+                  <Image style={styles.modalpic} source={require('../assets/images/s16.jpg')}/>
 
                 </View>
                 <View style={styles.text}>
@@ -689,7 +689,7 @@ export default class InventoryScreen extends React.Component {
             <Text style={styles.divide}></Text>
             <View style={styles.pic2} >
               <TouchableOpacity onPress={() => {this.setModals5(true)}}>
-                <Image style={styles.pic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/DP0706201717213547M.jpg')}/>
+                <Image style={styles.pic} source={require('../assets/images/DP0706201717213547M.jpg')}/>
               </TouchableOpacity>
               <Modal
                 animationType = "slide"
@@ -699,7 +699,7 @@ export default class InventoryScreen extends React.Component {
                 <View style={styles.modalview}>
                   <View style={styles.modalview2}>
 
-                    <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/DP0706201717213547M.jpg')}/>
+                    <Image style={styles.modalpic} source={require('../assets/images/DP0706201717213547M.jpg')}/>
 
                   </View>
                   <View style={styles.text}>
@@ -714,7 +714,7 @@ export default class InventoryScreen extends React.Component {
 
 
               <TouchableOpacity onPress={() => {this.setModals6(true)}}>
-                <Image style={styles.pic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/DP1130201708530536M.jpg')}/>
+                <Image style={styles.pic} source={require('../assets/images/DP1130201708530536M.jpg')}/>
               </TouchableOpacity>
               <Modal
                 animationType = "slide"
@@ -724,7 +724,7 @@ export default class InventoryScreen extends React.Component {
                 <View style={styles.modalview}>
                   <View style={styles.modalview2}>
 
-                    <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/DP1130201708530536M.jpg')}/>
+                    <Image style={styles.modalpic} source={require('../assets/images/DP1130201708530536M.jpg')}/>
 
                   </View><View style={styles.text}>
                     <Text style={styles.t}>315 Pts</Text>
@@ -739,7 +739,7 @@ export default class InventoryScreen extends React.Component {
 
 
               <TouchableOpacity onPress={() => {this.setModals7(true)}}>
-                <Image style={styles.pic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/DP1205201706382400M.jpg')}/>
+                <Image style={styles.pic} source={require('../assets/images/DP1205201706382400M.jpg')}/>
               </TouchableOpacity>
               <Modal
                 animationType = "slide"
@@ -749,7 +749,7 @@ export default class InventoryScreen extends React.Component {
                 <View style={styles.modalview}>
                   <View style={styles.modalview2}>
 
-                    <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/DP1205201706382400M.jpg')}/>
+                    <Image style={styles.modalpic} source={require('../assets/images/DP1205201706382400M.jpg')}/>
 
                   </View><View style={styles.text}>
                     <Text style={styles.t}>325 Pts</Text>
@@ -764,7 +764,7 @@ export default class InventoryScreen extends React.Component {
 
 
               <TouchableOpacity onPress={() => {this.setModals8(true)}}>
-                <Image style={styles.pic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/pantsbundle.jpg')}/>
+                <Image style={styles.pic} source={require('../assets/images/pantsbundle.jpg')}/>
               </TouchableOpacity>
               <Modal
                 animationType = "slide"
@@ -774,7 +774,7 @@ export default class InventoryScreen extends React.Component {
                 <View style={styles.modalview}>
                   <View style={styles.modalview2}>
 
-                    <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/pantsbundle.jpg')}/>
+                    <Image style={styles.modalpic} source={require('../assets/images/pantsbundle.jpg')}/>
 
                   </View>
                   <View style={styles.text}>
@@ -790,7 +790,7 @@ export default class InventoryScreen extends React.Component {
 
             <View style={styles.pic2} >
               <TouchableOpacity onPress={() => {this.setModals17(true)}}>
-                <Image style={styles.pic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/p1.jpg')}/>
+                <Image style={styles.pic} source={require('../assets/images/p1.jpg')}/>
               </TouchableOpacity>
               <Modal
                 animationType = "slide"
@@ -800,7 +800,7 @@ export default class InventoryScreen extends React.Component {
                 <View style={styles.modalview}>
                   <View style={styles.modalview2}>
 
-                    <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/p1.jpg')}/>
+                    <Image style={styles.modalpic} source={require('../assets/images/p1.jpg')}/>
 
                   </View><View style={styles.text}>
                     <Text style={styles.t}>360 Pts</Text>
@@ -813,7 +813,7 @@ export default class InventoryScreen extends React.Component {
               </Modal>
 
               <TouchableOpacity onPress={() => {this.setModals18(true)}}>
-                <Image style={styles.pic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/p2.jpg')}/>
+                <Image style={styles.pic} source={require('../assets/images/p2.jpg')}/>
               </TouchableOpacity>
               <Modal
                 animationType = "slide"
@@ -823,7 +823,7 @@ export default class InventoryScreen extends React.Component {
                 <View style={styles.modalview}>
                   <View style={styles.modalview2}>
 
-                    <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/p2.jpg')}/>
+                    <Image style={styles.modalpic} source={require('../assets/images/p2.jpg')}/>
 
                   </View><View style={styles.text}>
                     <Text style={styles.t}>340 Pts</Text>
@@ -836,7 +836,7 @@ export default class InventoryScreen extends React.Component {
               </Modal>
 
               <TouchableOpacity onPress={() => {this.setModals19(true)}}>
-                <Image style={styles.pic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/p3.jpg')}/>
+                <Image style={styles.pic} source={require('../assets/images/p3.jpg')}/>
               </TouchableOpacity>
               <Modal
                 animationType = "slide"
@@ -846,7 +846,7 @@ export default class InventoryScreen extends React.Component {
                 <View style={styles.modalview}>
                   <View style={styles.modalview2}>
 
-                    <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/p3.jpg')}/>
+                    <Image style={styles.modalpic} source={require('../assets/images/p3.jpg')}/>
 
                   </View><View style={styles.text}>
                     <Text style={styles.t}>350 Pts</Text>
@@ -859,7 +859,7 @@ export default class InventoryScreen extends React.Component {
               </Modal>
 
               <TouchableOpacity onPress={() => {this.setModals20(true)}}>
-                <Image style={styles.pic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/p4.jpg')}/>
+                <Image style={styles.pic} source={require('../assets/images/p4.jpg')}/>
               </TouchableOpacity>
               <Modal
                 animationType = "slide"
@@ -869,7 +869,7 @@ export default class InventoryScreen extends React.Component {
                 <View style={styles.modalview}>
                   <View style={styles.modalview2}>
 
-                    <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/p4.jpg')}/>
+                    <Image style={styles.modalpic} source={require('../assets/images/p4.jpg')}/>
 
                   </View>
                   <View style={styles.text}>
@@ -884,7 +884,7 @@ export default class InventoryScreen extends React.Component {
             </View>
             <View style={styles.pic2} >
               <TouchableOpacity onPress={() => {this.setModals41(true)}}>
-                <Image style={styles.pic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/p5.jpg')}/>
+                <Image style={styles.pic} source={require('../assets/images/p5.jpg')}/>
               </TouchableOpacity>
               <Modal
                 animationType = "slide"
@@ -894,7 +894,7 @@ export default class InventoryScreen extends React.Component {
                 <View style={styles.modalview}>
                   <View style={styles.modalview2}>
 
-                    <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/p5.jpg')}/>
+                    <Image style={styles.modalpic} source={require('../assets/images/p5.jpg')}/>
 
                   </View>
                   <View style={styles.text}>
@@ -907,7 +907,7 @@ export default class InventoryScreen extends React.Component {
                 </View>
               </Modal>
               <TouchableOpacity onPress={() => {this.setModals42(true)}}>
-                <Image style={styles.pic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/p6.jpg')}/>
+                <Image style={styles.pic} source={require('../assets/images/p6.jpg')}/>
               </TouchableOpacity>
               <Modal
                 animationType = "slide"
@@ -917,7 +917,7 @@ export default class InventoryScreen extends React.Component {
                 <View style={styles.modalview}>
                   <View style={styles.modalview2}>
 
-                    <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/p6.jpg')}/>
+                    <Image style={styles.modalpic} source={require('../assets/images/p6.jpg')}/>
 
                   </View>
                   <View style={styles.text}>
@@ -930,7 +930,7 @@ export default class InventoryScreen extends React.Component {
                 </View>
               </Modal>
               <TouchableOpacity onPress={() => {this.setModals43(true)}}>
-                <Image style={styles.pic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/p7.jpg')}/>
+                <Image style={styles.pic} source={require('../assets/images/p7.jpg')}/>
               </TouchableOpacity>
               <Modal
                 animationType = "slide"
@@ -940,7 +940,7 @@ export default class InventoryScreen extends React.Component {
                 <View style={styles.modalview}>
                   <View style={styles.modalview2}>
 
-                    <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/p7.jpg')}/>
+                    <Image style={styles.modalpic} source={require('../assets/images/p7.jpg')}/>
 
                   </View>
                   <View style={styles.text}>
@@ -953,7 +953,7 @@ export default class InventoryScreen extends React.Component {
                 </View>
               </Modal>
               <TouchableOpacity onPress={() => {this.setModals44(true)}}>
-                <Image style={styles.pic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/p8.jpg')}/>
+                <Image style={styles.pic} source={require('../assets/images/p8.jpg')}/>
               </TouchableOpacity>
               <Modal
                 animationType = "slide"
@@ -963,7 +963,7 @@ export default class InventoryScreen extends React.Component {
                 <View style={styles.modalview}>
                   <View style={styles.modalview2}>
 
-                    <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/p8.jpg')}/>
+                    <Image style={styles.modalpic} source={require('../assets/images/p8.jpg')}/>
 
                   </View>
                   <View style={styles.text}>
@@ -978,7 +978,7 @@ export default class InventoryScreen extends React.Component {
             </View>
             <View style={styles.pic2} >
               <TouchableOpacity onPress={() => {this.setModals45(true)}}>
-                <Image style={styles.pic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/p9.jpg')}/>
+                <Image style={styles.pic} source={require('../assets/images/p9.jpg')}/>
               </TouchableOpacity>
               <Modal
                 animationType = "slide"
@@ -988,7 +988,7 @@ export default class InventoryScreen extends React.Component {
                 <View style={styles.modalview}>
                   <View style={styles.modalview2}>
 
-                    <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/p9.jpg')}/>
+                    <Image style={styles.modalpic} source={require('../assets/images/p9.jpg')}/>
 
                   </View>
                   <View style={styles.text}>
@@ -1001,7 +1001,7 @@ export default class InventoryScreen extends React.Component {
                 </View>
               </Modal>
               <TouchableOpacity onPress={() => {this.setModals46(true)}}>
-                <Image style={styles.pic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/p10.jpg')}/>
+                <Image style={styles.pic} source={require('../assets/images/p10.jpg')}/>
               </TouchableOpacity>
               <Modal
                 animationType = "slide"
@@ -1011,7 +1011,7 @@ export default class InventoryScreen extends React.Component {
                 <View style={styles.modalview}>
                   <View style={styles.modalview2}>
 
-                    <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/p10.jpg')}/>
+                    <Image style={styles.modalpic} source={require('../assets/images/p10.jpg')}/>
 
                   </View>
                   <View style={styles.text}>
@@ -1024,7 +1024,7 @@ export default class InventoryScreen extends React.Component {
                 </View>
               </Modal>
               <TouchableOpacity onPress={() => {this.setModals47(true)}}>
-                <Image style={styles.pic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/p11.jpg')}/>
+                <Image style={styles.pic} source={require('../assets/images/p11.jpg')}/>
               </TouchableOpacity>
               <Modal
                 animationType = "slide"
@@ -1034,7 +1034,7 @@ export default class InventoryScreen extends React.Component {
                 <View style={styles.modalview}>
                   <View style={styles.modalview2}>
 
-                    <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/p11.jpg')}/>
+                    <Image style={styles.modalpic} source={require('../assets/images/p11.jpg')}/>
 
                   </View>
                   <View style={styles.text}>
@@ -1047,7 +1047,7 @@ export default class InventoryScreen extends React.Component {
                 </View>
               </Modal>
               <TouchableOpacity onPress={() => {this.setModals48(true)}}>
-                <Image style={styles.pic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/p12.jpg')}/>
+                <Image style={styles.pic} source={require('../assets/images/p12.jpg')}/>
               </TouchableOpacity>
               <Modal
                 animationType = "slide"
@@ -1057,7 +1057,7 @@ export default class InventoryScreen extends React.Component {
                 <View style={styles.modalview}>
                   <View style={styles.modalview2}>
 
-                    <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/p12.jpg')}/>
+                    <Image style={styles.modalpic} source={require('../assets/images/p12.jpg')}/>
 
                   </View>
                   <View style={styles.text}>
@@ -1087,7 +1087,7 @@ export default class InventoryScreen extends React.Component {
             <Text style={styles.divide}></Text>
             <View style={styles.pic2} >
               <TouchableOpacity onPress={() => {this.setModals9(true)}}>
-                <Image style={styles.pic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/d1.jpg')}/>
+                <Image style={styles.pic} source={require('../assets/images/d1.jpg')}/>
               </TouchableOpacity>
               <Modal
                 animationType = "slide"
@@ -1097,7 +1097,7 @@ export default class InventoryScreen extends React.Component {
                 <View style={styles.modalview}>
                   <View style={styles.modalview2}>
 
-                    <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/d1.jpg')}/>
+                    <Image style={styles.modalpic} source={require('../assets/images/d1.jpg')}/>
 
                   </View>
                   <View style={styles.text}>
@@ -1114,7 +1114,7 @@ export default class InventoryScreen extends React.Component {
 
 
               <TouchableOpacity onPress={() => {this.setModals10(true)}}>
-                <Image style={styles.pic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/d2.jpg')}/>
+                <Image style={styles.pic} source={require('../assets/images/d2.jpg')}/>
               </TouchableOpacity>
               <Modal
                 animationType = "slide"
@@ -1124,7 +1124,7 @@ export default class InventoryScreen extends React.Component {
                 <View style={styles.modalview}>
                   <View style={styles.modalview2}>
 
-                    <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/d2.jpg')}/>
+                    <Image style={styles.modalpic} source={require('../assets/images/d2.jpg')}/>
 
                   </View>
                   <View style={styles.text}>
@@ -1142,7 +1142,7 @@ export default class InventoryScreen extends React.Component {
 
 
               <TouchableOpacity onPress={() => {this.setModals11(true)}}>
-                <Image style={styles.pic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/d3.jpg')}/>
+                <Image style={styles.pic} source={require('../assets/images/d3.jpg')}/>
               </TouchableOpacity>
               <Modal
                 animationType = "slide"
@@ -1152,7 +1152,7 @@ export default class InventoryScreen extends React.Component {
                 <View style={styles.modalview}>
                   <View style={styles.modalview2}>
 
-                    <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/d3.jpg')}/>
+                    <Image style={styles.modalpic} source={require('../assets/images/d3.jpg')}/>
 
                   </View>
                   <View style={styles.text}>
@@ -1167,7 +1167,7 @@ export default class InventoryScreen extends React.Component {
 
 
               <TouchableOpacity onPress={() => {this.setModals12(true)}}>
-                <Image style={styles.pic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/d4.jpg')}/>
+                <Image style={styles.pic} source={require('../assets/images/d4.jpg')}/>
               </TouchableOpacity>
               <Modal
                 animationType = "slide"
@@ -1177,7 +1177,7 @@ export default class InventoryScreen extends React.Component {
                 <View style={styles.modalview}>
                   <View style={styles.modalview2}>
 
-                    <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/d4.jpg')}/>
+                    <Image style={styles.modalpic} source={require('../assets/images/d4.jpg')}/>
 
                   </View>
                   <View style={styles.text}>
@@ -1195,7 +1195,7 @@ export default class InventoryScreen extends React.Component {
 
             <View style={styles.pic2} >
               <TouchableOpacity onPress={() => {this.setModals21(true)}}>
-                <Image style={styles.pic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/d5.jpg')}/>
+                <Image style={styles.pic} source={require('../assets/images/d5.jpg')}/>
               </TouchableOpacity>
               <Modal
                 animationType = "slide"
@@ -1205,7 +1205,7 @@ export default class InventoryScreen extends React.Component {
                 <View style={styles.modalview}>
                   <View style={styles.modalview2}>
 
-                    <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/d5.jpg')}/>
+                    <Image style={styles.modalpic} source={require('../assets/images/d5.jpg')}/>
 
                   </View>
                   <View style={styles.text}>
@@ -1219,7 +1219,7 @@ export default class InventoryScreen extends React.Component {
               </Modal>
 
               <TouchableOpacity onPress={() => {this.setModals22(true)}}>
-                <Image style={styles.pic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/d6.jpg')}/>
+                <Image style={styles.pic} source={require('../assets/images/d6.jpg')}/>
               </TouchableOpacity>
               <Modal
                 animationType = "slide"
@@ -1229,7 +1229,7 @@ export default class InventoryScreen extends React.Component {
                 <View style={styles.modalview}>
                   <View style={styles.modalview2}>
 
-                    <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/d6.jpg')}/>
+                    <Image style={styles.modalpic} source={require('../assets/images/d6.jpg')}/>
 
                   </View>
                   <View style={styles.text}>
@@ -1243,7 +1243,7 @@ export default class InventoryScreen extends React.Component {
               </Modal>
 
               <TouchableOpacity onPress={() => {this.setModals23(true)}}>
-                <Image style={styles.pic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/d7.jpg')}/>
+                <Image style={styles.pic} source={require('../assets/images/d7.jpg')}/>
               </TouchableOpacity>
               <Modal
                 animationType = "slide"
@@ -1253,7 +1253,7 @@ export default class InventoryScreen extends React.Component {
                 <View style={styles.modalview}>
                   <View style={styles.modalview2}>
 
-                    <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/d7.jpg')}/>
+                    <Image style={styles.modalpic} source={require('../assets/images/d7.jpg')}/>
 
                   </View>
                   <View style={styles.text}>
@@ -1267,7 +1267,7 @@ export default class InventoryScreen extends React.Component {
               </Modal>
 
               <TouchableOpacity onPress={() => {this.setModals24(true)}}>
-                <Image style={styles.pic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/d8.jpg')}/>
+                <Image style={styles.pic} source={require('../assets/images/d8.jpg')}/>
               </TouchableOpacity>
               <Modal
                 animationType = "slide"
@@ -1277,7 +1277,7 @@ export default class InventoryScreen extends React.Component {
                 <View style={styles.modalview}>
                   <View style={styles.modalview2}>
 
-                    <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/d8.jpg')}/>
+                    <Image style={styles.modalpic} source={require('../assets/images/d8.jpg')}/>
 
                   </View>
                   <View style={styles.text}>
@@ -1292,7 +1292,7 @@ export default class InventoryScreen extends React.Component {
             </View>
             <View style={styles.pic2} >
               <TouchableOpacity onPress={() => {this.setModals49(true)}}>
-                <Image style={styles.pic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/d9.jpg')}/>
+                <Image style={styles.pic} source={require('../assets/images/d9.jpg')}/>
               </TouchableOpacity>
               <Modal
                 animationType = "slide"
@@ -1302,7 +1302,7 @@ export default class InventoryScreen extends React.Component {
                 <View style={styles.modalview}>
                   <View style={styles.modalview2}>
 
-                    <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/d9.jpg')}/>
+                    <Image style={styles.modalpic} source={require('../assets/images/d9.jpg')}/>
 
                   </View>
                   <View style={styles.text}>
@@ -1315,7 +1315,7 @@ export default class InventoryScreen extends React.Component {
                 </View>
               </Modal>
               <TouchableOpacity onPress={() => {this.setModals50(true)}}>
-                <Image style={styles.pic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/d10.jpg')}/>
+                <Image style={styles.pic} source={require('../assets/images/d10.jpg')}/>
               </TouchableOpacity>
               <Modal
                 animationType = "slide"
@@ -1325,7 +1325,7 @@ export default class InventoryScreen extends React.Component {
                 <View style={styles.modalview}>
                   <View style={styles.modalview2}>
 
-                    <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/d10.jpg')}/>
+                    <Image style={styles.modalpic} source={require('../assets/images/d10.jpg')}/>
 
                   </View>
                   <View style={styles.text}>
@@ -1338,7 +1338,7 @@ export default class InventoryScreen extends React.Component {
                 </View>
               </Modal>
               <TouchableOpacity onPress={() => {this.setModals51(true)}}>
-                <Image style={styles.pic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/d11.jpg')}/>
+                <Image style={styles.pic} source={require('../assets/images/d11.jpg')}/>
               </TouchableOpacity>
               <Modal
                 animationType = "slide"
@@ -1348,7 +1348,7 @@ export default class InventoryScreen extends React.Component {
                 <View style={styles.modalview}>
                   <View style={styles.modalview2}>
 
-                    <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/d11.jpg')}/>
+                    <Image style={styles.modalpic} source={require('../assets/images/d11.jpg')}/>
 
                   </View>
                   <View style={styles.text}>
@@ -1361,7 +1361,7 @@ export default class InventoryScreen extends React.Component {
                 </View>
               </Modal>
               <TouchableOpacity onPress={() => {this.setModals52(true)}}>
-                <Image style={styles.pic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/d12.jpg')}/>
+                <Image style={styles.pic} source={require('../assets/images/d12.jpg')}/>
               </TouchableOpacity>
               <Modal
                 animationType = "slide"
@@ -1371,7 +1371,7 @@ export default class InventoryScreen extends React.Component {
                 <View style={styles.modalview}>
                   <View style={styles.modalview2}>
 
-                    <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/d12.jpg')}/>
+                    <Image style={styles.modalpic} source={require('../assets/images/d12.jpg')}/>
 
                   </View><View style={styles.text}>
                     <Text style={styles.t}>360 Pts</Text>
@@ -1385,7 +1385,7 @@ export default class InventoryScreen extends React.Component {
             </View>
             <View style={styles.pic2} >
               <TouchableOpacity onPress={() => {this.setModals53(true)}}>
-                <Image style={styles.pic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/d13.jpg')}/>
+                <Image style={styles.pic} source={require('../assets/images/d13.jpg')}/>
               </TouchableOpacity>
               <Modal
                 animationType = "slide"
@@ -1395,7 +1395,7 @@ export default class InventoryScreen extends React.Component {
                 <View style={styles.modalview}>
                   <View style={styles.modalview2}>
 
-                    <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/d13.jpg')}/>
+                    <Image style={styles.modalpic} source={require('../assets/images/d13.jpg')}/>
 
                   </View>
                   <View style={styles.text}>
@@ -1408,7 +1408,7 @@ export default class InventoryScreen extends React.Component {
                 </View>
               </Modal>
               <TouchableOpacity onPress={() => {this.setModals54(true)}}>
-                <Image style={styles.pic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/d14.jpg')}/>
+                <Image style={styles.pic} source={require('../assets/images/d14.jpg')}/>
               </TouchableOpacity>
               <Modal
                 animationType = "slide"
@@ -1418,7 +1418,7 @@ export default class InventoryScreen extends React.Component {
                 <View style={styles.modalview}>
                   <View style={styles.modalview2}>
 
-                    <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/d14.jpg')}/>
+                    <Image style={styles.modalpic} source={require('../assets/images/d14.jpg')}/>
 
                   </View>
                   <View style={styles.text}>
@@ -1431,7 +1431,7 @@ export default class InventoryScreen extends React.Component {
                 </View>
               </Modal>
               <TouchableOpacity onPress={() => {this.setModals55(true)}}>
-                <Image style={styles.pic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/d15.png')}/>
+                <Image style={styles.pic} source={require('../assets/images/d15.png')}/>
               </TouchableOpacity>
               <Modal
                 animationType = "slide"
@@ -1441,7 +1441,7 @@ export default class InventoryScreen extends React.Component {
                 <View style={styles.modalview}>
                   <View style={styles.modalview2}>
 
-                    <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/d15.png')}/>
+                    <Image style={styles.modalpic} source={require('../assets/images/d15.png')}/>
 
                   </View>
                   <View style={styles.text}>
@@ -1454,7 +1454,7 @@ export default class InventoryScreen extends React.Component {
                 </View>
               </Modal>
               <TouchableOpacity onPress={() => {this.setModals56(true)}}>
-                <Image style={styles.pic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/d16.jpg')}/>
+                <Image style={styles.pic} source={require('../assets/images/d16.jpg')}/>
               </TouchableOpacity>
               <Modal
                 animationType = "slide"
@@ -1464,7 +1464,7 @@ export default class InventoryScreen extends React.Component {
                 <View style={styles.modalview}>
                   <View style={styles.modalview2}>
 
-                    <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/d16.jpg')}/>
+                    <Image style={styles.modalpic} source={require('../assets/images/d16.jpg')}/>
 
                   </View>
                   <View style={styles.text}>
@@ -1486,7 +1486,7 @@ export default class InventoryScreen extends React.Component {
             <Text style={styles.divide}></Text>
             <View style={styles.pic2} >
               <TouchableOpacity onPress={() => {this.setModals25(true)}}>
-                <Image style={styles.pic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/sh1.jpg')}/>
+                <Image style={styles.pic} source={require('../assets/images/sh1.jpg')}/>
               </TouchableOpacity>
               <Modal
                 animationType = "slide"
@@ -1496,7 +1496,7 @@ export default class InventoryScreen extends React.Component {
                 <View style={styles.modalview}>
                   <View style={styles.modalview2}>
 
-                    <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/sh1.jpg')}/>
+                    <Image style={styles.modalpic} source={require('../assets/images/sh1.jpg')}/>
 
                   </View>
                   <View style={styles.text}>
@@ -1510,7 +1510,7 @@ export default class InventoryScreen extends React.Component {
               </Modal>
 
               <TouchableOpacity onPress={() => {this.setModals26(true)}}>
-                <Image style={styles.pic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/sh2.jpg')}/>
+                <Image style={styles.pic} source={require('../assets/images/sh2.jpg')}/>
               </TouchableOpacity>
               <Modal
                 animationType = "slide"
@@ -1520,7 +1520,7 @@ export default class InventoryScreen extends React.Component {
                 <View style={styles.modalview}>
                   <View style={styles.modalview2}>
 
-                    <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/sh2.jpg')}/>
+                    <Image style={styles.modalpic} source={require('../assets/images/sh2.jpg')}/>
 
                   </View>
                   <View style={styles.text}>
@@ -1534,7 +1534,7 @@ export default class InventoryScreen extends React.Component {
               </Modal>
 
               <TouchableOpacity onPress={() => {this.setModals27(true)}}>
-                <Image style={styles.pic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/sh3.jpg')}/>
+                <Image style={styles.pic} source={require('../assets/images/sh3.jpg')}/>
               </TouchableOpacity>
               <Modal
                 animationType = "slide"
@@ -1544,7 +1544,7 @@ export default class InventoryScreen extends React.Component {
                 <View style={styles.modalview}>
                   <View style={styles.modalview2}>
 
-                    <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/sh3.jpg')}/>
+                    <Image style={styles.modalpic} source={require('../assets/images/sh3.jpg')}/>
 
                   </View>
                   <View style={styles.text}>
@@ -1558,7 +1558,7 @@ export default class InventoryScreen extends React.Component {
               </Modal>
 
               <TouchableOpacity onPress={() => {this.setModals28(true)}}>
-                <Image style={styles.pic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/sh4.jpg')}/>
+                <Image style={styles.pic} source={require('../assets/images/sh4.jpg')}/>
               </TouchableOpacity>
               <Modal
                 animationType = "slide"
@@ -1568,7 +1568,7 @@ export default class InventoryScreen extends React.Component {
                 <View style={styles.modalview}>
                   <View style={styles.modalview2}>
 
-                    <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/sh4.jpg')}/>
+                    <Image style={styles.modalpic} source={require('../assets/images/sh4.jpg')}/>
 
                   </View>
                   <View style={styles.text}>
@@ -1584,7 +1584,7 @@ export default class InventoryScreen extends React.Component {
 
             <View style={styles.pic2} >
               <TouchableOpacity onPress={() => {this.setModals29(true)}}>
-                <Image style={styles.pic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/sh5.jpg')}/>
+                <Image style={styles.pic} source={require('../assets/images/sh5.jpg')}/>
               </TouchableOpacity>
               <Modal
                 animationType = "slide"
@@ -1594,7 +1594,7 @@ export default class InventoryScreen extends React.Component {
                 <View style={styles.modalview}>
                   <View style={styles.modalview2}>
 
-                    <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/sh5.jpg')}/>
+                    <Image style={styles.modalpic} source={require('../assets/images/sh5.jpg')}/>
 
                   </View>
                   <View style={styles.text}>
@@ -1607,7 +1607,7 @@ export default class InventoryScreen extends React.Component {
                 </View>
               </Modal>
               <TouchableOpacity onPress={() => {this.setModals30(true)}}>
-                <Image style={styles.pic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/sh6.jpg')}/>
+                <Image style={styles.pic} source={require('../assets/images/sh6.jpg')}/>
               </TouchableOpacity>
               <Modal
                 animationType = "slide"
@@ -1617,7 +1617,7 @@ export default class InventoryScreen extends React.Component {
                 <View style={styles.modalview}>
                   <View style={styles.modalview2}>
 
-                    <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/sh6.jpg')}/>
+                    <Image style={styles.modalpic} source={require('../assets/images/sh6.jpg')}/>
 
                   </View>
                   <View style={styles.text}>
@@ -1630,7 +1630,7 @@ export default class InventoryScreen extends React.Component {
                 </View>
               </Modal>
               <TouchableOpacity onPress={() => {this.setModals31(true)}}>
-                <Image style={styles.pic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/sh7.jpg')}/>
+                <Image style={styles.pic} source={require('../assets/images/sh7.jpg')}/>
               </TouchableOpacity>
               <Modal
                 animationType = "slide"
@@ -1640,7 +1640,7 @@ export default class InventoryScreen extends React.Component {
                 <View style={styles.modalview}>
                   <View style={styles.modalview2}>
 
-                    <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/sh7.jpg')}/>
+                    <Image style={styles.modalpic} source={require('../assets/images/sh7.jpg')}/>
 
                   </View>
                   <View style={styles.text}>
@@ -1653,7 +1653,7 @@ export default class InventoryScreen extends React.Component {
                 </View>
               </Modal>
               <TouchableOpacity onPress={() => {this.setModals32(true)}}>
-                <Image style={styles.pic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/sh8.jpg')}/>
+                <Image style={styles.pic} source={require('../assets/images/sh8.jpg')}/>
               </TouchableOpacity>
               <Modal
                 animationType = "slide"
@@ -1663,7 +1663,7 @@ export default class InventoryScreen extends React.Component {
                 <View style={styles.modalview}>
                   <View style={styles.modalview2}>
 
-                    <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/sh8.jpg')}/>
+                    <Image style={styles.modalpic} source={require('../assets/images/sh8.jpg')}/>
 
                   </View>
                   <View style={styles.text}>
@@ -1678,7 +1678,7 @@ export default class InventoryScreen extends React.Component {
             </View>
             <View style={styles.pic2} >
               <TouchableOpacity onPress={() => {this.setModals57(true)}}>
-                <Image style={styles.pic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/sh9.jpg')}/>
+                <Image style={styles.pic} source={require('../assets/images/sh9.jpg')}/>
               </TouchableOpacity>
               <Modal
                 animationType = "slide"
@@ -1688,7 +1688,7 @@ export default class InventoryScreen extends React.Component {
                 <View style={styles.modalview}>
                   <View style={styles.modalview2}>
 
-                    <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/sh9.jpg')}/>
+                    <Image style={styles.modalpic} source={require('../assets/images/sh9.jpg')}/>
 
                   </View>
                   <TouchableOpacity onPress={() => {this.setModals57(false)}}>
@@ -1697,7 +1697,7 @@ export default class InventoryScreen extends React.Component {
                 </View>
               </Modal>
               <TouchableOpacity onPress={() => {this.setModals58(true)}}>
-                <Image style={styles.pic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/sh10.jpg')}/>
+                <Image style={styles.pic} source={require('../assets/images/sh10.jpg')}/>
               </TouchableOpacity>
               <Modal
                 animationType = "slide"
@@ -1707,7 +1707,7 @@ export default class InventoryScreen extends React.Component {
                 <View style={styles.modalview}>
                   <View style={styles.modalview2}>
 
-                    <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/sh10.jpg')}/>
+                    <Image style={styles.modalpic} source={require('../assets/images/sh10.jpg')}/>
 
                   </View>
                   <View style={styles.text}>
@@ -1720,7 +1720,7 @@ export default class InventoryScreen extends React.Component {
                 </View>
               </Modal>
               <TouchableOpacity onPress={() => {this.setModals59(true)}}>
-                <Image style={styles.pic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/sh11.jpg')}/>
+                <Image style={styles.pic} source={require('../assets/images/sh11.jpg')}/>
               </TouchableOpacity>
               <Modal
                 animationType = "slide"
@@ -1730,7 +1730,7 @@ export default class InventoryScreen extends React.Component {
                 <View style={styles.modalview}>
                   <View style={styles.modalview2}>
 
-                    <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/sh11.jpg')}/>
+                    <Image style={styles.modalpic} source={require('../assets/images/sh11.jpg')}/>
 
                   </View>
                   <View style={styles.text}>
@@ -1743,7 +1743,7 @@ export default class InventoryScreen extends React.Component {
                 </View>
               </Modal>
               <TouchableOpacity onPress={() => {this.setModals60(true)}}>
-                <Image style={styles.pic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/sh12.jpg')}/>
+                <Image style={styles.pic} source={require('../assets/images/sh12.jpg')}/>
               </TouchableOpacity>
               <Modal
                 animationType = "slide"
@@ -1753,7 +1753,7 @@ export default class InventoryScreen extends React.Component {
                 <View style={styles.modalview}>
                   <View style={styles.modalview2}>
 
-                    <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/sh12.jpg')}/>
+                    <Image style={styles.modalpic} source={require('../assets/images/sh12.jpg')}/>
 
                   </View>
                   <View style={styles.text}>
@@ -1768,7 +1768,7 @@ export default class InventoryScreen extends React.Component {
             </View>
             <View style={styles.pic2} >
               <TouchableOpacity onPress={() => {this.setModals61(true)}}>
-                <Image style={styles.pic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/sh13.jpg')}/>
+                <Image style={styles.pic} source={require('../assets/images/sh13.jpg')}/>
               </TouchableOpacity>
               <Modal
                 animationType = "slide"
@@ -1778,7 +1778,7 @@ export default class InventoryScreen extends React.Component {
                 <View style={styles.modalview}>
                   <View style={styles.modalview2}>
 
-                    <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/sh13.jpg')}/>
+                    <Image style={styles.modalpic} source={require('../assets/images/sh13.jpg')}/>
 
                   </View>
                   <View style={styles.text}>
@@ -1791,7 +1791,7 @@ export default class InventoryScreen extends React.Component {
                 </View>
               </Modal>
               <TouchableOpacity onPress={() => {this.setModals62(true)}}>
-                <Image style={styles.pic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/sh14.jpg')}/>
+                <Image style={styles.pic} source={require('../assets/images/sh14.jpg')}/>
               </TouchableOpacity>
               <Modal
                 animationType = "slide"
@@ -1801,7 +1801,7 @@ export default class InventoryScreen extends React.Component {
                 <View style={styles.modalview}>
                   <View style={styles.modalview2}>
 
-                    <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/sh14.jpg')}/>
+                    <Image style={styles.modalpic} source={require('../assets/images/sh14.jpg')}/>
 
                   </View>
                   <View style={styles.text}>
@@ -1814,7 +1814,7 @@ export default class InventoryScreen extends React.Component {
                 </View>
               </Modal>
               <TouchableOpacity onPress={() => {this.setModals63(true)}}>
-                <Image style={styles.pic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/sh15.jpg')}/>
+                <Image style={styles.pic} source={require('../assets/images/sh15.jpg')}/>
               </TouchableOpacity>
               <Modal
                 animationType = "slide"
@@ -1824,7 +1824,7 @@ export default class InventoryScreen extends React.Component {
                 <View style={styles.modalview}>
                   <View style={styles.modalview2}>
 
-                    <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/sh15.jpg')}/>
+                    <Image style={styles.modalpic} source={require('../assets/images/sh15.jpg')}/>
 
                   </View>
                   <View style={styles.text}>
@@ -1837,7 +1837,7 @@ export default class InventoryScreen extends React.Component {
                 </View>
               </Modal>
               <TouchableOpacity onPress={() => {this.setModals64(true)}}>
-                <Image style={styles.pic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/sh16.jpg')}/>
+                <Image style={styles.pic} source={require('../assets/images/sh16.jpg')}/>
               </TouchableOpacity>
               <Modal
                 animationType = "slide"
@@ -1847,7 +1847,7 @@ export default class InventoryScreen extends React.Component {
                 <View style={styles.modalview}>
                   <View style={styles.modalview2}>
 
-                    <Image style={styles.modalpic} source={require('/Users/nn121local/Documents/GitHub/BusinessINCsoftware/my-app/assets/images/sh16.jpg')}/>
+                    <Image style={styles.modalpic} source={require('../assets/images/sh16.jpg')}/>
 
                   </View>
                   <View style={styles.text}>

@@ -8,6 +8,7 @@ import { ScrollView,
   TouchableOpacity,
   Text,
   Modal,
+  Image,
   TextInput, } from 'react-native';
 import RadioForm, {RadioButton, RadioButtonInput,
   RadioButtonLabel} from 'react-native-simple-radio-button';
@@ -16,59 +17,8 @@ import { MonoText } from '../components/StyledText';
 import { WebBrowser } from 'expo';
 import { FullCheckBox } from '../components/FullCheckBox';
 
-var casual_shirts = [
-  {label: 'casual shirts', value: 0 },
-  {/*{label: 'jackets', value: 0 },
-  {label: 'sweaters', value: 0 },
-  {label: 'dresses', value: 0 },
-  {label: 'shorts', value: 0 },
-  {label: 'skirts', value: 0 },
-  {label: 'athletic wear', value: 0 },
-  {label: 'T-shirts', value: 0 },
-  {label: 'pants', value: 0 },
-  {label: 'tanks', value: 0 },
-  {label: 'flannel shirts', value: 0 },
-  {label: 'jeans', value: 0 },
-  {label: 'joggers/sweatpants', value: 0 }*/}
-];
-var jackets = [
-  {label: 'jackets', value: 0 }
-];
-var sweaters = [
-  {label: 'sweaters', value: 0 }
-];
-var dresses = [
-  {label: 'dresses', value: 0 }
-];
-var shorts = [
-  {label: 'shorts', value: 0 }
-];
-var skirts = [
-  {label: 'skirts', value: 0 }
-];
-var athletic_wear = [
-  {label: 'athletic wear', value: 0 }
-];
-var t_shirts = [
-  {label: 'T-shirts', value: 0 }
-];
-var pants = [
-  {label: 'pants', value: 0 }
-];
-var tanks = [
-  {label: 'tanks', value: 0 }
-];
-var flannel_shirts = [
-  {label: 'flannel shirts', value: 0 }
-];
-var jeans = [
-  {label: 'jeans', value: 0 }
-];
-var joggers_sweatpants = [
-  {label: 'joggers/sweatpants', value: 0 }
-];
 
-export default class CustomizeClothes extends React.Component {
+export default class MyCart extends React.Component {
   static navigationOptions = {
     header: null,
   };
@@ -91,33 +41,54 @@ export default class CustomizeClothes extends React.Component {
 
   render() {
     return (
-      <View style={styles.container}>
-        <ScrollView contentContainerStyle={styles.contentContainer}>
-          <Text style={styles.progressBarTitleText}>customize</Text>
-          <Text style={styles.numGarmentsInputLabel}>
-            what kind of clothes do you prefer{"\n"}to receive? choose at least 3
-          </Text>
-          <RadioForm
-            radio_props={casual_shirts}
-            initial={0}
-            formHorizontal={false}
-            labelHorizontal={true}
-            buttonColor={'#2196f3'}
-            animation={true}
-            onPress={() => {}}
+      <ScrollView contentContainerStyle={styles.contentContainer}>
+        <Text style={styles.progressBarTitleText}>my cart</Text>
+        <View style={{height:10}} />
+        <View style={styles.topDivider} />
+        <View style={{height:10}} />
+        <View style={{flexDirection: 'row', flex: 2}}>
+          <Image
+            style ={styles.image}
+            source={require('../assets/images/myCart1.jpg')}
           />
-          {/*}<FullCheckBox checkboxChecked={this.state.casualShirts}/>*/}
-
-          {/*Radio buttons:
-            https://www.npmjs.com/package/react-native-simple-radio-button*/}
-          <View style={{alignItems: 'flex-end', justifyContent: 'flex-end'}}>
+          <View style={{width:30}} />
+          <Text style={styles.nextText}>points: 550</Text>
+        </View>
+        <View style={{height:35}} />
+        <View style={styles.bottomDivider} />
+        <View style={{flexDirection: 'row', flex: 2}}>
+          <Image
+            style ={styles.image}
+            source={require('../assets/images/myCart2.jpg')}
+          />
+          <View style={{width:30}} />
+          <Text style={styles.nextText}>points: 300</Text>
+        </View>
+        <View style={{height:35}} />
+        <View style={styles.bottomDivider} />
+        <View style={{flexDirection: 'row', flex: 2}}>
+          <Image
+            style ={styles.image}
+            source={require('../assets/images/myCart3.jpg')}
+          />
+          <View style={{width:30}} />
+          <Text style={styles.nextText}>points: 1000</Text>
+        </View>
+        <View style={{flexDirection: 'row', flex: 2}}>
+          <View style={{alignItems: 'flex-start', flex: 2}}>
             <TouchableOpacity
-              onPress={() => {this.props.navigation.navigate('CustomizeOccasion');}}>
-              <Text style={styles.nextText}>next >> </Text>
+              onPress={() => {this.props.navigation.navigate('CustomizeOne');}}>
+              <Text style={styles.nextText}>back</Text>
             </TouchableOpacity>
           </View>
-        </ScrollView>
-      </View>
+          <View style={{alignItems: 'flex-end'}}>
+            <TouchableOpacity
+              onPress={() => {this.props.navigation.navigate('PaymentInfo');}}>
+              <Text style={styles.nextText}>next</Text>
+            </TouchableOpacity>
+          </View>
+        </View>
+      </ScrollView>
     );
   }
 }
@@ -125,13 +96,9 @@ export default class CustomizeClothes extends React.Component {
 const styles = StyleSheet.create({
   contentContainer: {
     flex: 1,
-    marginTop: 100,
-    backgroundColor: '#ACA5A5',
-  },
-  container: {
-    flex: 1,
     justifyContent: 'center',
     backgroundColor: '#ACA5A5',
+    paddingTop: 75,
     paddingLeft: 20,
     paddingRight: 20
   },
@@ -173,7 +140,7 @@ const styles = StyleSheet.create({
     fontSize: 24,
     paddingTop: 30,
     fontFamily: 'Helvetica',
-    marginRight: 40
+    marginBottom: 15,
   },
   inputSmall: {
     height: 43,
@@ -210,5 +177,21 @@ const styles = StyleSheet.create({
     padding: 20,
     color: 'white',
     fontSize: 20,
+  },
+  image: {
+    width: 150,
+    height: 150,
+    marginBottom: 15,
+    marginTop: 15
+  },
+  topDivider: {
+    height: 10,
+    backgroundColor: '#6F4141'
+  },
+  bottomDivider: {
+    height: 3,
+    backgroundColor: '#654321',
+    marginLeft: 35,
+    marginRight: 35,
   }
 });

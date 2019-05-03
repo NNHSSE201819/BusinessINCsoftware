@@ -30,22 +30,20 @@ export default class SwapFinish extends React.Component {
 
   render() {
     return (
-      <View style={styles.container}>
-        <ScrollView contentContainerStyle={styles.contentContainer}>
-          <Text style={styles.progressBarTitleText}>Awesome swap!{"\n"}Thank you for{"\n"}
-            participating in{"\n"}circular fashion.{"\n"}{"\n"}Expect to get your clothes in{"\n"}
-            5-7 business days!
-          </Text>
-          <View style={{alignItems: 'center'}}>
-            <TouchableHighlight onPress={() => {this.props.navigation.navigate('SwapProgress');}}
-            underlayColor="white">
-              <View style={styles.button}>
-                <Text style={styles.buttonText}>view swap progress</Text>
-              </View>
-            </TouchableHighlight>
-          </View>
-        </ScrollView>
-      </View>
+      <ScrollView contentContainerStyle={styles.contentContainer}>
+        <Text style={styles.progressBarTitleText}>Awesome swap!{"\n"}Thank you for{"\n"}
+          participating in{"\n"}circular fashion.{"\n"}{"\n"}Expect to get your clothes in{"\n"}
+          5-7 business days!
+        </Text>
+        <View style={{alignItems: 'center'}}>
+          <TouchableHighlight onPress={() => {this.props.navigation.navigate('SwapProgress');}}
+          underlayColor="white">
+            <View style={styles.button}>
+              <Text style={styles.buttonText}>view swap progress</Text>
+            </View>
+          </TouchableHighlight>
+        </View>
+      </ScrollView>
     );
   }
 }
@@ -55,13 +53,9 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     backgroundColor: '#ACA5A5',
-  },
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    backgroundColor: '#ACA5A5',
-    paddingLeft: 10,
-    paddingRight: 10
+    paddingTop: 75,
+    paddingLeft: 20,
+    paddingRight: 20
   },
   progressBarTitleText: {
     paddingTop: 10,
@@ -100,7 +94,8 @@ const styles = StyleSheet.create({
     fontSize: 24,
     paddingTop: 30,
     fontFamily: 'Helvetica',
-    marginRight: 40
+    marginRight: 40,
+    marginBottom: 15,
   },
   inputSmall: {
     height: 43,
