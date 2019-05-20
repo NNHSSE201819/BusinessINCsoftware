@@ -15,23 +15,23 @@ https://github.com/NNHSSE201819/BusinessINCsoftware
 1. Navigate to project directory through Mac terminal
 
 2. Type the following commands into the terminal:
-$ mkdir ~/.npm-global
-$ npm config set prefix '~/.npm-global'
-$ nano ~/.profile
+- $ mkdir ~/.npm-global
+- $ npm config set prefix '~/.npm-global'
+- $ nano ~/.profile
 
 3. Once the nano .profile file is opened, type in:
-export PATH=~/.npm-global/bin:$PATH
+- export PATH=~/.npm-global/bin:$PATH
 
 4. Save and exit the file by typing:
-$ source ~/.profile
+- $ source ~/.profile
 
 5. Then, still in the project directory, type in these commands into the terminal to create a new app program inside of your directory:
-$ npm install -g expo-cli
-$ expo init my-app
-$ cd my-app/
+- $ npm install -g expo-cli
+- $ expo init my-app
+- $ cd my-app/
 
 6. Once you navigate to inside the app, always type in this command to run the app:
-$ npm start
+- $ npm start
     - This should open a new page in your web browser titled localhost and says Metro Bundler on it.
     
 7. Once the localhost page says Tunnel Ready or a QR code and list of commands shows up in the terminal, you can choose whether to run your app in an Android or iOS simulator.
