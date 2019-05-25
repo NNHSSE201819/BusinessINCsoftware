@@ -7,6 +7,7 @@ Our project was creating a mobile app for one of the Business INCubator teams at
 - Atom (our code text editor, can install latest version here - https://atom.io)
 - MacOS computer for coding
 - Xcode (was already on the MacOS computers that we used, but for other computers, search for it and download on the Apple app store - https://developer.apple.com/xcode/)
+- node.js (download from https://nodejs.org/en/download/)
 
 **Link to Our Project Repository on GitHub:**
 https://github.com/NNHSSE201819/BusinessINCsoftware
@@ -25,14 +26,15 @@ https://github.com/NNHSSE201819/BusinessINCsoftware
 4. Save and exit the file by typing:
 - $ source ~/.profile
 
-5. Then, still in the project directory, type in these commands into the terminal to create a new app program inside of your directory:
+5. If you are creating a new project, you would do the following. While still in the project directory, type in these commands into the terminal to create a new app program inside of your directory:
 - $ npm install -g expo-cli
 - $ expo init my-app
 - $ cd my-app/
 
-6. Once you navigate to inside the app, always type in this command to run the app:
+6. However to run the Style360 app, navigate to the my_app folder, and then always type in this command to run the app:
 - $ npm start
-    - This should open a new page in your web browser titled localhost and says Metro Bundler on it.
+    - This should open a new page in your web browser titled localhost and says Metro Bundler on it. If it doesn't you may need to copy some modules from a fresh expo-cli project:
+        -  Create a new expo cli project and then copy the node_modules directory from the new project to my-app in order to get the Style 360 app to run.
     
 7. Once the localhost page says Tunnel Ready or a QR code and list of commands shows up in the terminal, you can choose whether to run your app in an Android or iOS simulator.
     - If you want to try out your app on an actual phone, you first need to download the Expo app from the app store on your phone. Then, when you scan the QR code given, your app should open in Expo on your phone. Keep in mind that in order for the app to run on the phone, the computer on which you're running the app and the phone must be on the same wifi/wireless network.
